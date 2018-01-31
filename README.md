@@ -22,7 +22,7 @@ Follow these installation instructions for [Mac](https://docs.mongodb.com/manual
 #### Create Python virtual environment ####
 If you haven't already, install [Python 3.6](https://www.python.org/downloads/).
 
-`cd pmgmt_project/project/server/`
+`cd Process-Management-Project/project/server/`
 
 `python3.6 -m venv env`
 
@@ -44,7 +44,7 @@ If you haven't already, install [Python 3.6](https://www.python.org/downloads/).
 
 If you haven't already, install [Yarn](https://yarnpkg.com/lang/en/docs/install/).
 
-`cd pmgmt_project/project/client/<deployment_option:={iOS, Android, Web}>/`
+`cd Process-Management-Project/project/client/<deployment_option:={iOS, Android, Web}>/`
 
 `yarn install`
 
