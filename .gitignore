@@ -1,0 +1,8 @@
+**.cache
+**.sw*
+**.pyc
+**.vim
+**env
+**.egg-info
+**__pycache__
+
