@@ -1,8 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_jwt_simple import JWTManager
-from pmgmt.models import db
+#from pmgmt.models import db
 from pmgmt.views.landing import landing
+from pmgmt.views.authentication import authentication
 
 def create_app():
     """
@@ -17,11 +18,13 @@ def create_app():
     CORS(app, resources=r"/api/*")
     jwt = JWTManager(app)
 
-    # Register database with Flask app
-    db.init_app(app)
+    # Register database with Flask app -- db config is probably a little
+    # differnt for SQLAlchemy as it's currently setup for MongoEngine...
+    # db.init_app(app)
 
     # Register views with Flask app
     app.register_blueprint(landing)
+    app.register_blueprint(authentication)
 
     return app
 

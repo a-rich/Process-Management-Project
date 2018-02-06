@@ -1,7 +1,6 @@
 import json
 from flask import Blueprint
 from flask_jwt_simple import jwt_required, create_jwt, get_jwt_identity
-from pmgmt.models import User
 
 landing = Blueprint('landing', __name__)
 
