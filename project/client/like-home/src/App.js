@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 
 import {Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
+import Counter from './components/Counter';
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
               <Button type="submit">Submit</Button>
             </Navbar.Form>
           </Navbar.Collapse>
-        </Navbar>;
+        </Navbar>
       
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -32,6 +33,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Counter />
       </div>
     );
   }
