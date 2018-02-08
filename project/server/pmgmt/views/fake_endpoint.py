@@ -5,8 +5,8 @@ from pmgmt.utils import send_email
 
 test_endpoint = Blueprint('test_endpoint', __name__)
 
-@test_endpoint.route('/api/<email>', methods=['GET'])
-def test(email):
+@fake_endpoint.route('/api/<email>', methods=['GET'])
+def endpoint(email):
     """
         Some default endpoint just to test the app.
     """
