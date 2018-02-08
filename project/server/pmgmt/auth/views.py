@@ -41,3 +41,11 @@ class RegisterAPI(MethodView)
                 'message': 'User already exists. Please log in.'
             }
             return make_response(jsonify(response_object)), 202
+
+# add API endpoints to blueprint
+registration_view = RegisterAPI.as_view('register_api')
+
+auth_blueprint.add_url_rule('/auth/register', view_func=registration_view, methods=['POST'])
+
+
+            
