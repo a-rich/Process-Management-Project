@@ -9,6 +9,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css'
 
 ReactDOM.render(
-    <App counter = {5} />, document.getElementById('root')
+    <App />, document.getElementById('root')
 );
 registerServiceWorker();

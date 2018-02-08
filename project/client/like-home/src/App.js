@@ -12,7 +12,7 @@ class App extends Component {
         <Navbar inverse >
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#home">Brand</a>
+              <a href="#home">LikeHome</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
