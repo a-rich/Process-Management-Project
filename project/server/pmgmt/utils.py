@@ -1,6 +1,7 @@
 import smtplib
 import email.utils
 from email.mime.text import MIMEText
+from flask import current_app as app
 
 def send_email(user_email, subject, html):
     """
@@ -10,9 +11,7 @@ def send_email(user_email, subject, html):
 
     msg = MIMEText(html, 'html')
     msg['To'] = email.utils.formataddr(('Recipient', user_email))
-
-    # Update this by creating a new email address for our app.
-    #msg['From'] = email.utils.formataddr(('Liquidemocracy', 'liquidemocracy.app@gmail.com'))
+    msg['From'] = email.utils.formataddr(('LikeHome', 'like.home.reg@gmail.com'))
 
     msg['Subject'] = subject
 
@@ -20,11 +19,9 @@ def send_email(user_email, subject, html):
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
 
-        # Update this by using login credentials for our app's email.
-        #server.login('liquidemocracy.app@gmail.com', "<PASSWORD>")
+        server.login('like.home.reg@gmail.com', app.config['EMAIL_AUTH'])
 
-        # Update this by using the email for our app.
-        #server.sendmail('liquidemocracy.app@gmail.com', user_email, msg.as_string())
+        server.sendmail('like.home.reg@gmail.com', user_email, msg.as_string())
     except Error as e:
         print("Email error:", e)
     finally:
