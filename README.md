@@ -28,6 +28,26 @@ If you haven't already, install [Python 3.6](https://www.python.org/downloads/).
 
 `source env/bin/activate`
 
+### Config database ###
+
+#### Install MySQL Workbench ####
+Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+Making alias
+`alias mysql=/usr/local/mysql/bin/mysql`
+`alias mysqladmin=/usr/local/mysql/bin/mysqladmin`
+
+
+#### Install SQLAlchemy ####
+Install [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/intro.html).
+
+`pip install SQLAlchemy`
+
+In case you have not install pip
+
+`sudo easy_install pip`
+
+
 #### Install Python dependencies and set environment variables ####
 `python3.6 -m pip install -e .`
 
