@@ -34,7 +34,9 @@ If you haven't already, install [Python 3.6](https://www.python.org/downloads/).
 Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 Making alias
+
 `alias mysql=/usr/local/mysql/bin/mysql`
+
 `alias mysqladmin=/usr/local/mysql/bin/mysqladmin`
 
 
