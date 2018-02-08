@@ -1,0 +1,17 @@
+attrs==17.4.0
+click==6.7
+Flask==0.12.2
+Flask-Cors==3.0.3
+Flask-JWT-Simple==0.0.3
+Flask-SQLAlchemy==2.3.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+pluggy==0.6.0
+py==1.5.2
+PyJWT==1.5.3
+pytest==3.4.0
+pytest-flask==0.10.0
+six==1.11.0
+SQLAlchemy==1.2.2
+Werkzeug==0.14.1
