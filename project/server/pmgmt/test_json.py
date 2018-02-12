@@ -13,5 +13,12 @@ for location in data:
 	for hotel in data[location]:
 #			print(type(r3)); print(r3.keys()); print(len(r3))
 		hid = hotel['id']
-		print(hotel_id)
+		phone = hotel['display_phone']
+		name = hotel['name']
+		image_url = hotel['image_url']
+		coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
+		rating = hotel['rating']
+		price = hotel['price']
+		address = hotel['location']['display_address']
+		print(address)
 
