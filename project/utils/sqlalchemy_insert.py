@@ -1,11 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
  
-from sqlalchemy_declarative import Address, Base, Person
+from sqlalchemy_declarative import Base, Hotel
 
 import json
-with open('testing.json') as f:
+with open('../../utils/hotel_data.json') as f:
 	data = json.load(f)
+print(data)
  
 engine = create_engine('mysql+mysqldb://root:root@localhost:3306/test')
 # Bind the engine to the metadata of the Base class so that the
@@ -27,20 +28,24 @@ session = DBSession()
 #session.add(new_person)
 #session.commit()
  
+
+
 for location in data:
 	print("location:{0}".format(location))
-#		print(type(hotel)); print(len(hotel))
 	for hotel in data[location]:
-#			print(type(r3)); print(r3.keys()); print(len(r3))
+#		print(type(hotel), len(hotel))
 		hid = hotel['id']
 		phone = hotel['display_phone']
 		name = hotel['name']
 		image_url = hotel['image_url']
 		coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
 		rating = hotel['rating']
-		price = hotel['price']
-		address = hotel['location']['display_address']
-		print(address)
-session.buld_save_objects(hotels)
+#		price = hotel['price']
+		address = ", ".join([work for work in hotel['location']['display_address']])
+		
+		session.add_all([
+			Hotel(hid=hid, phone=phone, name=name, image_url=image_url, coordinates=coordinates, location=location, address=address)
+		])
+	session.flush()
 session.commit()
 

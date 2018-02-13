@@ -1,17 +1,16 @@
 import json
 from pprint import pprint
 
-with open('testing.json') as f:
+with open('../../utils/hotel_data.json') as f:
 	data = json.load(f)
 #print(data.keys())
-pprint(data)
+#pprint(data)
 
 #for d in data:
 for location in data:
 	print("location:{0}".format(location))
-#		print(type(hotel)); print(len(hotel))
 	for hotel in data[location]:
-#			print(type(r3)); print(r3.keys()); print(len(r3))
+#		print(type(hotel), len(hotel))
 		hid = hotel['id']
 		phone = hotel['display_phone']
 		name = hotel['name']
@@ -19,6 +18,6 @@ for location in data:
 		coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
 		rating = hotel['rating']
 		price = hotel['price']
-		address = hotel['location']['display_address']
+		address = ", ".join([work for work in hotel['location']['display_address']])
 		print(address)
 

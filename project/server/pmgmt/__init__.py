@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_jwt_simple import JWTManager
-#from pmgmt.models import db
 from pmgmt.views.fake_endpoint import fake_endpoint
 from pmgmt.views.authentication import authentication
 
@@ -17,10 +16,6 @@ def create_app():
     # Configure cross-origin resource sharing
     CORS(app, resources=r"/api/*")
     jwt = JWTManager(app)
-
-    # Register database with Flask app -- db config is probably a little
-    # differnt for SQLAlchemy as it's currently setup for MongoEngine...
-    # db.init_app(app)
 
     # Register views with Flask app
     app.register_blueprint(fake_endpoint)
