@@ -3,7 +3,7 @@ from flask import Blueprint, render_template
 from flask_jwt_simple import jwt_required, create_jwt, get_jwt_identity
 from pmgmt.utils import send_email
 
-test_endpoint = Blueprint('test_endpoint', __name__)
+fake_endpoint = Blueprint('fake_endpoint', __name__)
 
 @fake_endpoint.route('/api/<email>', methods=['GET'])
 def endpoint(email):
