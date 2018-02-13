@@ -1,18 +1,23 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
- 
-from sqlalchemy_declarative import Base, Hotel
+from pmgmt import create_app, db
+from pmgmt.models import Hotel
+app = create_app()
+
+with app.app_context:
+    db.create_all()
 
 import json
-with open('../../utils/hotel_data.json') as f:
+with open('hotel_data.json') as f:
 	data = json.load(f)
-print(data)
- 
-engine = create_engine('mysql+mysqldb://root:root@localhost:3306/test')
+#print(data)
+
+#engine = create_engine('mysql+mysqldb://root:root@localhost:3306/test')
+engine = create_engine('sqlite:////tmp/test.db')
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
-Base.metadata.bind = engine
- 
+# Base.metadata.bind = engine
+
 DBSession = sessionmaker(bind=engine)
 # A DBSession() instance establishes all conversations with the database
 # and represents a "staging zone" for all the objects loaded into the
@@ -22,16 +27,16 @@ DBSession = sessionmaker(bind=engine)
 # revert all of them back to the last commit by calling
 # session.rollback()
 session = DBSession()
- 
+
 # Insert a Person in the person table
 #new_person = Person(name='new person')
 #session.add(new_person)
 #session.commit()
- 
+
 
 
 for location in data:
-	print("location:{0}".format(location))
+	print('location:', location)
 	for hotel in data[location]:
 #		print(type(hotel), len(hotel))
 		hid = hotel['id']
@@ -42,7 +47,7 @@ for location in data:
 		rating = hotel['rating']
 #		price = hotel['price']
 		address = ", ".join([work for work in hotel['location']['display_address']])
-		
+
 		session.add_all([
 			Hotel(hid=hid, phone=phone, name=name, image_url=image_url, coordinates=coordinates, location=location, address=address)
 		])
