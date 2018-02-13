@@ -7,6 +7,9 @@ import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Reservation from './views/Reservation/Reservation';
+import Favorites from './views/Favorites/Favorites';
+import Account from './views/Account/Account';
 
 class App extends Component {
   render() {
@@ -62,12 +65,6 @@ class App extends Component {
   }
 }
 
-const Reservation = () => (
-  <div>
-    <h2>Reservation</h2>
-  </div>
-);
-
 const Explore = () => (
   <div>
     <h1>Explore</h1>
@@ -78,20 +75,6 @@ const Explore = () => (
 const Rewards = () => (
   <div>
     <h1>Rewards</h1>
-  </div>
-
-);
-
-const Favorites = () => (
-  <div>
-    <h1>Favorites</h1>
-  </div>
-
-);
-
-const Account = () => (
-  <div>
-    <h1>Account</h1>
   </div>
 
 );
