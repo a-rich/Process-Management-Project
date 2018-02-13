@@ -59,43 +59,41 @@ class App extends Component {
       </Router>
 
     );
-
-    const Reservation = () => (
-      <div>
-        <h2>Reservation</h2>
-      </div>
-    );
-
-    const Explore = () => (
-      <div>
-        <h1>Explore</h1>
-      </div>
-
-    );
-
-    const Rewards = () => (
-      <div>
-        <h1>Rewards</h1>
-      </div>
-
-    );
-
-    const Favorites = () => (
-      <div>
-        <h1>Favorites</h1>
-      </div>
-
-    );
-
-
-
-    const Account = () => (
-      <div>
-        <h1>Account</h1>
-      </div>
-
-    );
   }
 }
+
+const Reservation = () => (
+  <div>
+    <h2>Reservation</h2>
+  </div>
+);
+
+const Explore = () => (
+  <div>
+    <h1>Explore</h1>
+  </div>
+
+);
+
+const Rewards = () => (
+  <div>
+    <h1>Rewards</h1>
+  </div>
+
+);
+
+const Favorites = () => (
+  <div>
+    <h1>Favorites</h1>
+  </div>
+
+);
+
+const Account = () => (
+  <div>
+    <h1>Account</h1>
+  </div>
+
+);
 
 export default App;
