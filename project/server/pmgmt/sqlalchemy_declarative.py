@@ -23,9 +23,9 @@ class Hotel(Base):
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     hid = Column(String(250), nullable=False)
-    name = Column(Text, nullable=False)
+    name = Column(Text)
     image_url = Column(Text)
-    rating = Column(Float, nullable=False)
+    rating = Column(Float)
     coordinates = Column(String(250))
     price = Column(Float)
     tiers = Column(String(250))
