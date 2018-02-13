@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
 import Account from './views/Account/Account';
+import SignUp from './components/modals/SignUp';
 
 class App extends Component {
   render() {
@@ -33,6 +34,9 @@ class App extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
+             <NavItem>
+              <SignUp/>
+            </NavItem>
             <NavItem>
               <Link to="/reservations">Reservations</Link>
             </NavItem>
@@ -54,6 +58,7 @@ class App extends Component {
 
         </header>
         <Route exact path="/" component={Explore}/>
+        <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
         <Route path="/favorites" component={Favorites}/>
         <Route path="/rewards" component={Rewards}/>
