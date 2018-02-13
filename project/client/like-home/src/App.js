@@ -11,6 +11,7 @@ import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
 import Account from './views/Account/Account';
 import SignUp from './components/modals/SignUp';
+import Ripples from 'react-ripples'
 
 class App extends Component {
   render() {
@@ -53,7 +54,9 @@ class App extends Component {
           </Navbar.Collapse>
         </Navbar>
         <header className="App-header">
-
+        <Ripples>
+          <Button>Ripple Effect</Button>
+        </Ripples>
 
 
         </header>
