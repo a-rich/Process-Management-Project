@@ -6,8 +6,11 @@ import './App.scss';
 import {Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
+import SignUp from './components/SignUp'; 
 
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">
@@ -32,10 +35,13 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
          
           <h1 className="App-title">Welcome to React</h1>
+
         </header>
         <Counter />
-        
+        <SignUp />
+
       </div>
+
     );
   }
 }
