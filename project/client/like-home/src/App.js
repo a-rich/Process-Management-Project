@@ -6,10 +6,13 @@ import './App.scss';
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
+      <Router>
+
       <div className="App">
         <Navbar inverse>
           <Navbar.Header>
@@ -23,35 +26,74 @@ class App extends Component {
           <Navbar.Collapse>
           <Nav>
             <NavItem>
-              Explore
+              <Link to="/">Explore</Link>
             </NavItem>
           </Nav>
           <Nav pullRight>
             <NavItem>
-              Reservations
+              <Link to="/reservations">Reservations</Link>
             </NavItem>
             <NavItem>
-              Favorites
+              <Link to="/favorites">Favorites</Link>
             </NavItem>
             <NavItem>
-              Rewards
+              <Link to="/rewards">Rewards</Link>
             </NavItem>
             <NavItem>
-              Account
+              <Link to="/account">Account</Link>
             </NavItem>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-
         <header className="App-header">
 
-            <img src={logo} className="App-logo" alt="logo" />
 
-          <h1 className="App-title">Welcome to React</h1>
+
         </header>
-        <Counter />
-
+        <Route exact path="/" component={Explore}/>
+        <Route path="/reservations" component={Reservation}/>
+        <Route path="/favorites" component={Favorites}/>
+        <Route path="/rewards" component={Rewards}/>
+        <Route path="/account" component={Account}/>
       </div>
+      </Router>
+
+    );
+
+    const Reservation = () => (
+      <div>
+        <h2>Reservation</h2>
+      </div>
+    );
+
+    const Explore = () => (
+      <div>
+        <h1>Explore</h1>
+      </div>
+
+    );
+
+    const Rewards = () => (
+      <div>
+        <h1>Rewards</h1>
+      </div>
+
+    );
+
+    const Favorites = () => (
+      <div>
+        <h1>Favorites</h1>
+      </div>
+
+    );
+
+
+
+    const Account = () => (
+      <div>
+        <h1>Account</h1>
+      </div>
+
     );
   }
 }
