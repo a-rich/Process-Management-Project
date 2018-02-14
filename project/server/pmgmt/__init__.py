@@ -20,6 +20,7 @@ def create_app():
 
     # Initialize database
     db.init_app(app)
+    #db.create_all()
 
     # Register views with Flask app
     app.register_blueprint(fake_endpoint)

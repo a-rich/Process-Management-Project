@@ -4,9 +4,6 @@ from pmgmt import create_app, db
 from pmgmt.models import Hotel
 app = create_app()
 
-with app.app_context:
-    db.create_all()
-
 import json
 with open('hotel_data.json') as f:
 	data = json.load(f)
