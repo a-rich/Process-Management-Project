@@ -46,7 +46,7 @@ Open up a Python3.6 interpreter and create the schema for the database:
 
 `>>> from pmgmt import create_app, db`
 
-`>>> db.create_all(app=create_app())
+`>>> db.create_all(app=create_app())`
 
 Populate database with `hotel_data.json` file:
 
