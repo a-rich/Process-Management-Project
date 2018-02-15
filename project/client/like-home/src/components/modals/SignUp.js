@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import '../../stylesheets/SignUp.scss'
+import {Row, Col, Grid} from 'react-bootstrap';
 
 const customStyles = {
     content : {
@@ -43,7 +44,7 @@ class SignUp extends Component {
             <div>
 
             <a onClick={this.openModal}>Sign Up</a>
-
+           
             <form>
               <Modal
               isOpen={this.state.modalIsOpen}
@@ -52,26 +53,38 @@ class SignUp extends Component {
               style={customStyles}
               contentLabel="Sign Up"
               >
-                <h2 ref={subtitle => this.subtitle = subtitle}>CREATE AN ACCOUNT</h2>
-
-                <p>Please fill in this form to create an account.</p>
-                <hr/>
-                <label for="email"><b>Email Address</b></label>
-                <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/>              
-                <label for="psw"><b>Password</b></label>
-                <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
-                <label for="psw-repeat"><b>Confirm Password</b></label>
-                <input class="make-it-slow" type="password" placeholder="Confirm Password" name="psw-repeat" required/>
-          
-                <label for="firstName"><b>First Name</b></label>
-                <input class="make-it-slow" type="word" placeholder="Enter First Name" name="firstName" required/>
-          
-              <label for="lastName"><b>Last Name</b></label>
-              <input class="make-it-slow" type="word" placeholder="Enter Last Name" name="lastName" required/>
-
-                <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-                <button type="submit" class="button2">Sign Up</button>
-                <p>Already have an account? <a href="#" >Sign in</a>.</p>
+              <div className="row">
+                <div className="col-4">
+                  <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>CREATE AN ACCOUNT</h2>
+                  <p className="text-center">Please fill in this form to create an account.</p>
+                  <hr/>
+                </div>
+                <div className="col-4">
+                  <label for="email"><b>Email Address</b></label>
+                  <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/> 
+                </div>
+                <div className="col-4">
+                  <label for="psw"><b>Password</b></label>
+                  <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
+                </div>
+                <div className="col-4">
+                  <label for="psw-repeat"><b>Confirm Password</b></label>
+                  <input class="make-it-slow" type="password" placeholder="Confirm Password" name="psw-repeat" required/>
+                </div>
+                <div className="col-4">
+                  <label for="firstName"><b>First Name</b></label>
+                  <input class="make-it-slow" type="word" placeholder="Enter First Name" name="firstName" required/>
+                </div>
+                <div className="col-4">
+                  <label for="lastName"><b>Last Name</b></label>
+                  <input class="make-it-slow" type="word" placeholder="Enter Last Name" name="lastName" required/>
+                </div>
+                <div className="col-4">
+                  <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
+                  <button type="submit" class="button2">Sign Up</button>
+                  <p>Already have an account? <a href="#" >Sign in</a>.</p>
+                </div>
+              </div> 
            </Modal>
          </form>  
 
