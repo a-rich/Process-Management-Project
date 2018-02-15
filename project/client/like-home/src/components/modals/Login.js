@@ -14,7 +14,7 @@ const customStyles = {
     }
   };
 
-class SignUp extends Component {
+class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +42,7 @@ class SignUp extends Component {
         return (
             <div>
 
-            <a onClick={this.openModal}>Sign Up</a>
+            <a onClick={this.openModal}>Login</a>
 
             <form>
 
@@ -63,18 +63,10 @@ class SignUp extends Component {
             <input type="word" placeholder="Enter Email" name="email" required aria-required="true"/>              
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required/>
-            <label for="psw-repeat"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Confirm Password" name="psw-repeat" required/>
-      
-              <label for="firstName"><b>First Name</b></label>
-            <input type="word" placeholder="Enter First Name" name="firstName" required/>
-      
-           <label for="lastName"><b>Last Name</b></label>
-           <input type="word" placeholder="Enter Last Name" name="lastName" required/>
-
-             <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-            <button type="submit" class="button2">Sign Up</button>
-               <p>Already have an account? <a href="#" >Sign in</a>.</p>
+                
+             <p><a href="#" >Forgot your password?</a></p>
+            <button type="submit" class="button2">LogIn</button>
+               <p>Don't have an account? <a href="#" >Sign Up</a>.</p>
 
            </Modal>
          </form>  
@@ -85,4 +77,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default SignIn;
