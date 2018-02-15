@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import '../../stylesheets/SignUpForm.scss'
+import '../../stylesheets/SignUp.scss'
 
 const customStyles = {
     content : {
@@ -14,7 +14,7 @@ const customStyles = {
     }
   };
 
-class SignIn extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,6 +33,8 @@ class SignIn extends Component {
         // references are now sync'd and can be accessed.
         this.subtitle.style.color = '#00f';
       }
+
+
     
       closeModal() {
         this.setState({modalIsOpen: false});
@@ -54,15 +56,12 @@ class SignIn extends Component {
               contentLabel="Sign Up"
             >
            
-     
-            <h2 ref={subtitle => this.subtitle = subtitle}>CREATE AN ACCOUNT</h2>
-
-            <p>Please fill in this form to create an account.</p>
+            <h2 ref={subtitle => this.subtitle = subtitle}>Sign In</h2>
             <hr/>
              <label for="email"><b>Email Address</b></label>
-            <input type="word" placeholder="Enter Email" name="email" required aria-required="true"/>              
+            <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required aria-required="true"/>              
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required/>
+            <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
                 
              <p><a href="#" >Forgot your password?</a></p>
             <button type="submit" class="button2">LogIn</button>
@@ -77,4 +76,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default Login;
