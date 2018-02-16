@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
 import Account from './views/Account/Account';
+import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples'
 
@@ -35,6 +36,9 @@ class App extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
+             <NavItem>
+              <Login/>
+            </NavItem>
              <NavItem>
               <SignUp/>
             </NavItem>
