@@ -40,6 +40,7 @@ input[type=word], input[type=password] {
     }
 }
 
+/* label color */
 label {
     color: $primaryColor;
 }
@@ -53,6 +54,8 @@ input[type=word]:focus, input[type=password]:focus {
     transition: box-shadow 2s ease-out;
     outline: none;
 }
+
+/* submit button style */
 .button2 {
     background-color: $secondaryColor; /* Green */
     border: none;
@@ -68,13 +71,14 @@ input[type=word]:focus, input[type=password]:focus {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
+/* submit button style */
 .button2 {
     background-color: white; 
     color: black; 
     border: 2px solid $secondaryColor;
 }
 
+/* submit button style */
 .button2:hover {
     background-color: $secondaryColor;
     color: white;
@@ -119,3 +123,4 @@ hr {
   .make-it-fast:hover::after {
     opacity: 1;
   }
+

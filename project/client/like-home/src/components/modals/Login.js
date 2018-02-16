@@ -15,7 +15,7 @@ const customStyles = {
     }
   };
 
-class SignUp extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,16 +34,18 @@ class SignUp extends Component {
         // references are now sync'd and can be accessed.
         this.subtitle.style.color = '#00f';
       }
+
+
     
       closeModal() {
         this.setState({modalIsOpen: false});
       }
 
     render() {
-        return (
+               return (
             <div>
 
-            <a onClick={this.openModal}>Sign Up</a>
+            <a onClick={this.openModal}>Login</a>
            
             <form>
               <Modal
@@ -56,8 +58,7 @@ class SignUp extends Component {
               >
               <div className="row">
                 <div className="col-4">
-                  <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>CREATE AN ACCOUNT</h2>
-                  <p className="text-center">Please fill in this form to create an account.</p>
+                  <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>Sign In</h2>
                   <hr/>
                 </div>
                 <div className="col-4">
@@ -69,21 +70,9 @@ class SignUp extends Component {
                   <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
                 </div>
                 <div className="col-4">
-                  <label for="psw-repeat"><b>Confirm Password</b></label>
-                  <input class="make-it-slow" type="password" placeholder="Confirm Password" name="psw-repeat" required/>
-                </div>
-                <div className="col-4">
-                  <label for="firstName"><b>First Name</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter First Name" name="firstName" required/>
-                </div>
-                <div className="col-4">
-                  <label for="lastName"><b>Last Name</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Last Name" name="lastName" required/>
-                </div>
-                <div className="col-4">
-                  <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-                  <button type="submit" class="button2">Sign Up</button>
-                  <p>Already have an account? <a href="#" >Sign in</a>.</p>
+                  <p><a href="#" >Forgot your password?</a></p>
+                  <button type="submit" class="button2">Login</button>
+                  <p>Don't have an account? <a href="#" >Sign Up</a>.</p>
                 </div>
               </div> 
            </Modal>
@@ -91,8 +80,7 @@ class SignUp extends Component {
 
 
           </div>
-        );
-    }
+        );    }
 }
 
-export default SignUp;
+export default Login;
