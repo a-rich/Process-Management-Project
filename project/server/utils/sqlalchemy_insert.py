@@ -2,18 +2,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from pmgmt import create_app, db
 from pmgmt.models import Hotel
-app = create_app()
+
+db.create_all(app=create_app())
 
 import json
 with open('hotel_data.json') as f:
 	data = json.load(f)
-#print(data)
 
 #engine = create_engine('mysql+mysqldb://root:root@localhost:3306/test')
-engine = create_engine('sqlite:////tmp/test.db')
-# Bind the engine to the metadata of the Base class so that the
-# declaratives can be accessed through a DBSession instance
-# Base.metadata.bind = engine
+engine = create_engine('sqlite:///../test.db')
 
 DBSession = sessionmaker(bind=engine)
 # A DBSession() instance establishes all conversations with the database
@@ -25,17 +22,9 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
-# Insert a Person in the person table
-#new_person = Person(name='new person')
-#session.add(new_person)
-#session.commit()
-
-
-
 for location in data:
 	print('location:', location)
 	for hotel in data[location]:
-#		print(type(hotel), len(hotel))
 		hid = hotel['id']
 		phone = hotel['display_phone']
 		name = hotel['name']
