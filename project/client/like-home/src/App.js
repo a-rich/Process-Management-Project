@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import LikeHomeLogo from './assets/LikeHomeLogo.png';
+import Explore from './components/Explore';
 import './App.scss';
 
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
@@ -58,7 +59,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        
+
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
@@ -71,14 +72,6 @@ class App extends Component {
     );
   }
 }
-
-const Explore = () => (
-  <div>
-    <h1>Explore</h1>
-    <CollectionView/>
-  </div>
-
-);
 
 const Rewards = () => (
   <div>
