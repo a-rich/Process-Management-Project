@@ -23,41 +23,17 @@ If you haven't already, install [Python 3.6](https://www.python.org/downloads/).
 
 `source env/bin/activate`
 
-### Config database: option 1 (MySQL), option 2 (SQLite) ###
-
-#### Option 1: install MySQL Workbench ####
-Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-
-Making alias
-
-`alias mysql=/usr/local/mysql/bin/mysql`
-
-`alias mysqladmin=/usr/local/mysql/bin/mysqladmin`
-
-#### Option 2: create SQLite database ####
-Follow the instruction below to start the app. This will create a SQLite
-database located at `/tmp/test.db`.
-
-Shutdown the application (CTRL + C).
-
-Open up a Python3.6 interpreter and create the schema for the database:
-
-`python3.6`
-
-`>>> from pmgmt import create_app, db`
-
-`>>> db.create_all(app=create_app())`
-
-Populate database with `hotel_data.json` file:
-
-`python3.6 Process-Management-Project/project/utils/sqlalchemy_insert.py`
-
 #### Install Python dependencies and set environment variables ####
 `python3.6 -m pip install -e .`
 
 `export FLASK_APP=pmgmt`
 
 `export FLASK_DEBUG=true`
+
+### Create database and insert Hotel data ###
+Creates an SQLite3 database at `Process-Management-Project/project/server/test.db`:
+
+`python3.6 Process-Management-Project/project/server/utils/sqlalchemy_insert.py`
 
 #### Run Flask server ####
 `flask run`
