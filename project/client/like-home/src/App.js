@@ -58,11 +58,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <header className="App-header">
-        <Ripples>
-          <Button>Ripple Effect</Button>
-        </Ripples>
-        </header>
+        
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
