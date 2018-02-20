@@ -6,6 +6,7 @@ import './App.scss';
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
+import CollectionView from './components/CollectionView';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
@@ -61,8 +62,6 @@ class App extends Component {
         <Ripples>
           <Button>Ripple Effect</Button>
         </Ripples>
-
-
         </header>
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
@@ -80,6 +79,7 @@ class App extends Component {
 const Explore = () => (
   <div>
     <h1>Explore</h1>
+    <CollectionView/>
   </div>
 
 );
