@@ -32,12 +32,10 @@ class App extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-          <Nav>
-            <NavItem>
+          <Nav pullRight>
+          <NavItem>
               <Link to="/">Explore</Link>
             </NavItem>
-          </Nav>
-          <Nav pullRight>
              <NavItem>
               <Login/>
             </NavItem>

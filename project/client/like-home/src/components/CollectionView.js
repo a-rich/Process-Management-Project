@@ -14,6 +14,13 @@ export class CollectionView extends React.Component {
         {'name':"Miami",
         'photo': "http://www.djoybeat.com/wp-content/uploads/2014/07/miami3-250x250.jpg"
         },
+        {'name':"Italy",
+        'photo': "http://uncarvedblocktraveler.com/wp-content/uploads/2015/09/rome-italy-250x250.jpg"
+        },
+        {
+          'name': "Malaysia",
+          'photo': "https://i.pinimg.com/736x/2d/b4/8a/2db48a923748bd647190bfb6adbc9f4c--dream-vacations-vacation-places.jpg"
+        },
         {'name':"London",
           'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2017/04/best-time-to-go-to-london-feature-250x250.jpg"
         },
@@ -25,7 +32,10 @@ export class CollectionView extends React.Component {
         },
         {'name':"New York",
         'photo': "http://tomsphotocafe.com/wp-content/uploads/2016/03/WS_NewYork_8TP8173_4_5_6_7E-1-250x250.jpg"
-      },
+        },
+        {'name':"New Zealand",
+        'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2017/01/MilfordSound.Shutterstock300-250x250.jpg"
+        },
         {'name':"Paris",
         'photo': "https://paris-day-trip.com/wp-content/uploads/2016/10/Paris-Arc-De-Triomphe-Gallery-250x250.jpg"
 
