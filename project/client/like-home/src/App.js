@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import LikeHomeLogo from './assets/LikeHomeLogo.png';
+import Explore from './components/Explore';
 import './App.scss';
 import VideoPlayer from './components/VideoPlayer';
 
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
+import CollectionView from './components/CollectionView';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
@@ -32,12 +34,10 @@ class App extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-          <Nav>
-            <NavItem>
+          <Nav pullRight>
+          <NavItem>
               <Link to="/">Explore</Link>
             </NavItem>
-          </Nav>
-          <Nav pullRight>
              <NavItem>
               <Login/>
             </NavItem>
@@ -72,13 +72,6 @@ class App extends Component {
     );
   }
 }
-
-const Explore = () => (
-  <div>
-    <h1>Explore</h1>
-  </div>
-
-);
 
 const Rewards = () => (
   <div>
