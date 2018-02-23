@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import LikeHomeLogo from './assets/LikeHomeLogo.png';
 import './App.scss';
+import VideoPlayer from './components/VideoPlayer';
 
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
@@ -13,12 +14,13 @@ import Account from './views/Account/Account';
 import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples'
+import { Player } from 'video-react';
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-
       <div className="App">
         <Navbar inverse>
           <Navbar.Header>
@@ -57,13 +59,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <header className="App-header">
-        <Ripples>
-          <Button>Ripple Effect</Button>
-        </Ripples>
-
-
-        </header>
+        <VideoPlayer/> 
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
@@ -88,7 +84,6 @@ const Rewards = () => (
   <div>
     <h1>Rewards</h1>
   </div>
-
 );
 
 export default App;

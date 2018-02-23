@@ -1,0 +1,21 @@
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.aspect-ratio-box {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  background: black;
+  position: relative;
+}
+
+
+.flexbox-centering {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
