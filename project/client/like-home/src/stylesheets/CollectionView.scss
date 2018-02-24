@@ -1,11 +1,12 @@
+@import '../variables/colors.scss';
+
 .items {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left:100px;
-  margin-right:100px;
+  margin: 100px;
 }
 
 .items img {
@@ -45,6 +46,12 @@
 
 .itemLink {
   position: relative;
+  width:250px;
+  height:250px;
+  box-shadow: 0 0 10px #4f4f4f;
+  box-sizing: border-box;
+  border-radius: 2%;
+  margin-bottom: 30px;
 }
 
 .info {
@@ -69,5 +76,4 @@
   visibility: visible;
   border-radius: 2%;
   background-color: rgba(0,0,0,.7); // Sets to 50%
-
 }
