@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+Removed from html template but looked important so I will leave it here: This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+            You can add webfonts, meta tags, or analytics to this file.
+                  The build step will place the bundled scripts into the <body> tag.
+
+                        To begin the development, run `npm start` or `yarn start`.
+                              To create a production bundle, use `npm run build` or `yarn build`.
+                                  -->
+
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 

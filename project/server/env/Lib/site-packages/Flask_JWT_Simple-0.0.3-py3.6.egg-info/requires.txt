@@ -1,0 +1,5 @@
+Flask
+PyJWT
+
+[asymmetric_crypto]
+cryptography
