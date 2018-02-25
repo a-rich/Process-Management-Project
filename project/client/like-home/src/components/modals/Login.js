@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import '../../stylesheets/SignUp.scss'
+// import '../../stylesheets/SignUp.scss'
 import {Row, Col, Grid} from 'react-bootstrap';
 
 const customStyles = {
@@ -10,8 +10,8 @@ const customStyles = {
       right                 : '70%',
       bottom                : 'auto%',
       marginRight           : '-50%',
+      height                : "45%",
       transform             : 'translate(-50%, -50%)'
-
     }
   };
 

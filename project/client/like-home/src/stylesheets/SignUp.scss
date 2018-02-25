@@ -9,11 +9,13 @@ input[type=word], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    color: black;
     background: $color_whiteSmoke;
 }
 
 .ReactModal__Content {
     color: $black_30;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
     position: absolute;
     height: 70%;
     width: 33.333%;
