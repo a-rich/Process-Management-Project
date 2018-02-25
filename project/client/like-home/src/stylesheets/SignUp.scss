@@ -9,13 +9,15 @@ input[type=word], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    color: black;
     background: $color_whiteSmoke;
 }
 
 .ReactModal__Content {
     color: $black_30;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
     position: absolute;
-    //height: 100%;
+    height: 70%;
     width: 33.333%;
     @media only screen and (max-width: 768px) {
         width: 100%;
@@ -40,6 +42,11 @@ input[type=word], input[type=password] {
     }
 }
 
+/*disable the background to scroll*/
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
 /* label color */
 label {
     color: $primaryColor;
@@ -61,12 +68,13 @@ input[type=word]:focus, input[type=password]:focus {
     border: none;
     color: white;
     width: 100%;
-    height: 80%;
+    // height: 80%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 0px 0px;
+    padding: 5px 5px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -84,6 +92,8 @@ input[type=word]:focus, input[type=password]:focus {
     color: white;
 }
 
+//input column space
+.col { height: 60px; }
 
 /* Add padding to container elements */
 .container {
@@ -92,7 +102,7 @@ input[type=word]:focus, input[type=password]:focus {
 
 /* Style the horizontal ruler */
 hr {
-    border-top: 1px solid $primaryColor !important;
+    border-top: 1px solid green !important;
     margin-bottom: 25px;
 }
  

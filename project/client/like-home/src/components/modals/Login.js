@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
-import '../../stylesheets/SignUp.scss'
+// import '../../stylesheets/SignUp.scss'
 import {Row, Col, Grid} from 'react-bootstrap';
 
 const customStyles = {
@@ -10,8 +10,8 @@ const customStyles = {
       right                 : '70%',
       bottom                : 'auto%',
       marginRight           : '-50%',
+      height                : "45%",
       transform             : 'translate(-50%, -50%)'
-
     }
   };
 
@@ -57,17 +57,15 @@ class Login extends Component {
 
               >
               <div className="row">
-                <div className="col-4">
+                <div className="col">
                   <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>Sign In</h2>
                   <hr/>
                 </div>
-                <div className="col-4">
-                  <label for="email"><b>Email Address</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/> 
+                <div className="col">
+                  <input class="make-it-slow" type="word" placeholder="Email Address" name="email" required/> 
                 </div>
-                <div className="col-4">
-                  <label for="psw"><b>Password</b></label>
-                  <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
+                <div className="col">
+                  <input class="make-it-slow" type="password" placeholder="Password" name="psw" required/>
                 </div>
                 <div className="col-4">
                   <p><a href="#" >Forgot your password?</a></p>
