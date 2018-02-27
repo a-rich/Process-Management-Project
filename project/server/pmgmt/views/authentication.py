@@ -2,8 +2,9 @@ import json
 from bcrypt import gensalt, hashpw, checkpw
 from itsdangerous import URLSafeTimedSerializer
 from flask import current_app, Blueprint, request, url_for, render_template
-from flask_jwt_simple import create_jwt
-from pmgmt.models import db, User
+from flask_jwt_simple import create_jwt, jwt_required, get_jwt_identity
+from pmgmt import db
+from pmgmt.models import User
 from pmgmt.utils import send_email
 
 authentication = Blueprint('authentication', __name__)
@@ -113,6 +114,7 @@ def reset_password():
     return json.dumps({'msg': 'No account associated with this email.'})
 
 @authentication.route('/api/reset_password/<token>/', methods=['GET'])
+@jwt_required
 def confirm_account_recovery(token):
     """
     """
