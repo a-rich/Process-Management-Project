@@ -1,9 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, DateTime, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from pmgmt import db
 
 class User(db.Model):
     __tablename__ = 'user'

@@ -1,74 +1,152 @@
 import json
-from flask import Blueprint, request, jsonify, make_response
-from flask_jwt_simple import create_jwt
-# is this how you import models?
-from .models import User
-from .app_config import DevelopmentConfig
-# may use werkzeug later
-# from werkzeug.security import generate_password_hash, check_password_hash
-import datetime
-from functools import wraps
-#from pmgmt.models import User
+from bcrypt import gensalt, hashpw, checkpw
+from itsdangerous import URLSafeTimedSerializer
+from flask import current_app, Blueprint, request, url_for, render_template
+from flask_jwt_simple import create_jwt, jwt_required, get_jwt_identity
+from pmgmt import db
+from pmgmt.models import User
+from pmgmt.utils import send_email
 
 authentication = Blueprint('authentication', __name__)
 
-# @authentication.route('/api/login/', methods=['POST'])
-# def login():
-#     """
-#         The following code is copied from another project that uses MongoEngine
-#         which is an object document mapper (ODM) as opposed to an object
-#         relational mapper (ORM)...the SQLAlchemy parallel to the following code
-#         should be very similar with minor syntax differences.
-#     """
-#
-#     req = request.get_json()  # Get the request object as a Python dict
-#
-#     try:
-#         # Query the User model
-#         user = User.objects.get(email=req['email'], password=req['password'])
-#         # Create a JWT to send back to the client
-#         token = create_jwt(identity=email)
-#         return json.dumps({'jwt': token, 'name': user.name})
-#     except Exception as e:
-#         return json.dumps({'error': 'Invalid credentials. Please try again.'})
+@authentication.route('/api/test_create_user/', methods=['POST'])
+def simple_create_user():
+    """
+    """
 
-expiration = DevelopmentConfig.JWT_EXPIRES
-key =  DevelopmentConfig.JWT_SECRET_KEY
+    req = request.get_json()
+    email = req['email']
+    password = req['password']
+    name = req['name']
 
-# apply this token to all endpoints that require the user by logged in
-def require_token(f):
-    @wraps(f)
-    def decorate(*args, **kwargs):
-        token = None
-        if 'x-access-token' in request.headers:
-            token = request.headers['x-access-token']
-        if not token:
-            return jsonify({'message': 'Missing token'}), 401
+    if not User.query.filter_by(email=email).first():
+        new_user = User(name=name, email=email,
+                password=hashpw(password.encode('utf-8'), gensalt()))
+        db.session.add(new_user)
+        db.session.commit()
+        return json.dumps({'msg': 'User account created.'})
+    return json.dumps({'msg': 'User already exists.'})
+
+@authentication.route('/api/create_user/', methods=['POST'])
+def create_user():
+    """
+    """
+
+    req = request.get_json()
+    email = req['email']
+    password = req['password']
+    name = req['name']
+
+    if not User.query.filter_by(email=email).first():
+        ts = URLSafeTimedSerializer(current_app.config['SERIALIZATION_KEY'])
+        token = ts.dumps({
+                    'email': email,
+                    'password': password,
+                    'name': name
+                }, salt='account_creation_key')
+        email_url = url_for(
+                'authentication.confirm_account_creation',
+                token=token,
+                _external=True)
+        subject = 'Confirm your LikeHome account'
+        html = render_template(
+                'account_activation.html',
+                email_url=email_url)
 
         try:
-            data = jwt.decode(token, key)
-            current_user = User.query.filter_by(public_id=data['public_id']).first()
-        except:
-            return jsonify({'message': 'Invalid token'}), 401
+            send_email(email, subject, html)
+            return json.dumps({'msg': 'Sent account confirmation link to email.'})
+        except Exception as e:
+            return json.dumps({'msg': str(e)})
 
-        return f(current_user, *args, **kwargs)
-    return decorate
+        return json.dumps({'msg': 'User account created.'})
 
-
-
-@authentication.route('/api/login', methods=['POST'])
-def login():
-    auth = request.authorization
-    if not auth or not auth.username or not auth.password:
-        return make_response('Could not verify', 401, {'WWW-Authenticate': 'Basic realm="Login Required!"'})
+@authentication.route('/api/create_user/<token>/', methods=['GET'])
+def confirm_account_creation(token):
+    """
+    """
 
     try:
-        user = User.query.filter_by(name=auth.username).first()
-
-        # since password is being hashed in user init i'm not entirely sure if this is the correct check
-        if user.password_hash == auth.password:
-            token = jwt.encode({'public_id': user.public_id, 'exp': datetime.datetime.utcnow() + expiration}, key)
-            return jsonify({'token': token.decode('UTF-8')})
-
+        ts = URLSafeTimedSerializer(current_app.config['SERIALIZATION_KEY'])
+        token = ts.loads(token, salt='account_creation_key', max_age=21600)
+        email = token['email']
+        password = token['password']
+        name = token['name']
+        if not User.query.filter_by(email=email).first():
+            new_user = User(name=name, email=email,
+                    password=hashpw(password.encode('utf-8'), gensalt()))
+            db.session.add(new_user)
+            db.session.commit()
+            return json.dumps({'msg': 'User account created.'})
     except Exception as e:
-        return make_response('Could not verify', 401, {'WWW-Authenticate': 'Basic realm="Login Required!"'})
+        return json.dumps({'msg': 'This email is already in use.'})
+
+@authentication.route('/api/reset_password/', methods=['POST'])
+def reset_password():
+    """
+    """
+
+    req = request.get_json()
+    email = req['email']
+    password = req['password']
+
+    if User.query.filter_by(email=email).first():
+        ts = URLSafeTimedSerializer(current_app.config['SERIALIZATION_KEY'])
+        token = ts.dumps({
+                'email': email,
+                'password': password
+                }, salt='account_recovery_key')
+        email_url = url_for(
+                'authentication.confirm_account_recovery',
+                token=token,
+                _external=True)
+        subject = 'Recover your LikeHome account'
+        html = render_template(
+                'account_recovery.html',
+                email_url=email_url)
+
+        try:
+            send_email(email, subject, html)
+            return json.dumps({'msg': 'Sent account recovery link to email.'})
+        except Exception as e:
+            return json.dumps({'msg': str(e)})
+
+    return json.dumps({'msg': 'No account associated with this email.'})
+
+@authentication.route('/api/reset_password/<token>/', methods=['GET'])
+@jwt_required
+def confirm_account_recovery(token):
+    """
+    """
+
+    try:
+        ts = URLSafeTimedSerializer(current_app.config['SERIALIZATION_KEY'])
+        token = ts.loads(token, salt='account_recovery_key', max_age=21600)
+        email = token['email']
+        password = token['password']
+        user = User.query.filter_by(email=email).first()
+        user.password = hashpw(password.encode('utf-8'), gensalt())
+        db.session.commit()
+        return json.dumps({'msg': 'User successfully reset their password.'})
+    except Exception as e:
+        return json.dumps({'msg': str(e)})
+
+@authentication.route('/api/login/', methods=['POST'])
+def login():
+    """
+    """
+
+    req = request.get_json()
+    email = req['email']
+    password = req['password']
+
+    try:
+        user = User.query.filter_by(email=email).first()
+        token = create_jwt(identity=email)
+        return json.dumps({
+                'jwt': token,
+                'name': user.name
+                })
+    except Exception as e:
+        return json.dumps({'msg': 'Invalid credentials.'})
+
