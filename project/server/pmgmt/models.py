@@ -13,6 +13,18 @@ class User(db.Model):
     name = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
     password = Column(String(250), nullable=False)
+    reward = Column(Integer)
+
+
+class Reward(db.Model):
+    __tablename__ = 'reward'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+    alter = Column(Integer)
+    reward = Column(Integer)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
+
 
 class Hotel(db.Model):
     __tablename__ = 'hotel'
@@ -41,6 +53,9 @@ class Room(db.Model):
     tiers = Column(String(250))
     location = Column(String(250))
     phone = Column(String(250))
+    status = Column(Integer)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
+    
 
 class Tier(db.Model):
     __tablename__ = 'tier'
@@ -58,3 +73,16 @@ class Reservation(db.Model):
     room = relationship(Room)
     active = Column(SmallInteger)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
+
+class State(db.Model):
+    __tablename__ = 'state'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(50))
+
+class City(db.Model):
+    __tablename__ = 'city'
+    id = Column(Integer, primary_key=True)
+    state_id = Column(Integer, ForeignKey('state.id'))
+    state = relationship(State)
+    name = Column(String(50))
+
