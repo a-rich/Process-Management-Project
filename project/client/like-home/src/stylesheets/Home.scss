@@ -19,3 +19,118 @@
   justify-content: center;
   align-items: center;
 }
+
+.mainbar
+{
+  width:90%;
+  height: 40px;
+}
+
+.form-row
+{
+  display: flex;
+}
+
+.inputs-row {
+  display: flex;
+  flex-grow: 1;
+  background:transparent;
+}
+
+.location-input {
+width: 40%;
+height: 40px;
+position: relative;
+background-color: black;
+z-index: 0;
+display: flex;
+align-items: center;
+flex-grow: 2;
+border: solid;
+}
+
+.input-text{
+font-size: 12px;
+font-weight: normal;
+line-height: 15px;
+background-color: black;
+}
+
+.date-input {
+  width: fit-content;
+  height: 40px;
+  position: relative;
+  background-color: black;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+.date-text{
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 30px;
+  background-color: black;
+  color:gray;
+  border:black;
+  }
+
+.icon-size {
+  height: 40px;
+  width: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.price-input {
+  width: fit-content;
+  height: 40px;
+  position: relative;
+  background-color: black;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+  .price-text{
+    width: 50%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 30px;
+    background-color: black;
+    color:gray;
+    border: black;
+    }
+
+.room-input {
+  width: fit-content;
+  height: 40px;
+  position: relative;
+  background-color: black;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+  .room-text{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 30px;
+    background-color: black;
+    color:gray;
+    border: black;
+    }
+
+    .search {
+      color: black;
+      height: 40px;
+      width: 30px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }

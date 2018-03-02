@@ -17,6 +17,7 @@ import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples'
 import { Player } from 'video-react';
+import MainBar from './components/MainBar';
 
 
 class App extends Component {
@@ -59,7 +60,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <VideoPlayer/> 
+        <MainBar/>
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
