@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import '../../stylesheets/SignUp.scss'
 import {Row, Col, Grid} from 'react-bootstrap';
-import "../../actions/Account";
 
 const customStyles = {
     content : {
@@ -83,7 +82,7 @@ class SignUp extends Component {
                 </div>
                 <div className="col-4">
                   <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-                  <button type="submit" class="button2" onClick={this.createUsers}>Sign Up</button>
+                  <button type="submit" class="button2">Sign Up</button>
                   <p>Already have an account? <a href="#" >Sign in</a>.</p>
                 </div>
               </div> 

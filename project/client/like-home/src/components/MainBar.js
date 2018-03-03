@@ -11,6 +11,7 @@ import VideoPlayer from '../components/VideoPlayer';
 
 
 class MainBar extends Component {	
+
   render() {
  return(
   <div>
@@ -46,7 +47,7 @@ class MainBar extends Component {
   </label>
 
   <label class = "search" >
-  <Search class = "icon-size"/>
+  <button class = "search" ><Search class = "search-icon"/></button> 
   </label>
 
   </div>

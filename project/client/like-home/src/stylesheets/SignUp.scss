@@ -16,7 +16,7 @@ input[type=word], input[type=password] {
     color: $black_30;
     position: absolute;
     //height: 100%;
-    width: 33.333%;
+    width: 50%;
     @media only screen and (max-width: 768px) {
         width: 100%;
     }

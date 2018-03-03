@@ -128,9 +128,18 @@ background-color: black;
     }
 
     .search {
-      color: black;
+      background: transparent;
       height: 40px;
-      width: 30px;
+      width: fit-content;
       padding-right: 5px;
       padding-left: 5px;
+      border: none;
+    }
+
+    .search-icon {
+      height: 35px;
+      width: 35px;
+      padding-right: 5px;
+      color: black;
+
     }
