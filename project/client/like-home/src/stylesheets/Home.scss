@@ -22,26 +22,29 @@
 
 .mainbar
 {
-  width:90%;
+  width:80%;
   height: 40px;
+  align-self: center;
 }
 
 .form-row
 {
   display: flex;
+  align-self: center;
 }
 
 .inputs-row {
   display: flex;
   flex-grow: 1;
   background:transparent;
+  align-self: center;
 }
 
 .location-input {
-width: 40%;
+width: 50%;
 height: 40px;
 position: relative;
-background-color: black;
+background-color: #222;
 z-index: 0;
 display: flex;
 align-items: center;
@@ -53,14 +56,14 @@ border: solid;
 font-size: 12px;
 font-weight: normal;
 line-height: 15px;
-background-color: black;
+background-color:  #222;
 }
 
 .date-input {
-  width: fit-content;
+  width: 25%;
   height: 40px;
   position: relative;
-  background-color: black;
+  background-color:  #222;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -72,9 +75,9 @@ background-color: black;
   font-size: 12px;
   font-weight: normal;
   line-height: 30px;
-  background-color: black;
+  background-color:  #222;
   color:gray;
-  border:black;
+  border: #222;
   }
 
 .icon-size {
@@ -85,10 +88,10 @@ background-color: black;
 }
 
 .price-input {
-  width: fit-content;
+  width: 15%;
   height: 40px;
   position: relative;
-  background-color: black;
+  background-color:  #222;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -97,20 +100,20 @@ background-color: black;
   }
 
   .price-text{
-    width: 50%;
+    width: 40%;
     font-size: 12px;
     font-weight: normal;
     line-height: 30px;
-    background-color: black;
+    background-color:  #222;
     color:gray;
-    border: black;
+    border:  #222;
     }
 
 .room-input {
-  width: fit-content;
+  width: 10%;
   height: 40px;
   position: relative;
-  background-color: black;
+  background-color: #222;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -119,12 +122,13 @@ background-color: black;
   }
 
   .room-text{
+    width: 70%;
     font-size: 12px;
     font-weight: normal;
     line-height: 30px;
-    background-color: black;
+    background-color: #222;
     color:gray;
-    border: black;
+    border: #222;
     }
 
     .search {
@@ -140,6 +144,6 @@ background-color: black;
       height: 35px;
       width: 35px;
       padding-right: 5px;
-      color: black;
+      color: #222;
 
     }

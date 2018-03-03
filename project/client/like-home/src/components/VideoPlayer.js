@@ -2,6 +2,7 @@ import React from 'react'
 import { Component } from 'react';
 import '../stylesheets/Home.scss'
 import ReactPlayer from 'react-player'
+import MainBar from '/Users/jamala/Desktop/Spring_2018/SE_165/Project/Process-Management-Project-master/project/client/like-home/src/components/MainBar.js';
 
 class VideoPlayer extends Component {	
   render() {

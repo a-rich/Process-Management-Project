@@ -53,7 +53,9 @@ class MainBar extends Component {
   </div>
   </div>
 </form>
+<div>
 <VideoPlayer/>
+</div>
 </div>
  )
 }
