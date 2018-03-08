@@ -1,4 +1,6 @@
 from datetime import timedelta
+from whoosh.analysis import StemmingAnalyzer
+
 
 class DevelopmentConfig():
     DEBUG = True
@@ -7,4 +9,7 @@ class DevelopmentConfig():
     JWT_EXPIRES = timedelta(days=365)
     EMAIL_AUTH = "gffk68TdPt0dttmu"
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../test.db'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    # WHOOSH_BASE = 'whoosh'
+    # WHOOSH_ANALYZER = StemmingAnalyzer()
+    WHOOSHEE_WRITER_TIMEOUT = 10

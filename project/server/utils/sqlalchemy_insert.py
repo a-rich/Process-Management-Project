@@ -39,4 +39,3 @@ for location in data:
 		])
 	session.flush()
 session.commit()
-

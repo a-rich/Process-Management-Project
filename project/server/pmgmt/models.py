@@ -2,8 +2,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger,
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from pmgmt import db, whooshee
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -14,8 +13,10 @@ class User(db.Model):
     email = Column(String(250), nullable=False)
     password = Column(String(250), nullable=False)
 
+@whooshee.register_model('name', 'location')
 class Hotel(db.Model):
     __tablename__ = 'hotel'
+    __searchable__ = ['name', 'location']
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
@@ -29,6 +30,12 @@ class Hotel(db.Model):
     location = Column(String(250))
     address = Column(Text)
     phone = Column(String(20))
+
+
+
+# class HotelSchema(ma.ModelSchema):
+#     class Meta:
+#         model = Hotel
 
 class Room(db.Model):
     __tablename__ = 'room'
