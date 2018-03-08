@@ -18,7 +18,6 @@ db = SQLAlchemy()
 db.init_app(app)
 ma = Marshmallow(app)
 whooshee = Whooshee(app)
-whooshee.reindex()
 
 from pmgmt.views.authentication import authentication
 
