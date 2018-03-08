@@ -8,3 +8,5 @@ class DevelopmentConfig():
     EMAIL_AUTH = "gffk68TdPt0dttmu"
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../test.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WHOOSHEE_DIR = 'whoosh_index'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True

@@ -2,6 +2,8 @@ from flask import Flask
 from flask_cors import CORS
 from flask_jwt_simple import JWTManager
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+from flask_whooshee import Whooshee
 
 # Create and configure Flask app
 app = Flask(__name__)
@@ -14,6 +16,9 @@ jwt = JWTManager(app)
 # Initialize database
 db = SQLAlchemy()
 db.init_app(app)
+ma = Marshmallow(app)
+whooshee = Whooshee(app)
+whooshee.reindex()
 
 from pmgmt.views.authentication import authentication
 

@@ -9,6 +9,14 @@ from pmgmt.utils import send_email
 
 authentication = Blueprint('authentication', __name__)
 
+from pmgmt.models import Hotel
+@authentication.route('/api/whoosh/', methods=['GET'])
+def whoosher():
+    results = Hotel.query.filter_by(location='san francisco ca').all()
+    results2 = Hotel.query.whooshee_search('san francisco ca').all()
+    print('filter_by:\n{}\n\nwhoosh:\n{}'.format(results, results2))
+    return 'stuff'
+
 @authentication.route('/api/test_create_user/', methods=['POST'])
 def simple_create_user():
     """
@@ -142,10 +150,14 @@ def login():
 
     try:
         user = User.query.filter_by(email=email).first()
+        schema = User.UserSchema()
+        obj = schema.dump(user)
+        text = obj.data
         token = create_jwt(identity=email)
         return json.dumps({
                 'jwt': token,
-                'name': user.name
+                'name': user.name,
+                'user':text
                 })
     except Exception as e:
         return json.dumps({'msg': 'Invalid credentials.'})
