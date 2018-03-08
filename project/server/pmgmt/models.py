@@ -33,6 +33,14 @@ class Hotel(db.Model):
     address = Column(Text)
     phone = Column(String(20))
 
+    class HotelSchema(ma.ModelSchema):
+        class Meta:
+            fields = ('name', 'location')
+            def __init__(self):
+                model = self.Outer.Outer
+
+    hotel_schema = HotelSchema(many=True)
+
 class Room(db.Model):
     __tablename__ = 'room'
     # Here we define columns for the table address.

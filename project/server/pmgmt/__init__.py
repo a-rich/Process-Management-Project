@@ -20,6 +20,8 @@ ma = Marshmallow(app)
 whooshee = Whooshee(app)
 
 from pmgmt.views.authentication import authentication
+from pmgmt.views.search import search
 
 # Register views with Flask app
 app.register_blueprint(authentication)
+app.register_blueprint(search)

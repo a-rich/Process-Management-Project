@@ -9,14 +9,6 @@ from pmgmt.utils import send_email
 
 authentication = Blueprint('authentication', __name__)
 
-from pmgmt.models import Hotel
-@authentication.route('/api/whoosh/', methods=['GET'])
-def whoosher():
-    results = Hotel.query.filter_by(location='san francisco ca').all()
-    results2 = Hotel.query.whooshee_search('san francisco ca').all()
-    print('filter_by:\n{}\n\nwhoosh:\n{}'.format(results, results2))
-    return 'stuff'
-
 @authentication.route('/api/test_create_user/', methods=['POST'])
 def simple_create_user():
     """
