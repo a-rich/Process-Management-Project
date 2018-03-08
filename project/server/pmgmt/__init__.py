@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_jwt_simple import JWTManager
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 
 # Create and configure Flask app
 app = Flask(__name__)
@@ -15,7 +16,13 @@ jwt = JWTManager(app)
 db = SQLAlchemy()
 db.init_app(app)
 
+ma = Marshmallow(app)
+
 from pmgmt.views.authentication import authentication
+from pmgmt.views.reservations import reservation
+from pmgmt.views.mybookings import mybookings
 
 # Register views with Flask app
 app.register_blueprint(authentication)
+app.register_blueprint(reservation)
+app.register_blueprint(mybookings)

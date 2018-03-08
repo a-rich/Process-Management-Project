@@ -1,7 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, DateTime, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from pmgmt import db
+from pmgmt import db,ma 
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -34,11 +34,19 @@ class Hotel(db.Model):
     image_url = Column(Text)
     rating = Column(Float)
     coordinates = Column(String(250))
-    price = Column(Float)
+    price = Column(String(50))
     tiers = Column(String(250))
     location = Column(String(250))
     address = Column(Text)
     phone = Column(String(20))
+
+    """
+    class HotelSchema(ma.ModelSchema):
+        class Meta:
+            def __init(self):
+                model = self.Outer.Outer.Hotel
+    """
+
 
 class Room(db.Model):
     __tablename__ = 'room'
@@ -48,10 +56,8 @@ class Room(db.Model):
     hotel_id = Column(Integer, ForeignKey('hotel.id'))
     hotel = relationship(Hotel)
     price = Column(Float)
-    tiers = Column(String(250))
-    location = Column(String(250))
-    phone = Column(String(250))
-    status = Column(Integer)
+    tier = Column(String(250))
+    vacant = Column(SmallInteger, default=0)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
     
 
@@ -71,6 +77,9 @@ class Reservation(db.Model):
     room = relationship(Room)
     active = Column(SmallInteger)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
+    updated_date = Column(DateTime(timezone=True), server_default=func.now())
+    start_date = Column(DateTime)
+    end_date = Column(DateTime)
 
 class State(db.Model):
     __tablename__ = 'state'
