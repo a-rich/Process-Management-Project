@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import LikeHomeLogo from './assets/LikeHomeLogo.png';
 import Explore from './components/Explore';
 import './App.scss';
 
@@ -26,8 +25,8 @@ class App extends Component {
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">
-              <img src={LikeHomeLogo} className="LikeHomeLogo" alt="logo" href="#"/>
+              <a href="#" >
+                LIKEHOME
               </a>
             </Navbar.Brand>
             <Navbar.Toggle />
@@ -58,13 +57,14 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-        
-        <Route exact path="/" component={Explore}/>
-        <Route path="signup" component={SignUp}/>
-        <Route path="/reservations" component={Reservation}/>
-        <Route path="/favorites" component={Favorites}/>
-        <Route path="/rewards" component={Rewards}/>
-        <Route path="/account" component={Account}/>
+        <div className="routeOverlay">
+          <Route exact path="/" component={Explore}/>
+          <Route path="signup" component={SignUp}/>
+          <Route path="/reservations" component={Reservation}/>
+          <Route path="/favorites" component={Favorites}/>
+          <Route path="/rewards" component={Rewards}/>
+          <Route path="/account" component={Account}/>
+        </div>
       </div>
       </Router>
 

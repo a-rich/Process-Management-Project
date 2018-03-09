@@ -7,7 +7,7 @@ import MainBar from '../components/MainBar.js';
 class VideoPlayer extends Component {
   render() {
   return (
-<h1 class="aspect-ratio-box">
+<div class="aspect-ratio-box">
     <div class="flexbox-centering">
           <ReactPlayer
           className='react-player'
@@ -19,7 +19,7 @@ class VideoPlayer extends Component {
           muted='true'
         />
       </div>
-</h1>
+</div>
     )
   }
 };
