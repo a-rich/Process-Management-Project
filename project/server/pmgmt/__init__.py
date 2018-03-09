@@ -16,17 +16,16 @@ jwt = JWTManager(app)
 # Initialize database
 db = SQLAlchemy()
 db.init_app(app)
-
-# Initialize Marshmallow serialization object
 ma = Marshmallow(app)
-
-# Initialize Whooshee for full text search
 whooshee = Whooshee(app)
-whooshee.reindex()
 
 from pmgmt.views.authentication import authentication
+from pmgmt.views.reservations import reservation
+from pmgmt.views.mybookings import booking
 from pmgmt.views.search import search_blueprint
 
 # Register views with Flask app
 app.register_blueprint(authentication)
 app.register_blueprint(search_blueprint)
+app.register_blueprint(reservation)
+app.register_blueprint(booking)

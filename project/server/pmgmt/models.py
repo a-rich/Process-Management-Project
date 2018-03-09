@@ -1,8 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, DateTime, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from flask_sqlalchemy import SQLAlchemy
-from pmgmt import db, whooshee
+from pmgmt import db,ma, whooshee
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -12,8 +11,20 @@ class User(db.Model):
     name = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
     password = Column(String(250), nullable=False)
+    reward = Column(Integer)
 
-@whooshee.register_model('name', 'location')
+
+class Reward(db.Model):
+    __tablename__ = 'reward'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+    alter = Column(Integer)
+    reward = Column(Integer)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
+
+
+# @whooshee.register_model('name', 'location')
 class Hotel(db.Model):
     __tablename__ = 'hotel'
     __searchable__ = ['name', 'location']
@@ -25,17 +36,20 @@ class Hotel(db.Model):
     image_url = Column(Text)
     rating = Column(Float)
     coordinates = Column(String(250))
-    price = Column(Float)
+    price = Column(String(50))
     tiers = Column(String(250))
     location = Column(String(250))
     address = Column(Text)
     phone = Column(String(20))
 
+    # class HotelSchema(ma.ModelSchema):
+    #     class Meta:
+    #         # fields = ('name', 'location')
+    #         def __init__(self):
+    #             model = self.Outer.Outer
+    #
+    # hotel_schema = HotelSchema(many=True)
 
-
-# class HotelSchema(ma.ModelSchema):
-#     class Meta:
-#         model = Hotel
 
 class Room(db.Model):
     __tablename__ = 'room'
@@ -45,9 +59,10 @@ class Room(db.Model):
     hotel_id = Column(Integer, ForeignKey('hotel.id'))
     hotel = relationship(Hotel)
     price = Column(Float)
-    tiers = Column(String(250))
-    location = Column(String(250))
-    phone = Column(String(250))
+    tier = Column(String(250))
+    vacant = Column(SmallInteger, default=0)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
+
 
 class Tier(db.Model):
     __tablename__ = 'tier'
@@ -65,3 +80,18 @@ class Reservation(db.Model):
     room = relationship(Room)
     active = Column(SmallInteger)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
+    updated_date = Column(DateTime(timezone=True), server_default=func.now())
+    start_date = Column(DateTime)
+    end_date = Column(DateTime)
+
+class State(db.Model):
+    __tablename__ = 'state'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(50))
+
+class City(db.Model):
+    __tablename__ = 'city'
+    id = Column(Integer, primary_key=True)
+    state_id = Column(Integer, ForeignKey('state.id'))
+    state = relationship(State)
+    name = Column(String(50))

@@ -10,6 +10,6 @@ class DevelopmentConfig():
     EMAIL_AUTH = "gffk68TdPt0dttmu"
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../test.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    # WHOOSH_BASE = 'whoosh'
+    WHOOSHEE_DIR = 'whoosh_index'
     # WHOOSH_ANALYZER = StemmingAnalyzer()
-    WHOOSHEE_WRITER_TIMEOUT = 10
+    

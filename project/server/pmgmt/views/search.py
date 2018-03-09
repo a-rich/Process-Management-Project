@@ -1,16 +1,13 @@
 from flask import Blueprint, request, jsonify
-from pmgmt import ma
 from flask_marshmallow import Marshmallow
-from pmgmt.models import Hotel
+from pmgmt.models import Hotel, ma
 import itertools
-
-
-search_blueprint = Blueprint('search', __name__)
 
 class HotelSchema(ma.ModelSchema):
     class Meta:
         model = Hotel
 
+search_blueprint = Blueprint('search', __name__)
 
 locations = ['chicago il', 'san francisco ca', 'los angeles ca', 'san jose ca','washington dc', 'new york ny', 'miami fl', 'las vegas nv', 'austin tx']
 
@@ -18,26 +15,52 @@ searchable_locations = [place.rsplit(' ', 1) for place in locations]
 
 merged_locations = list(itertools.chain(*searchable_locations))
 
-states = ['illinois', 'california', 'district of columbia', 'new york', 'florida', 'texas', 'nevada']
+states = ['illinois', 'california', 'district of columbia', 'new york', 'florida', 'texas', 'nevada', 'washington dc']
 
 merged_locations += states
-
 
 @search_blueprint.route('/api/hotels/', methods=['POST'])
 def search():
     """
-    Search currently requires city or state to match a location in the database 
+    Search hotel database by city or state
     """
-    word = request.form['query']
+    # word = request.form['query']
+    req = request.get_json()
+    word = req['query']
+    sort = req['sort']
+
+    name_sort = sort['name']
+    price_sort = sort['price']
+    rating_sort = sort['rating']
+
+    # figure all sort metriccs
+    if price_sort:
+        price_order = 'price asc' if price_sort == 1 else 'price desc'
+    else:
+        price_order = None
+
+    if rating_sort:
+        rating_order = 'rating asc' if rating_sort == 1 else 'rating desc'
+    else:
+        price_order = None
+
+    if name_sort:
+        name_order = 'name asc' if name_sort == 1 else 'name desc'
+    else:
+        name_order = None
 
     if word not in merged_locations:
-        return 'Sorry, we do not currently have any hotels in that area.'
+        return 'Sorry, we do not currently have any hotels in that area. Check your spelling.'
     else:
+    # if word:
         try:
-            #print(word)
-            query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%")).all()
-            #print(query_result)
+            if price_sort and rating_sort and name_sort:
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
+                    .order_by(price_order+', '+rating_order+', '+name_order).all()
 
+            # if price_sort and not rating_sort:
+            #     query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
+            #         .order_by(price_sort).order_by(rating_sort).all()
             # serializes search results
             search_schema = HotelSchema(many=True)
             output = search_schema.dump(query_result)
@@ -46,6 +69,11 @@ def search():
             return jsonify(output.data)
         except:
             return 'failed query'
+
+# @search_blueprint.route('api/hotels/', methods='POST')
+# def search_filters():
+
+
 
     # try:
     #     results = Hotel.query.all()
