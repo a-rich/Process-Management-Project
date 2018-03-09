@@ -1,0 +1,149 @@
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.aspect-ratio-box {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  background: black;
+  position: relative;
+}
+
+
+.flexbox-centering {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainbar
+{
+  width:80%;
+  height: 40px;
+  align-self: center;
+}
+
+.form-row
+{
+  display: flex;
+  align-self: center;
+}
+
+.inputs-row {
+  display: flex;
+  flex-grow: 1;
+  background:transparent;
+  align-self: center;
+}
+
+.location-input {
+width: 50%;
+height: 40px;
+position: relative;
+background-color: #222;
+z-index: 0;
+display: flex;
+align-items: center;
+flex-grow: 2;
+border: solid;
+}
+
+.input-text{
+font-size: 12px;
+font-weight: normal;
+line-height: 15px;
+background-color:  #222;
+}
+
+.date-input {
+  width: 25%;
+  height: 40px;
+  position: relative;
+  background-color:  #222;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+.date-text{
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 30px;
+  background-color:  #222;
+  color:gray;
+  border: #222;
+  }
+
+.icon-size {
+  height: 40px;
+  width: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.price-input {
+  width: 15%;
+  height: 40px;
+  position: relative;
+  background-color:  #222;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+  .price-text{
+    width: 40%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 30px;
+    background-color:  #222;
+    color:gray;
+    border:  #222;
+    }
+
+.room-input {
+  width: 10%;
+  height: 40px;
+  position: relative;
+  background-color: #222;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  border: solid;
+  }
+
+  .room-text{
+    width: 70%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 30px;
+    background-color: #222;
+    color:gray;
+    border: #222;
+    }
+
+    .search {
+      background: transparent;
+      height: 40px;
+      width: fit-content;
+      padding-right: 5px;
+      padding-left: 5px;
+      border: none;
+    }
+
+    .search-icon {
+      height: 35px;
+      width: 35px;
+      padding-right: 5px;
+      color: #222;
+
+    }

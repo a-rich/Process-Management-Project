@@ -16,6 +16,7 @@ import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples'
 
+
 class App extends Component {
   render() {
     return (
@@ -57,7 +58,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
-
+        
         <Route exact path="/" component={Explore}/>
         <Route path="signup" component={SignUp}/>
         <Route path="/reservations" component={Reservation}/>
