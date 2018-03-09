@@ -7,7 +7,7 @@ class HotelSchema(ma.ModelSchema):
     class Meta:
         model = Hotel
 
-search_blueprint = Blueprint('search', __name__)
+search = Blueprint('search', __name__)
 
 locations = ['chicago il', 'san francisco ca', 'los angeles ca', 'san jose ca','washington dc', 'new york ny', 'miami fl', 'las vegas nv', 'austin tx']
 
@@ -19,8 +19,8 @@ states = ['illinois', 'california', 'district of columbia', 'new york', 'florida
 
 merged_locations += states
 
-@search_blueprint.route('/api/hotels/', methods=['POST'])
-def search():
+@search.route('/api/hotels/', methods=['POST'])
+def hotel_search():
     """
     Search hotel database by city or state
     """
@@ -70,31 +70,23 @@ def search():
         except:
             return 'failed query'
 
-# @search_blueprint.route('api/hotels/', methods='POST')
-# def search_filters():
+@search.route('/api/search_index/', methods=['GET'])
+def search_index():
 
+    objects = Hotel.query.with_entities(
+            Hotel.name, Hotel.city, Hotel.state).all()
 
+    names, cities, states = set(), set(), set()
 
-    # try:
-    #     results = Hotel.query.all()
-    #
-    #     output = []
-    #
-    #     for hotel in results:
-    #         hotel_data = {}
-    #         hotel_data['id'] = hotel.id
-    #         hotel_data['hid'] = hotel.hid
-    #         hotel_data['name'] = hotel.name
-    #         hotel_data['image_url'] = hotel.image_url
-    #         hotel_data['rating'] = hotel.rating
-    #         hotel_data['coordinates'] = hotel.coordinates
-    #         hotel_data['price'] = hotel.price
-    #         hotel_data['tiers'] = hotel.tiers
-    #         hotel_data['location'] = hotel.location
-    #         hotel_data['address'] = hotel.address
-    #         hotel_data['phone'] = hotel.phone
-    #         output.append(hotel_data)
-    #     return jsonify(output)
-    #     #print(results)
-    # except:
-    #     return 'this is some bullshit'
+    for o in objects:
+        names.add(o[0])
+        cities.add(o[1])
+        states.add(o[2])
+
+    data = {
+            'names': list(names),
+            'cities': list(cities),
+            'states': list(states)
+            }
+
+    return jsonify(data)

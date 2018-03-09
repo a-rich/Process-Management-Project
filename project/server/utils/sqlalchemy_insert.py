@@ -9,7 +9,7 @@ db.create_all(app=app)
 
 import json
 with open('hotel_data.json') as f:
-	data = json.load(f)
+    data = json.load(f)
 
 #engine = create_engine('mysql+mysqldb://root:root@localhost:3306/test')
 engine = create_engine('sqlite:///../test.db')
@@ -39,38 +39,37 @@ tier = Tier(tier="Suite");session.add(tier)
 session.commit()
 
 for location in data:
-	print('location:', location)
-	for hotel in data[location]:
-		hid = hotel['id']
-		phone = hotel['display_phone']
-		name = hotel['name']
-		#print(name)
-		image_url = hotel['image_url']
-		coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
-		rating = str(hotel['rating'])
-		price = random.choice(hotel_prices)
-		#print(price)
-		address = ", ".join([work for work in hotel['location']['display_address']])
-		city_state = location.rsplit(' ', 1)
-		final_location = ''
-		for _ in states:
-			state = city_state[1]
-			if state in states:
-				full_state = states[state]
-				final_location = (city_state[0] + ' ' + full_state)
-		h = Hotel(hid=hid, rating=rating, phone=phone, name=name, image_url=image_url, coordinates=coordinates, location=final_location, address=address, price=price)
-		print(final_location)
-		session.add(h)
-		session.flush()
-		#print(h.id)
+    print('location:', location)
+    for hotel in data[location]:
+        hid = hotel['id']
+        phone = hotel['display_phone']
+        name = hotel['name']
+        image_url = hotel['image_url']
+        coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
+        rating = str(hotel['rating'])
+        price = random.choice(hotel_prices)
+        address = ", ".join([work for work in hotel['location']['display_address']])
+        city_state = location.rsplit(' ', 1)
+        city = city_state[0]
+        state = city_state[1]
+        if state in states:
+            state = states[state]
 
-		for i in range(1, len(price)+1):
-			#print(len(price))
-			session.add_all([
-				Room(hotel_id=h.id, tier=i)
-				for j in range(1, numbersOfRoomForEachTier+1)
-			])
-			session.flush()
+        h = Hotel(hid=hid, rating=rating, phone=phone, name=name,
+                image_url=image_url, coordinates=coordinates,
+                city=city, state=state, address=address, price=price)
+
+        session.add(h)
+        session.flush()
+        #print(h.id)
+
+        for i in range(1, len(price)+1):
+            #print(len(price))
+            session.add_all([
+                Room(hotel_id=h.id, tier=i)
+                for j in range(1, numbersOfRoomForEachTier+1)
+            ])
+            session.flush()
 
 session.commit()
 

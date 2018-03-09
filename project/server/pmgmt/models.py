@@ -38,7 +38,8 @@ class Hotel(db.Model):
     coordinates = Column(String(250))
     price = Column(String(50))
     tiers = Column(String(250))
-    location = Column(String(250))
+    city = Column(String(250))
+    state = Column(String(250))
     address = Column(Text)
     phone = Column(String(20))
 
