@@ -11,7 +11,7 @@ class VideoPlayer extends Component {
     <div class="flexbox-centering">
           <ReactPlayer
           className='react-player'
-          url='https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/917/5/129589425/375054934.mp4?token=1520643030-0xe2131c5be2ea4ebd18509256a50e32cfdc425c68'
+          url='https://player.vimeo.com/external/129589425.hd.mp4?s=31aae396844ad80fad322d9ccc29e9bd&profile_id=113'
           height='100%'
           width='auto'
           playing='true'
