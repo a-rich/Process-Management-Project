@@ -52,7 +52,7 @@ class MainBar extends Component {
       <div class = "inputs-row">
         <label class = "location-input">
         <MdLocationOn class = "icon-size" />
-        <Autocomplete class = "input-text" options = {locations} placeholder = "Where To?" ref="location" required/>
+        <Autocomplete options = {locations} placeholder = "Where To?" ref="location" required/>
         </label>
 
         <label class = "date-input">

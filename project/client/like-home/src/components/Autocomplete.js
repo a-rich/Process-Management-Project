@@ -1,6 +1,6 @@
 import React from 'react'
 import { Component, PropTypes } from 'react';
-
+import '../stylesheets/Home.scss'
 
 class Autocomplete extends Component {
 
@@ -15,7 +15,8 @@ class Autocomplete extends Component {
 	render() {
 		return (
 			<div>
-			<input ref = "inputLocation"
+			<input class = "input-text"
+				   ref = "inputLocation"
 			       type="text" 
 			       list="locations" />
 			<datalist id="locations">
@@ -24,7 +25,6 @@ class Autocomplete extends Component {
 					<option key= {i}>{opt}</option>)}
 			</datalist>
 			</div>
-
 			)
 	}
 }

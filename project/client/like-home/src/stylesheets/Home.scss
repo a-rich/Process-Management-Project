@@ -49,6 +49,7 @@
   textarea:focus, input:focus, input, select, button{
     background-color: transparent;
     outline: none;
+    position: relative;
   }
   }
 
@@ -74,8 +75,9 @@ border: solid;
 .input-text{
 font-size: 12px;
 font-weight: normal;
-line-height: 15px;
-background-color:  red;
+position: relative;
+padding-right: 0;
+
 }
 
 .date-input {
