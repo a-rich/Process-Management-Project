@@ -1,0 +1,21 @@
+from flask import Flask
+from flask_cors import CORS
+from flask_jwt_simple import JWTManager
+from flask_sqlalchemy import SQLAlchemy
+
+# Create and configure Flask app
+app = Flask(__name__)
+app.config.from_object('pmgmt.app_config.DevelopmentConfig')
+
+# Configure cross-origin resource sharing
+CORS(app, resources=r"/api/*")
+jwt = JWTManager(app)
+
+# Initialize database
+db = SQLAlchemy()
+db.init_app(app)
+
+from pmgmt.views.authentication import authentication
+
+# Register views with Flask app
+app.register_blueprint(authentication)
