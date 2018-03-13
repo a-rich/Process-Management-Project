@@ -8,7 +8,19 @@ import Bed from 'react-icons/lib/fa/bed'
 import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
 import VideoPlayer from '../components/VideoPlayer';
+import Autocomplete from '../components/Autocomplete'
 
+// to be read from backend
+const locations = [
+"chicago",
+"san francisco",
+"los angeles",
+"san jose",
+"washington",
+"new york",
+"miami",
+"las vegas"
+]
 
 class MainBar extends Component {
 
@@ -40,7 +52,7 @@ class MainBar extends Component {
       <div class = "inputs-row">
         <label class = "location-input">
         <MdLocationOn class = "icon-size" />
-        <input id = "location" type = "text" class = "input-text" autoComplete="on" placeholder = "Where To?" required ref="location"/>
+        <Autocomplete class = "input-text" options = {locations} placeholder = "Where To?" ref="location" required/>
         </label>
 
         <label class = "date-input">
@@ -68,7 +80,7 @@ class MainBar extends Component {
         <label>
          <button class = "search"> <Search class = "search-icon"/> </button>
         </label>
-        
+
       </div>
     </div>
 </form>
