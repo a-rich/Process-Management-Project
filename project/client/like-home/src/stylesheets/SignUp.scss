@@ -9,11 +9,12 @@ input[type=word], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: $color_whiteSmoke;
+    background: rgba(0, 0, 0, 0.25);
+    color: $secondaryColor;
 }
 
 .ReactModal__Content {
-    color: $black_30;
+    color: $secondaryColor;
     position: absolute;
     //height: 100%;
     width: 33.333%;
@@ -27,7 +28,7 @@ input[type=word], input[type=password] {
     // left: 50%;
     // right: 70%;
     // border: 1px solid rgb(204, 204, 204);
-    // background: rgb(255, 255, 255);
+     background: rgba(0, 0, 0, .75) !important;
     // overflow: auto;
     // border-radius: 4px;
     // outline: none;
@@ -36,18 +37,23 @@ input[type=word], input[type=password] {
     // transform: translate(-50%, -50%);
 
     h2 {
-        color: $secondaryColor !important;
+        color: $primaryColor !important;
+    }
+
+    a {
+        color: $primaryColor;
+        text-decoration: none !important;
     }
 }
 
 /* label color */
 label {
-    color: $primaryColor;
+    color: $secondaryColor;
 }
 
 /* Add a background color when the inputs get focus */
 input[type=word]:focus, input[type=password]:focus {
-    box-shadow: 0 0 5px $secondaryColor; 
+    box-shadow: 0 0 5px $primaryColor; 
     -webkit-transition: box-shadow 2s ease-out;
     -moz-transition: box-shadow 2s ease-out;
     -o-transition: box-shadow 2s ease-out;
@@ -57,9 +63,9 @@ input[type=word]:focus, input[type=password]:focus {
 
 /* submit button style */
 .button2 {
-    background-color: $secondaryColor; /* Green */
+    background-color: $primaryColor; /* Green */
     border: none;
-    color: white;
+    color: $secondaryColor;
     width: 100%;
     height: 80%;
     text-align: center;
@@ -73,15 +79,15 @@ input[type=word]:focus, input[type=password]:focus {
 }
 /* submit button style */
 .button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid $secondaryColor;
+    background-color: $primaryColor; 
+    color: $secondaryColor; 
+    border: 2px solid inherit;
 }
 
 /* submit button style */
 .button2:hover {
     background-color: $secondaryColor;
-    color: white;
+    color: $primaryColor;
 }
 
 
@@ -92,7 +98,7 @@ input[type=word]:focus, input[type=password]:focus {
 
 /* Style the horizontal ruler */
 hr {
-    border-top: 1px solid $primaryColor !important;
+    border-top: 1px solid $secondaryColor !important;
     margin-bottom: 25px;
 }
  
@@ -104,7 +110,7 @@ hr {
   
   /* Transition to a bigger shadow on hover */
   .make-it-slow:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
   }
   
   /* The fast way */

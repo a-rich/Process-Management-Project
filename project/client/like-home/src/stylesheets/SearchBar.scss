@@ -18,7 +18,7 @@ input[type="text"] {
     font-weight: 100;
     border: none;
     outline: none;
-    color: white;
+    color: $secondaryColor;
     padding: 3px;
     padding-right: 60px;
     width: 0px;
@@ -32,20 +32,20 @@ input[type="text"] {
 }
 
 input[type="text"]:focus:hover {
-    border-bottom: 1px solid $color_whiteSmoke;;
+    border-bottom: 1px solid $secondaryColor;
 }
 
 input[type="text"]:focus {
     width: 500px;
     z-index: 1;
-    border-bottom: 1px solid $color_whiteSmoke;;
+    border-bottom: 1px solid $secondaryColor;
     cursor: text;
 }
 input[type="submit"] {
     height: 32px;
     width: 32px;
     display: inline-block;
-    color: $color_whiteSmoke;
+    color: $secondaryColor;
     float: right;
     background: url($icon_Search_White) center center no-repeat;
     text-indent: -10000px;
