@@ -188,3 +188,115 @@ padding-right: 0;
       color: black;
     }
 
+
+ .DateRangePickerInput {
+ background-color: transparent !important;
+ color: white !important;
+
+ :placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $secondaryColor;
+      opacity: 1; /* Firefox */
+  }
+
+
+ }
+
+ .DateInput {
+ color: white !important;
+ background-color: transparent !important;
+ transition: none;
+ type:text;
+ }
+
+.DateRangePickerInput_arrow {
+  color: white !important;
+}
+
+.DateRangePicker_picker {
+  background-color: transparent !important;
+}
+
+.DayPicker{
+background-color: $color_whiteSmoke;
+background-color: transparent !important;
+}
+
+
+.DayPicker_transitionContainer {
+  background-color: transparent !important;
+  border: solid;
+  border-color: $color_whiteSmoke !important;
+  border-radius: 8px;
+  
+}
+
+.DayPicker_weekHeader_ul {
+  color: $color_whiteSmoke !important;
+}
+
+.DayPickerNavigation_button {
+   background-color: transparent !important;
+    border: solid;
+    color: $color_whiteSmoke !important;
+}
+
+.CalendarMonth {
+  background-color: transparent !important;
+
+}
+
+
+.CalendarMonthGrid {
+  background-color: transparent !important;
+}
+
+.CalendarMonth_caption {
+  background-color: transparent !important;
+  color: $primaryColor !important;
+}
+
+.CalendarMonth_table {
+  color: $color_whiteSmoke !important;
+}
+
+.CalendarDay {
+  background-color: transparent !important;
+  border: solid;
+  color: $color_whiteSmoke !important;
+  
+}
+
+.CalendarDay__blocked_out_of_range {
+  color: gray !important;
+}
+
+.CalendarDay__selected {
+  background-color: $primaryColor !important;
+
+}
+
+.CalendarDay__selected_span {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected_span:hover {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected_span:active {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected:hover {
+  background-color: $primaryColor !important;
+}
+
+.CalendarDay__selected:active {
+  background-color: $primaryColor !important;
+}

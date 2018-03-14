@@ -55,6 +55,7 @@ render() {
 const { focusedInput, startDate, endDate } = this.state;
 
 	return (
+
   <DateRangePicker daySize={26} autoFocus
   startDate={this.state.startDate} 
   startDateId="FromDate" 
@@ -74,12 +75,14 @@ const { focusedInput, startDate, endDate } = this.state;
   orientation="horizontal" 
   anchorDirection="left" 
   displayFormat="MMM D"
-  monthFormat = "MMMM 'YY"
-  verticalSpacing = {50}
+  monthFormat = "MMMM  'YY"
+  verticalSpacing = {80}
   navPrev ="<" 
   navNext =">"
   small ="true"
   withPortal="true"
+  keepOpenOnDateSelect="true"
+
 />
 )
 }
