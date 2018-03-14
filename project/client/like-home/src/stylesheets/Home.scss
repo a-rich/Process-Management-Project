@@ -1,3 +1,5 @@
+@import '../variables/colors.scss';
+
 .react-player {
   position: absolute;
   top: 0;
@@ -42,6 +44,7 @@
   label {
     height: 80px;
     background-color: rgba(0, 0, 0, 0.25);
+    border-color: $secondaryColor;
     border-radius: 8px;
     margin-left: 4px;
   }
@@ -77,7 +80,6 @@ font-size: 12px;
 font-weight: normal;
 position: relative;
 padding-right: 0;
-
 }
 
 .date-input {
@@ -95,7 +97,7 @@ padding-right: 0;
   font-size: 12px;
   font-weight: normal;
   line-height: 30px;
-  color:white;
+  color: $secondaryColor;
   border: transparent;
   background: transparent;
   }
@@ -118,16 +120,16 @@ padding-right: 0;
   border: solid;
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: white;
+      color: $secondaryColor;
       opacity: 1; /* Firefox */
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: white;
+      color: $secondaryColor;
   }
 
   ::-ms-input-placeholder { /* Microsoft Edge */
-      color: white;
+      color: $secondaryColor;
   }
 
   }
@@ -137,7 +139,7 @@ padding-right: 0;
     font-size: 12px;
     font-weight: normal;
     line-height: 30px;
-    color:white;
+    color: $secondaryColor;
     border:  transparent;
     }
 
@@ -157,7 +159,7 @@ padding-right: 0;
     font-size: 12px;
     font-weight: normal;
     line-height: 30px;
-    color:white;
+    color: $secondaryColor;
     border: transparent;
     }
 
@@ -185,5 +187,8 @@ padding-right: 0;
       background-color: $color_whiteSmoke;
       color: black;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Imaan-new

@@ -21,7 +21,7 @@ class Autocomplete extends Component {
 			       list="locations" />
 			<datalist id="locations">
 				{this.props.options.map(
-					(opt,i) => 
+					(opt, i) => 
 					<option key= {i}>{opt}</option>)}
 			</datalist>
 			</div>
