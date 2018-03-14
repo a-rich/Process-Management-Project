@@ -209,7 +209,9 @@ padding-right: 0;
  }
 
 .DateRangePickerInput_arrow {
-  color: white !important;
+  svg {
+  fill: white !important;
+  }
 }
 
 .DateRangePicker_picker {

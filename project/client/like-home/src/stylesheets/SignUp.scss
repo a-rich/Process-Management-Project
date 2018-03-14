@@ -9,8 +9,8 @@ input[type=word], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: rgba(0, 0, 0, 0.5);
-    color: $secondaryColor;
+    background: $color_whiteSmoke;
+    color: black;
 }
 
 .ReactModal__Content {
@@ -44,6 +44,10 @@ input[type=word], input[type=password] {
         color: $primaryColor;
         text-decoration: none !important;
     }
+}
+
+.ReactModal__Overlay, .ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* label color */
