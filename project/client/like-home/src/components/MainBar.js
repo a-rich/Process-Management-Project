@@ -9,6 +9,7 @@ import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
 import VideoPlayer from '../components/VideoPlayer';
 import Autocomplete from '../components/Autocomplete'
+import DateRange from '../components/DateRange'
 
 // to be read from backend
 const locations = [
@@ -57,8 +58,7 @@ class MainBar extends Component {
 
         <label class = "date-input">
         <Calendar class = "icon-size"/>
-        <input id = "from-date" type = "date" class = "date-text" placeholderText = "From?" ref="fromDate" required />
-        <input id = "to-date" type = "date" class = "date-text" placeholderText = "To?" ref="toDate" required />
+        <DateRange/>
         </label>
 
         <label class = "price-input">
