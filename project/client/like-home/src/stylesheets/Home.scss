@@ -43,7 +43,7 @@
 
   label {
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
     border-color: $secondaryColor;
     border-radius: 8px;
     margin-left: 4px;
@@ -221,13 +221,16 @@ background-color: $color_whiteSmoke;
 background-color: transparent !important;
 }
 
+.DateRangePicker_picker__portal {
+  position: absolute !important;
+  margin-top: 98px;
+}
 
 .DayPicker_transitionContainer {
-  background-color: transparent !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
   border: solid;
   border-color: $color_whiteSmoke !important;
   border-radius: 8px;
-  
 }
 
 .DayPicker_weekHeader_ul {
