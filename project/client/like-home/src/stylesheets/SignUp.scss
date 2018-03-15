@@ -83,12 +83,6 @@ input[type=word]:focus, input[type=password]:focus {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-/* submit button style */
-.button2 {
-    background-color: $primaryColor;
-    color: $secondaryColor;
-    border: 2px solid inherit;
-}
 
 /* submit button style */
 .button2:hover {
