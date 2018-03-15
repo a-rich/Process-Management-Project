@@ -75,6 +75,10 @@ flex-grow: 2;
 border: solid;
 }
 
+select, option {
+ background-color: rgba(0, 0, 0, 1);
+}
+
 .input-text{
 font-size: 12px;
 font-weight: normal;
@@ -183,10 +187,7 @@ padding-right: 0;
 
     }
 
-    option {
-      background-color: $color_whiteSmoke;
-      color: black;
-    }
+ 
 
 
  .DateRangePickerInput {
