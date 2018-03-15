@@ -15,7 +15,6 @@ jwt = JWTManager(app)
 # Initialize database
 db = SQLAlchemy()
 db.init_app(app)
-
 ma = Marshmallow(app)
 
 from pmgmt.views.authentication import authentication
