@@ -101,31 +101,3 @@ hr {
     border-top: 1px solid $secondaryColor !important;
     margin-bottom: 25px;
 }
-
-/* The slow way */
-.make-it-slow {
-    box-shadow: 0 1px 2px $gray;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-  /* Transition to a bigger shadow on hover */
-  .make-it-slow:hover {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
-  }
-
-  /* The fast way */
-  .make-it-fast {
-    box-shadow: 0 1px 2px $gray;
-  }
-
-  /* Pre-render the bigger shadow, but hide it */
-  .make-it-fast::after {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  /* Transition to showing the bigger shadow on hover */
-  .make-it-fast:hover::after {
-    opacity: 1;
-  }
