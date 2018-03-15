@@ -69,31 +69,31 @@ def hotel_search():
             '''
             query_result = ''
             if price_sort and rating_sort and name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(price_order+', '+rating_order+', '+name_order).all()
 
             if price_sort and rating_sort and not name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(price_order+', '+rating_order).all()
 
             if price_sort and not rating_sort and name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(price_order+', '+name_order).all()
 
             if price_sort and not rating_sort and not name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(price_order).all()
 
             if not price_sort and rating_sort and name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(rating_order+', '+name_order).all()
 
             if not price_sort and rating_sort and not name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .order_by(rating_order).all()
 
             if not price_sort and not rating_sort and not name_sort:
-                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
                     .all()
 
             search_schema = HotelSchema(many=True)

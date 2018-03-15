@@ -21,11 +21,11 @@ whooshee = Whooshee(app)
 
 from pmgmt.views.authentication import authentication
 from pmgmt.views.reservations import reservation
-from pmgmt.views.mybookings import booking
+from pmgmt.views.mybookings import mybookings
 from pmgmt.views.search import search
 
 # Register views with Flask app
 app.register_blueprint(authentication)
 app.register_blueprint(search)
 app.register_blueprint(reservation)
-app.register_blueprint(booking)
+app.register_blueprint(mybookings)

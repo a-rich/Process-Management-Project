@@ -9,7 +9,5 @@ class DevelopmentConfig():
     JWT_EXPIRES = timedelta(days=365)
     EMAIL_AUTH = "gffk68TdPt0dttmu"
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../test.db'
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
-    WHOOSHEE_DIR = 'whoosh_index'
-    # WHOOSH_ANALYZER = StemmingAnalyzer()
-    
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = True

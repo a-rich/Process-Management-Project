@@ -1,7 +1,7 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, DateTime, Text
+from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, Date, DateTime, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from pmgmt import db,ma, whooshee
+from pmgmt import db, ma
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -14,17 +14,6 @@ class User(db.Model):
     reward = Column(Integer)
 
 
-class Reward(db.Model):
-    __tablename__ = 'reward'
-    id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User)
-    alter = Column(Integer)
-    reward = Column(Integer)
-    created_date = Column(DateTime(timezone=True), server_default=func.now())
-
-
-# @whooshee.register_model('name', 'location')
 class Hotel(db.Model):
     __tablename__ = 'hotel'
     __searchable__ = ['name', 'location']
@@ -38,18 +27,11 @@ class Hotel(db.Model):
     coordinates = Column(String(250))
     price = Column(String(50))
     tiers = Column(String(250))
+    location = Column(String(250))
     city = Column(String(250))
     state = Column(String(250))
     address = Column(Text)
     phone = Column(String(20))
-
-    # class HotelSchema(ma.ModelSchema):
-    #     class Meta:
-    #         # fields = ('name', 'location')
-    #         def __init__(self):
-    #             model = self.Outer.Outer
-    #
-    # hotel_schema = HotelSchema(many=True)
 
 
 class Room(db.Model):
@@ -70,6 +52,7 @@ class Tier(db.Model):
     id = Column(Integer, primary_key=True)
     tier = Column(String(250))
 
+
 class Reservation(db.Model):
     __tablename__ = 'reservation'
     id = Column(Integer, primary_key=True)
@@ -82,8 +65,29 @@ class Reservation(db.Model):
     active = Column(SmallInteger)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
     updated_date = Column(DateTime(timezone=True), server_default=func.now())
-    start_date = Column(DateTime)
-    end_date = Column(DateTime)
+    start_date = Column(Date)
+    end_date = Column(Date)
+
+"""
+    class ReservationSchema(ma.ModelSchema):
+        class Meta:
+            def __init__(self):
+                model = self.Outer.Outer
+
+    reservation_schema = ReservationSchema(many=True)
+"""
+
+class Reward(db.Model):
+    __tablename__ = 'reward'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+    reservation_id = Column(Integer, ForeignKey('reservation.id'))
+    reservation = relationship(Reservation)
+    alter = Column(Integer)
+    reward = Column(Integer)
+    active = Column(SmallInteger)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
 
 class State(db.Model):
     __tablename__ = 'state'

@@ -25,8 +25,7 @@ DBSession = sessionmaker(bind=engine, autocommit=False)
 session = DBSession()
 
 hotel_prices = ["$", "$$", "$$$", "$$$$", "$$$$$"]
-states = {'ca': 'california', 'nv': 'nevada', 'il': 'illinois', 'ny':'new york', 'fl': 'florida', 'tx': 'texas', 'dc': 'washington dc'}
-
+states = {"ca": "California", "nv": "Nevada", "il": "Illinois", 'ny': 'New York', 'fl': 'Florida', 'tx': 'Texas', 'dc': 'Washington DC'}
 
 numbersOfRoomForEachTier = 3
 #print(numbersOfRoomForEachTier)
@@ -39,36 +38,38 @@ tier = Tier(tier="Suite");session.add(tier)
 session.commit()
 
 for location in data:
-    print('location:', location)
-    for hotel in data[location]:
-        hid = hotel['id']
-        phone = hotel['display_phone']
-        name = hotel['name']
-        image_url = hotel['image_url']
-        coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
-        rating = str(hotel['rating'])
-        price = random.choice(hotel_prices)
-        address = ", ".join([work for work in hotel['location']['display_address']])
-        city_state = location.rsplit(' ', 1)
-        city = city_state[0]
-        state = city_state[1]
-        if state in states:
-            state = states[state]
-        h = Hotel(hid=hid, rating=rating, phone=phone, name=name,
-                image_url=image_url, coordinates=coordinates,
-                city=city, state=state, address=address, price=price)
+	for hotel in data[location]:
+		hid = hotel['id']
+		phone = hotel['display_phone']
+		name = hotel['name']
+		#print(name)
+		image_url = hotel['image_url']
+		coordinates = str(hotel['coordinates']['latitude'])+', '+str(hotel['coordinates']['longitude'])
+		rating = hotel['rating']
+		price = random.choice(hotel_prices)
+		#print(price)
+		address = ", ".join([work for work in hotel['location']['display_address']])
+		city_state = location.rsplit(' ', 1)
+		city = city_state[0]
+		for _ in states:
+			state = city_state[1]
+			if state in states:
+				full_state = states[state]
+				state = full_state
+				final_location = (city_state[0] + " " + full_state)
+		print(final_location)
+		h = Hotel(hid=hid, phone=phone, name=name, image_url=image_url, coordinates=coordinates, location=final_location, address=address, city=city, state=state, price=price, rating=rating)
+		session.add(h)
+		session.flush()
+		#print(h.id)
 
-        session.add(h)
-        session.flush()
-        #print(h.id)
-
-        for i in range(1, len(price)+1):
-            #print(len(price))
-            session.add_all([
-                Room(hotel_id=h.id, tier=i)
-                for j in range(1, numbersOfRoomForEachTier+1)
-            ])
-            session.flush()
+		for i in range(1, len(price)+1):
+			#print(len(price))
+			session.add_all([
+				Room(hotel_id=h.id, tier=i, price=float("{0:.2f}".format(random.uniform(100, 500))))
+				for j in range(1, numbersOfRoomForEachTier+1)
+			])
+			session.flush()
 
 session.commit()
 
