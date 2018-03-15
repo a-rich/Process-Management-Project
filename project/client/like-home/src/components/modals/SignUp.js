@@ -30,12 +30,12 @@ class SignUp extends Component {
       openModal() {
         this.setState({modalIsOpen: true});
       }
-    
+
       afterOpenModal() {
         // references are now sync'd and can be accessed.
         this.subtitle.style.color = '#00f';
       }
-    
+
       closeModal() {
         this.setState({modalIsOpen: false});
       }
@@ -45,7 +45,7 @@ class SignUp extends Component {
             <div>
 
             <a onClick={this.openModal}>Sign Up</a>
-           
+
             <form>
               <Modal
               isOpen={this.state.modalIsOpen}
@@ -62,8 +62,12 @@ class SignUp extends Component {
                   <hr/>
                 </div>
                 <div className="col-4">
+                  <label for="Name"><b>Name</b></label>
+                  <input class="make-it-slow" type="word" placeholder="Enter Name" name="Name" required/>
+                </div>
+                <div className="col-4">
                   <label for="email"><b>Email Address</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/> 
+                  <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/>
                 </div>
                 <div className="col-4">
                   <label for="psw"><b>Password</b></label>
@@ -74,21 +78,13 @@ class SignUp extends Component {
                   <input class="make-it-slow" type="password" placeholder="Confirm Password" name="psw-repeat" required/>
                 </div>
                 <div className="col-4">
-                  <label for="firstName"><b>First Name</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter First Name" name="firstName" required/>
-                </div>
-                <div className="col-4">
-                  <label for="lastName"><b>Last Name</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Last Name" name="lastName" required/>
-                </div>
-                <div className="col-4">
                   <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
                   <button type="submit" class="button2" onClick={this.createUser}>Sign Up</button>
                   <p>Already have an account? <a href="#" >Sign in</a>.</p>
                 </div>
-              </div> 
+              </div>
            </Modal>
-         </form>  
+         </form>
 
 
           </div>
