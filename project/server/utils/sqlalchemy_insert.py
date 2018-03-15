@@ -54,7 +54,6 @@ for location in data:
         state = city_state[1]
         if state in states:
             state = states[state]
-
         h = Hotel(hid=hid, rating=rating, phone=phone, name=name,
                 image_url=image_url, coordinates=coordinates,
                 city=city, state=state, address=address, price=price)

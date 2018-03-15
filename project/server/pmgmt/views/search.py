@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_marshmallow import Marshmallow
-from pmgmt.models import Hotel, ma
+from pmgmt.models import Hotel
+from pmgmt import ma
 import itertools
 
 class HotelSchema(ma.ModelSchema):
@@ -33,18 +34,20 @@ def hotel_search():
     price_sort = sort['price']
     rating_sort = sort['rating']
 
+    accepted_value = [1,2]
+
     # figure all sort metriccs
-    if price_sort:
+    if price_sort in accepted_value:
         price_order = 'price asc' if price_sort == 1 else 'price desc'
     else:
         price_order = None
 
-    if rating_sort:
+    if rating_sort in accepted_value:
         rating_order = 'rating asc' if rating_sort == 1 else 'rating desc'
     else:
         price_order = None
 
-    if name_sort:
+    if name_sort in accepted_value:
         name_order = 'name asc' if name_sort == 1 else 'name desc'
     else:
         name_order = None
@@ -54,20 +57,52 @@ def hotel_search():
     else:
     # if word:
         try:
+            '''
+            1 1 1
+            1 1 0
+            1 0 1
+            1 0 0
+            0 1 1
+            0 0 1
+            0 1 0
+            0 0 0
+            '''
+            query_result = ''
             if price_sort and rating_sort and name_sort:
-                query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
                     .order_by(price_order+', '+rating_order+', '+name_order).all()
 
-            # if price_sort and not rating_sort:
-            #     query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\
-            #         .order_by(price_sort).order_by(rating_sort).all()
-            # serializes search results
+            if price_sort and rating_sort and not name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .order_by(price_order+', '+rating_order).all()
+
+            if price_sort and not rating_sort and name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .order_by(price_order+', '+name_order).all()
+
+            if price_sort and not rating_sort and not name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .order_by(price_order).all()
+
+            if not price_sort and rating_sort and name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .order_by(rating_order+', '+name_order).all()
+
+            if not price_sort and rating_sort and not name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .order_by(rating_order).all()
+
+            if not price_sort and not rating_sort and not name_sort:
+                query_result = Hotel.query.filter(Hotel.state.like("%"+word+"%"))\
+                    .all()
+
             search_schema = HotelSchema(many=True)
             output = search_schema.dump(query_result)
 
             # return json representation of search results
             return jsonify(output.data)
-        except:
+        except Exception as e:
+            print(e)
             return 'failed query'
 
 @search.route('/api/search_index/', methods=['GET'])
