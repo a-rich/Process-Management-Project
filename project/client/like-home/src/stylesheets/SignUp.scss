@@ -57,7 +57,7 @@ label {
 
 /* Add a background color when the inputs get focus */
 input[type=word]:focus, input[type=password]:focus {
-    box-shadow: 0 0 5px $primaryColor; 
+    box-shadow: 0 0 5px $primaryColor;
     -webkit-transition: box-shadow 2s ease-out;
     -moz-transition: box-shadow 2s ease-out;
     -o-transition: box-shadow 2s ease-out;
@@ -69,6 +69,8 @@ input[type=word]:focus, input[type=password]:focus {
 .button2 {
     background-color: $primaryColor; /* Green */
     border: none;
+    border-radius: 5px;
+    padding: 10px;
     color: $secondaryColor;
     width: 100%;
     height: 80%;
@@ -83,8 +85,8 @@ input[type=word]:focus, input[type=password]:focus {
 }
 /* submit button style */
 .button2 {
-    background-color: $primaryColor; 
-    color: $secondaryColor; 
+    background-color: $primaryColor;
+    color: $secondaryColor;
     border: 2px solid inherit;
 }
 
@@ -105,32 +107,31 @@ hr {
     border-top: 1px solid $secondaryColor !important;
     margin-bottom: 25px;
 }
- 
+
 /* The slow way */
 .make-it-slow {
     box-shadow: 0 1px 2px $gray;
     transition: box-shadow 0.3s ease-in-out;
   }
-  
+
   /* Transition to a bigger shadow on hover */
   .make-it-slow:hover {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
   }
-  
+
   /* The fast way */
   .make-it-fast {
     box-shadow: 0 1px 2px $gray;
   }
-  
+
   /* Pre-render the bigger shadow, but hide it */
   .make-it-fast::after {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
-  
+
   /* Transition to showing the bigger shadow on hover */
   .make-it-fast:hover::after {
     opacity: 1;
   }
-
