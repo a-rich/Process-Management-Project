@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Explore from './components/Explore';
 import './App.scss';
+//import '../src/stylesheets/navbar.scss';
 
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
 import Counter from './components/Counter';
@@ -13,7 +14,7 @@ import Favorites from './views/Favorites/Favorites';
 import Account from './views/Account/Account';
 import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
-import Ripples from 'react-ripples'
+import Ripples from 'react-ripples';
 
 
 class App extends Component {
