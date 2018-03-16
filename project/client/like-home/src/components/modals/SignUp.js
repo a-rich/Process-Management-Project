@@ -58,7 +58,6 @@ class SignUp extends Component {
               <div className="row">
                 <div className="col-4">
                   <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>Create An Account</h2>
-                  <hr/>
                 </div>
                 <div className="col-4">
                   <label for="Name"><b>Name</b></label>

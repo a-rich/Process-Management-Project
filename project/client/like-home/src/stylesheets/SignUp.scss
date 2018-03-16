@@ -6,43 +6,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 input[type=word], input[type=password] {
     width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    border-radius:5px;
+    margin-left: auto;
+    margin-right: auto;
     display: inline-block;
     border: none;
     background: $color_whiteSmoke;
     color: black;
-}
-
-.ReactModal__Content {
-    color: $secondaryColor;
-    position: absolute;
-    width: 33.333%;
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-    }
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-        width: 60%;
-    }
-     background: rgba(0, 0, 0, .75) !important;
-
-
-    h2 {
-        color: $primaryColor !important;
-    }
-
-    a {
-        color: $primaryColor;
-        text-decoration: none !important;
-    }
-}
-
-.ReactModal__Overlay, .ReactModal__Overlay--after-open {
-    background-color: rgba(0, 0,0, 0.80) !important;
-}
-
-/* label color */
-label {
-    color: $secondaryColor;
 }
 
 /* Add a background color when the inputs get focus */
@@ -53,6 +23,46 @@ input[type=word]:focus, input[type=password]:focus {
     -o-transition: box-shadow 2s ease-out;
     transition: box-shadow 2s ease-out;
     outline: none;
+}
+
+.ReactModal__Content {
+    position: absolute;
+    width: 40%;
+    border-radius: 20px !important;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        width: 60%;
+    }
+     background: white !important;
+
+    h2 {
+        color: $primaryColor !important;
+    }
+
+    a {
+        color: $primaryColor;
+        text-decoration: none !important;
+    }
+
+    p {
+      margin-top: 30px;
+      text-align: center;
+    }
+}
+
+.ReactModal__Overlay, .ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0,0, 0.80) !important;
+}
+
+/* label color */
+label {
+    color: black;
+    margin-bottom: 0px !important;
+    margin-top: 15px !important;
+    padding-left: 5px;
+    padding-top: 0px;
 }
 
 /* submit button style */
@@ -74,20 +84,12 @@ input[type=word]:focus, input[type=password]:focus {
     cursor: pointer;
 }
 
-/* submit button style */
-.button2:hover {
-    background-color: $secondaryColor;
-    color: $primaryColor;
-}
-
-
 /* Add padding to container elements */
 .container {
     padding: 16px;
 }
 
-/* Style the horizontal ruler */
-hr {
-    border-top: 1px solid $secondaryColor !important;
-    margin-bottom: 25px;
+.col-4 {
+  margin-left: 30px;
+  margin-right: 30px;
 }
