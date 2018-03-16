@@ -6,35 +6,36 @@ body {font-family: Arial, Helvetica, sans-serif;}
 input[type=word], input[type=password] {
     width: 100%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    border-radius:5px;
+    margin-left: auto;
+    margin-right: auto;
     display: inline-block;
     border: none;
     background: $color_whiteSmoke;
     color: black;
 }
 
+/* Add a background color when the inputs get focus */
+input[type=word]:focus, input[type=password]:focus {
+    box-shadow: 0 0 5px $primaryColor;
+    -webkit-transition: box-shadow 2s ease-out;
+    -moz-transition: box-shadow 2s ease-out;
+    -o-transition: box-shadow 2s ease-out;
+    transition: box-shadow 2s ease-out;
+    outline: none;
+}
+
 .ReactModal__Content {
-    color: $secondaryColor;
     position: absolute;
-    //height: 100%;
-    width: 33.333%;
+    width: 40%;
+    border-radius: 20px !important;
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
     @media only screen and (min-width: 769px) and (max-width: 992px) {
         width: 60%;
     }
-    // top: 50%;
-    // left: 50%;
-    // right: 70%;
-    // border: 1px solid rgb(204, 204, 204);
-     background: rgba(0, 0, 0, .75) !important;
-    // overflow: auto;
-    // border-radius: 4px;
-    // outline: none;
-    // padding: 20px;
-    // margin-right: -50%;
-    // transform: translate(-50%, -50%);
+     background: white !important;
 
     h2 {
         color: $primaryColor !important;
@@ -44,31 +45,40 @@ input[type=word], input[type=password] {
         color: $primaryColor;
         text-decoration: none !important;
     }
+
+    p {
+      margin-top: 30px;
+      text-align: center;
+    }
 }
 
 .ReactModal__Overlay, .ReactModal__Overlay--after-open {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0,0, 0.80) !important;
 }
 
 /* label color */
 label {
-    color: $secondaryColor;
+    color: black;
+    margin-bottom: 0px !important;
+    margin-top: 15px !important;
+    padding-left: 5px;
+    padding-top: 0px;
 }
 
-/* Add a background color when the inputs get focus */
-input[type=word]:focus, input[type=password]:focus {
-    box-shadow: 0 0 5px $primaryColor; 
-    -webkit-transition: box-shadow 2s ease-out;
-    -moz-transition: box-shadow 2s ease-out;
-    -o-transition: box-shadow 2s ease-out;
-    transition: box-shadow 2s ease-out;
-    outline: none;
+.closebutton {
+  float: right;
+  border-radius: 30px;
 }
 
+.closebutton:before {
+    content: "x";
+}
 /* submit button style */
 .button2 {
     background-color: $primaryColor; /* Green */
     border: none;
+    border-radius: 5px;
+    padding: 10px;
     color: $secondaryColor;
     width: 100%;
     height: 80%;
@@ -81,56 +91,13 @@ input[type=word]:focus, input[type=password]:focus {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-/* submit button style */
-.button2 {
-    background-color: $primaryColor; 
-    color: $secondaryColor; 
-    border: 2px solid inherit;
-}
-
-/* submit button style */
-.button2:hover {
-    background-color: $secondaryColor;
-    color: $primaryColor;
-}
-
 
 /* Add padding to container elements */
 .container {
     padding: 16px;
 }
 
-/* Style the horizontal ruler */
-hr {
-    border-top: 1px solid $secondaryColor !important;
-    margin-bottom: 25px;
+.col-4 {
+  margin-left: 30px;
+  margin-right: 30px;
 }
- 
-/* The slow way */
-.make-it-slow {
-    box-shadow: 0 1px 2px $gray;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  /* Transition to a bigger shadow on hover */
-  .make-it-slow:hover {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
-  }
-  
-  /* The fast way */
-  .make-it-fast {
-    box-shadow: 0 1px 2px $gray;
-  }
-  
-  /* Pre-render the bigger shadow, but hide it */
-  .make-it-fast::after {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Transition to showing the bigger shadow on hover */
-  .make-it-fast:hover::after {
-    opacity: 1;
-  }
-
