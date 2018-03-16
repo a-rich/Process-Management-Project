@@ -20,11 +20,15 @@ class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalIsOpen: false
+            modalIsOpen: false,
+            name: '',
+            email: '',
+            password:''
         };
         this.openModal = this.openModal.bind(this);
         this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.submit = this.submit.bind(this)
       }
 
       openModal() {
@@ -40,13 +44,35 @@ class SignUp extends Component {
         this.setState({modalIsOpen: false});
       }
 
+      handleEmailChange(e) {
+        this.setState({email: e.target.value});
+    }
+    handlePasswordChange(e) {
+        this.setState({password: e.target.value});
+    }
+
+    handleNameChange(e){
+      this.setState({name: e.target.value});
+    }
+
+      submit(e){
+        e.preventDefault()
+        createUser(
+          { "name": this.refs.name.value,
+            "email": this.refs.email.value,
+            "password": this.refs.password.value
+          })
+      }
+
     render() {
+
+      const {name, email, password} = this.props
         return (
             <div>
 
             <a onClick={this.openModal}>Sign Up</a>
 
-            <form>
+            <form onSubmit={this.submit}>
               <Modal
               isOpen={this.state.modalIsOpen}
               onAfterOpen={this.afterOpenModal}
@@ -64,15 +90,15 @@ class SignUp extends Component {
                 </div>
                 <div className="col-4">
                   <label for="Name"><b>Name</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Name" name="Name" required/>
+                  <input class="make-it-slow" ref="name" type="word" placeholder="Enter Name" name="Name" required  onChange={this.handleNameChange.bind(this)}/>
                 </div>
                 <div className="col-4">
                   <label for="email"><b>Email Address</b></label>
-                  <input class="make-it-slow" type="word" placeholder="Enter Email" name="email" required/>
+                  <input class="make-it-slow" ref="email" type="word" placeholder="Enter Email" name="email" required  onChange={this.handleEmailChange.bind(this)}/>
                 </div>
                 <div className="col-4">
                   <label for="psw"><b>Password</b></label>
-                  <input class="make-it-slow" type="password" placeholder="Enter Password" name="psw" required/>
+                  <input class="make-it-slow" ref="password" type="password" placeholder="Enter Password" name="psw" required  onChange={this.handlePasswordChange.bind(this)}/>
                 </div>
                 <div className="col-4">
                   <label for="psw-repeat"><b>Confirm Password</b></label>
@@ -80,7 +106,7 @@ class SignUp extends Component {
                 </div>
                 <div className="col-4">
                   <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-                  <button type="submit" class="button2" onClick={createUser({"name":"alexis","email":"email@a.com", "password":"hello"})}>Sign Up</button>
+                  <button class="button2"  onClick={this.submit}>Sign Up</button>
                   <p>Already have an account? <a href="#" >Sign in</a>.</p>
                 </div>
               </div>
