@@ -43,6 +43,7 @@
 
   label {
     height: 80px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border-color: $secondaryColor;
     border-radius: 8px;
@@ -269,7 +270,7 @@ background-color: transparent !important;
   background-color: transparent !important;
   border: solid;
   color: $color_whiteSmoke !important;
-  
+
 }
 
 .CalendarDay__blocked_out_of_range {
