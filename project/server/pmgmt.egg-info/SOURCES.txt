@@ -1,9 +1,0 @@
-pmgmt/__init__.py
-pmgmt/app_config.py
-pmgmt/models.py
-pmgmt/utils.py
-pmgmt.egg-info/PKG-INFO
-pmgmt.egg-info/SOURCES.txt
-pmgmt.egg-info/dependency_links.txt
-pmgmt.egg-info/requires.txt
-pmgmt.egg-info/top_level.txt
