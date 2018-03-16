@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from pmgmt import create_app, db
+from pmgmt import app, db
 from pmgmt.models import Hotel
 
-db.create_all(app=create_app())
+db.create_all(app=app)
 
 import json
 with open('hotel_data.json') as f:
