@@ -55,6 +55,9 @@ class SignUp extends Component {
               contentLabel="Sign Up"
 
               >
+              <div className="closebuttondiv">
+                <button type="button" class="closebutton" onClick={this.closeModal}></button>
+              </div>
               <div className="row">
                 <div className="col-4">
                   <h2 className="text-center" ref={subtitle => this.subtitle = subtitle}>Create An Account</h2>
