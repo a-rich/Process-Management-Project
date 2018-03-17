@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Grid, Col, Row} from 'react-bootstrap';
 //import './newitems.css';
 import '../stylesheets/CollectionView.scss';
 
@@ -67,23 +68,32 @@ export class CollectionView extends React.Component {
   }
 
   render() {
+    var row = '';
     return(
       <section>
+      <Grid>
         <div className="items">
+        <Row>
           {this.state.items.map((item, index) => {
             return (
-              <div className="itemLink">
-              <Link to={`/item/${this.state.items[index].name}`} key={index} className="">
-                <img src={item.photo}/>
-                <div className="info">
-                  <h3>{item.name}</h3>
+            
+              <Col sm={12} md={12}>
+                <div className="itemLink">
+                <Link to={`/item/${this.state.items[index].name}`} key={index} className="">
+                  <img src={item.photo}/>
+                  <div className="info">
+                    <h3>{item.name}</h3>
+                  </div>
+                </Link>
                 </div>
-              </Link>
-            </div>
+              </Col>
+            
 
             )
           })}
+          </Row>
         </div>
+        </Grid>
       </section>
     );
   }

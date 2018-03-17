@@ -61,7 +61,13 @@
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {

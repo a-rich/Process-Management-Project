@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Explore from './components/Explore';
 import './App.scss';
-
-import {Nav, Navbar, NavItem, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'react-bootstrap';
+import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap';
 import Counter from './components/Counter';
 import SearchBar from './components/SearchBar';
-import CollectionView from './components/CollectionView';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Reservation from './views/Reservation/Reservation';
 import Favorites from './views/Favorites/Favorites';
 import Account from './views/Account/Account';
+import SearchResults from './views/SearchResults/SearchResults';
 import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples';
@@ -43,15 +42,6 @@ class App extends Component {
               <SignUp/>
             </NavItem>
             <NavItem>
-              <Link to="/reservations">Reservations</Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/favorites">Favorites</Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/rewards">Rewards</Link>
-            </NavItem>
-            <NavItem>
               <Link to="/account">Account</Link>
             </NavItem>
           </Nav>
@@ -60,23 +50,13 @@ class App extends Component {
         <div className="routeOverlay">
           <Route exact path="/" component={Explore}/>
           <Route path="signup" component={SignUp}/>
-          <Route path="/reservations" component={Reservation}/>
-          <Route path="/favorites" component={Favorites}/>
-          <Route path="/rewards" component={Rewards}/>
           <Route path="/account" component={Account}/>
+          <Route path="/search-results" component={SearchResults} />
         </div>
       </div>
       </Router>
-
     );
   }
 }
-
-const Rewards = () => (
-  <div>
-    <h1>Rewards</h1>
-  </div>
-
-);
 
 export default App;
