@@ -72,9 +72,3 @@ for location in data:
             session.flush()
 
 session.commit()
-
-# Move whoosh_index into the appropriate directory
-if os.path.exists('whoosh_index'):
-    os.rename('whoosh_index', '../whoosh_index')
-else:
-    print('No whoosh_index directory found.')

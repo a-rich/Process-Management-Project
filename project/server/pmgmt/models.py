@@ -1,7 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, SmallInteger, DateTime, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from pmgmt import db,ma, whooshee
+from pmgmt import db, ma
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -24,7 +24,6 @@ class Reward(db.Model):
     created_date = Column(DateTime(timezone=True), server_default=func.now())
 
 
-# @whooshee.register_model('name', 'location')
 class Hotel(db.Model):
     __tablename__ = 'hotel'
     __searchable__ = ['name', 'location']

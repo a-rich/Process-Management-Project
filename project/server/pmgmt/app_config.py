@@ -1,6 +1,4 @@
 from datetime import timedelta
-from whoosh.analysis import StemmingAnalyzer
-
 
 class DevelopmentConfig():
     DEBUG = True
@@ -10,6 +8,3 @@ class DevelopmentConfig():
     EMAIL_AUTH = "gffk68TdPt0dttmu"
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../test.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    WHOOSHEE_DIR = 'whoosh_index'
-    # WHOOSH_ANALYZER = StemmingAnalyzer()
-    
