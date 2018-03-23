@@ -1,19 +1,31 @@
 import React from 'react'
-import { Component } from 'react';
+import { Component } from 'react'
 import '../stylesheets/Home.scss'
 import ReactPlayer from 'react-player'
-import MainBar from '../components/MainBar.js';
+import MainBar from '../components/MainBar.js'
 
 class VideoPlayer extends Component {
+
+constructor() {
+  super();
+
+  this.state = {
+    video:[
+      {url: 'https://player.vimeo.com/external/260015882.hd.mp4?s=a1321e6df42f072dc1a0c62018580a2b2387f402&profile_id=174'},
+      {url: 'https://player.vimeo.com/external/129589425.hd.mp4?s=31aae396844ad80fad322d9ccc29e9bd&profile_id=113'}
+    ]
+  }
+}
+
   render() {
   return (
 <div class="aspect-ratio-box">
     <div class="flexbox-centering">
           <ReactPlayer
           className='react-player'
-          url='https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/917/5/129589425/375054934.mp4?token=1520643030-0xe2131c5be2ea4ebd18509256a50e32cfdc425c68'
+          url= {this.state.video[0].url}
           height='100%'
-          width='auto'
+          width='100%'
           playing='true'
           loop='true'
           muted='true'

@@ -14,7 +14,7 @@
   
   height: 150px;
   padding: 20px;
-  color: white;
+  color: $secondaryColor;
 }
 
 .App-title {
@@ -42,10 +42,10 @@
   border-bottom:  1px solid rgba(255,255,255, .2) !important;
 
   a {
-    color: white !important;
+    color: $secondaryColor !important;
   }
   a:hover {
-    color: $color_peterRiver !important;
+    color: $primaryColor !important;
     text-decoration: none;
   }
 }
@@ -61,7 +61,13 @@
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -84,4 +90,5 @@
   left: 0; right: 0;
   top: 0; bottom: 0;
   margin: auto;
+  //background-color: $primaryColor;
 }
