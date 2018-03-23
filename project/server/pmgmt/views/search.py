@@ -24,6 +24,8 @@ merged_locations += states
 def hotel_search():
     """
     Search hotel database by city or state
+
+    all sorting criteria can be defined by 1 or 2 meaning ascending, descending, respectively 
     """
     # word = request.form['query']
     req = request.get_json()
@@ -57,16 +59,7 @@ def hotel_search():
     else:
     # if word:
         try:
-            '''
-            1 1 1
-            1 1 0
-            1 0 1
-            1 0 0
-            0 1 1
-            0 0 1
-            0 1 0
-            0 0 0
-            '''
+
             query_result = ''
             if price_sort and rating_sort and name_sort:
                 query_result = Hotel.query.filter(Hotel.location.like("%"+word+"%"))\

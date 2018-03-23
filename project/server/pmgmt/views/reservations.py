@@ -27,7 +27,11 @@ def new_reservation():
 
 	try:
 		# user = User.query.filter(User.email==get_jwt_identity()).first()
-		user = User.query.filter(User.email=='jiajun.wu@sjsu.edu').first()
+		#user = User.query.filter(User.email=='jiajun.wu@sjsu.edu').first()
+		# created a user in sqlite to test this, if you want to test this endpoint, do the same, and provide your email here,
+		
+		user = User.query.filter(User.email=='brandonabajelo@gmail.com').first()
+
 
 		if user:
 			# try_create_res = db.session.query(Reservation).filter(Reservation.room_id==roomId).filter(Reservation.start_date.between(startDate, endDate)|Reservation.end_date.between(startDate, endDate))
