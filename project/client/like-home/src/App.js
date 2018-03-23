@@ -13,7 +13,7 @@ import SearchResults from './views/SearchResults/SearchResults';
 import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples';
-
+import Listview from './views/Listview/Listview';
 
 class App extends Component {
   render() {
@@ -55,6 +55,7 @@ class App extends Component {
           <Route path="signup" component={SignUp}/>
           <Route path="/account" component={Account}/>
           <Route path="/search-results" component={SearchResults} />
+          <Route path="/listview" component={Listview} />
         </div>
       </div>
       </Router>
