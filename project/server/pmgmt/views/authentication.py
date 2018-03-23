@@ -153,3 +153,4 @@ def login():
                 })
     except Exception as e:
         return json.dumps({'msg': 'Invalid credentials.'})
+
