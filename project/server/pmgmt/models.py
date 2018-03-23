@@ -13,6 +13,15 @@ class User(db.Model):
     password = Column(String(250), nullable=False)
     reward = Column(Integer)
 
+class Reward(db.Model):
+    __tablename__ = 'reward'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+    alter = Column(Integer)
+    reward = Column(Integer)
+    created_date = Column(DateTime(timezone=True), server_default=func.now())
+
 class Hotel(db.Model):
     __tablename__ = 'hotel'
     __searchable__ = ['name', 'location']
