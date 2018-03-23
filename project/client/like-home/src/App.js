@@ -44,6 +44,9 @@ class App extends Component {
             <NavItem>
               <Link to="/account">Account</Link>
             </NavItem>
+            <NavItem>
+              <Link to="/listview">Listview</Link>
+            </NavItem>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
