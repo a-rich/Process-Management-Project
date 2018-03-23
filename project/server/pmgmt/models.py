@@ -13,14 +13,9 @@ class User(db.Model):
     password = Column(String(250), nullable=False)
     reward = Column(Integer)
 
-
-    class UserSchema(ma.ModelSchema):
-        class Meta:
-            def __init__(self):
-                model = self.Outer.Outer
-
-@whooshee.register_model('location')
 class Hotel(db.Model):
+    __tablename__ = 'hotel'
+    __searchable__ = ['name', 'location']
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
@@ -49,12 +44,10 @@ class Room(db.Model):
     vacant = Column(SmallInteger, default=0)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
 
-
 class Tier(db.Model):
     __tablename__ = 'tier'
     id = Column(Integer, primary_key=True)
     tier = Column(String(250))
-
 
 class Reservation(db.Model):
     __tablename__ = 'reservation'
