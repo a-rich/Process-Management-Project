@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ListGroup, ListGroupItem} from 'react-bootstrap';
 import './Listview.scss';
 
 
@@ -11,7 +12,7 @@ class Listview extends Component {
 
     render() {
         return (
-            <div class="accountResultContainer">
+            <div class="listViewContainer">
             <h2>ListView</h2>
           </div>
         );
