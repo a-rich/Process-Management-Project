@@ -14,7 +14,7 @@ import Login from './components/modals/Login';
 import SignUp from './components/modals/SignUp';
 import Ripples from 'react-ripples';
 import Listview from './views/Listview/Listview';
-
+import ListviewFilter from './views/Listview/ListviewFilter';
 class App extends Component {
   render() {
     return (
@@ -47,6 +47,9 @@ class App extends Component {
             <NavItem>
               <Link to="/listview">Listview</Link>
             </NavItem>
+            <NavItem>
+              <Link to="/listviewFilter">ListviewFilter</Link>
+            </NavItem>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -56,6 +59,8 @@ class App extends Component {
           <Route path="/account" component={Account}/>
           <Route path="/search-results" component={SearchResults} />
           <Route path="/listview" component={Listview} />
+          <Route path="/listviewFilter" component={ListviewFilter} />
+
         </div>
       </div>
       </Router>
