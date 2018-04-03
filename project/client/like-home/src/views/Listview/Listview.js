@@ -60,6 +60,7 @@ class Listview extends Component {
     render() {
       return (
         <div class="contentListView">
+        <h2>List View</h2>
         <div class="ToplistViewContainer">
             <div id="SearchBar">
               <form onSubmit={this.submit} class="mainbar">
