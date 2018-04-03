@@ -34,8 +34,7 @@ class ListviewFilter extends Component {
     render() {
         return (
             <div class="listViewContainer">
-                <h2>ListViewFilter</h2>
-                <div class="searchContain">
+\                <div class="searchContain">
                     <form onSubmit={this.submit} class="mainbar">
                         <div class="form-row">
                             <div class="inputs-row">
