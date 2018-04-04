@@ -60,9 +60,7 @@ class Listview extends Component {
     render() {
       return (
         <div class="contentListView">
-        <h2>List View</h2>
-        <div class="ToplistViewContainer">
-            <div id="SearchBar">
+            <div id="SearchBar" class="searchContain">
               <form onSubmit={this.submit} class="mainbar">
                   <div class="form-row">
                       <div class="inputs-row">
@@ -99,11 +97,10 @@ class Listview extends Component {
                         </div>
                   </div>
               </form>
-            </div>
         </div>
 
         <div class="BottomListViewContainer" align="center">
-            <div className="col-md-4">
+            <div className="col-md-2">
                 <div>
                     <ListGroup>
                         <ListGroupItem header="Hotel Name">
@@ -136,13 +133,12 @@ class Listview extends Component {
             </div>
 
             <div className="col-md-8">
-                <div>
                   <ListGroup>
                       <ListGroupItem>
 
                       {this.state.items.map((item, index) => {
                         return (
-                          <div id="eachHotel">
+                          <div id="eachHotel" class="box">
                               <Grid align="left">
                               <Row id="hotelName">{item.name}</Row>
                               <Row id="hotelAddress">{item.address}</Row>
@@ -163,7 +159,6 @@ class Listview extends Component {
 
                       </ListGroupItem>
                   </ListGroup>
-                </div>
             </div>
         </div>
 
