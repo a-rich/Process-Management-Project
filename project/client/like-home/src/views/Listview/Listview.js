@@ -27,32 +27,30 @@ class Listview extends Component {
         this.state = {
             items: [
                 {'name':"Las Vegas",
-                  'address': "1234 Las Vegas Ave, LV",
-                  'description': "What happens in Vegas, stays in Vegas.",
+                'address': "1234 Las Vegas Ave",
+                  'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
                   'price': "$99",
-                  'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
+                'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
+                },
+                {'name':"Miami",
+                'address': "1234 Miami Ave",
+                  'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
+                  'price': "$99",
+                'photo': "http://www.djoybeat.com/wp-content/uploads/2014/07/miami3-250x250.jpg"
+                },
+                {'name':"Italy",
+                'address': "1234 Italy Ave",
+                  'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
+                  'price': "$99",
+                'photo': "http://uncarvedblocktraveler.com/wp-content/uploads/2015/09/rome-italy-250x250.jpg"
                 },
                 {
-                    'name':"Tokyo",
-                  'address': "1234 Tokyo Ave, LV",
-                  'description': "Hello",
+                'name': "Malaysia",
+                'address': "1234 Malaysia Ave",
+                  'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
                   'price': "$99",
-                  'photo': "http://www.mylittleworldtour.com/wp-content/uploads/tokyo-kapak.jpg"
-                },
-                {'name':"Las Vegas",
-                  'address': "1234 Las Vegas Ave, LV",
-                  'description': "What happens in Vegas, stays in Vegas.",
-                  'price': "$99",
-                  'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
-                },
-                {
-                'name':"Tokyo",
-              'address': "1234 Tokyo Ave, LV",
-              'description': "Hello",
-              'price': "$99",
-              'photo': "http://www.mylittleworldtour.com/wp-content/uploads/tokyo-kapak.jpg"
-            }
-
+                'photo': "https://i.pinimg.com/736x/2d/b4/8a/2db48a923748bd647190bfb6adbc9f4c--dream-vacations-vacation-places.jpg"
+                }
             ]
         };
       }
