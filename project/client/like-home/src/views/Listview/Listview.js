@@ -100,7 +100,7 @@ class Listview extends Component {
         </div>
 
         <div class="BottomListViewContainer" align="center">
-            <div className="col-md-2">
+            <div className="col-md-4">
                 <div>
                     <ListGroup>
                         <ListGroupItem header="Hotel Name">
