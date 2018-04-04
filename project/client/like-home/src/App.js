@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-
       <div className="App">
         <Navbar inverse>
           <Navbar.Header>
