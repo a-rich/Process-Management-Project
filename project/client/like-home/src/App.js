@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Explore from './components/Explore';
+import Explore from './views/Explore/Explore';
 import './App.scss';
 import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap';
 import Counter from './components/Counter';

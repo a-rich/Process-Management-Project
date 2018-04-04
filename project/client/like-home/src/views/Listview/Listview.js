@@ -99,13 +99,14 @@ class Listview extends Component {
               </form>
         </div>
 
+        <Grid>
         <div class="BottomListViewContainer" align="center">
             <div className="col-md-4">
                 <div>
                     <ListGroup>
                         <ListGroupItem header="Hotel Name">
                             <input placeholder="Hotel name..." class="borderline"></input>
-                            <button type="submit" class="searchHotel"> Go </button>
+                            <Button type="submit" bsStyle="default" bsSize="xsmall" className="searchHotel">Details</Button>
                         </ListGroupItem>
 
                         <ListGroupItem header="Additional Filter">
@@ -161,6 +162,7 @@ class Listview extends Component {
                   </ListGroup>
             </div>
         </div>
+        </Grid>
 
 
         </div>
