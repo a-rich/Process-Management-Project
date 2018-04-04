@@ -147,7 +147,7 @@ class Listview extends Component {
                                     <Col xs={6} md={3}>{item.description}</Col>
                                     <Col xs={6} md={3}>
                                         <Row>{item.price}</Row>
-                                        <Row><Button bsStyle="primary" bsSize="small">Details</Button></Row>
+                                        <Row><Button bsStyle="default" bsSize="small">Details</Button></Row>
                                     </Col>
                               </Row>
                               </Grid>

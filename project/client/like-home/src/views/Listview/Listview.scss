@@ -4,6 +4,15 @@
     margin-top: 82px;
 }
 
+label {
+    color: white !important;
+}
+
+.list-group-item {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 
 .searchContain{
     position: relative;
@@ -29,10 +38,10 @@
 }
 
 dl input{
-    width:20px;
-    position:relative;
+    width: 20px;
+    position: relative;
     left: 0px;
-    vertical-align:left;
+    vertical-align: left;
 }
 
 dl label{
