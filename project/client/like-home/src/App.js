@@ -22,9 +22,7 @@ class App extends Component {
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#" >
-                LIKEHOME
-              </a>
+            <Link to="/">LIKEHOME</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
