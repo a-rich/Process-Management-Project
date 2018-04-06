@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import Explore from './views/Explore/Explore';
-import './App.scss';
-import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap';
-import Counter from './components/Counter';
-import SearchBar from './components/SearchBar';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Reservation from './views/Reservation/Reservation';
-import Favorites from './views/Favorites/Favorites';
-import Account from './views/Account/Account';
-import SearchResults from './views/SearchResults/SearchResults';
-import Login from './components/modals/Login';
-import SignUp from './components/modals/SignUp';
-import Ripples from 'react-ripples';
-import Listview from './views/Listview/Listview';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import Explore from './views/Explore/Explore'
+import './App.scss'
+import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap'
+import Counter from './components/Counter'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import Reservation from './views/Reservation/Reservation'
+import Favorites from './views/Favorites/Favorites'
+import Account from './views/Account/Account'
+import SearchResults from './views/SearchResults/SearchResults'
+import Login from './components/modals/Login'
+import SignUp from './components/modals/SignUp'
+import Ripples from 'react-ripples'
+import Listview from './views/Listview/Listview'
 class App extends Component {
   render() {
     return (
