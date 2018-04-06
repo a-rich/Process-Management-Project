@@ -18,14 +18,11 @@ class App extends Component {
   render() {
     return (
       <Router>
-
       <div className="App">
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#" >
-                LIKEHOME
-              </a>
+            <Link to="/">LIKEHOME</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
