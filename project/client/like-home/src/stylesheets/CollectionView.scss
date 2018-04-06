@@ -6,15 +6,20 @@
   align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 100px;
+  margin: 20px;
+}
+
+b {
+  font-size: 40px;
 }
 
 .items img {
-  border-radius: 2%;
-  max-width:250px;
-  max-height:250px;
+  min-width:400px;
+  min-height:400px;
+  max-width: 400px;
+  max-height: 400px;
   height: auto;
-  width: auto;
+  width: 100%;
 }
 
 .items a {
@@ -46,11 +51,10 @@
 
 .itemLink {
   position: relative;
-  width:250px;
-  height:250px;
+  width:400px;
+  height:400px;
   box-shadow: 0 0 10px #4f4f4f;
   box-sizing: border-box;
-  border-radius: 2%;
   margin-bottom: 30px;
 }
 
@@ -63,8 +67,8 @@
   top: 0;
   text-align: center;
   padding: 0 10px;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   background-color: #263238;
   color: #FFFFFF;//#1DE9B6;
   opacity: 0;
@@ -74,6 +78,5 @@
 .itemLink:hover .info {
   opacity: 1;
   visibility: visible;
-  border-radius: 2%;
   background-color: rgba(0,0,0,.7); // Sets to 50%
 }
