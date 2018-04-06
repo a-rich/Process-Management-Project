@@ -10,6 +10,8 @@ import Search from 'react-icons/lib/fa/search'
 import VideoPlayer from '../components/VideoPlayer';
 import Autocomplete from '../components/Autocomplete'
 import DateRange from '../components/DateRange'
+import chevron from '../assets/chevron.png'
+import scrollToComponent from 'react-scroll-to-component';
 
 // to be read from backend
 const locations = [
@@ -45,9 +47,9 @@ class MainBar extends Component {
 
   render() {
  return(
-   <div className="videoPlayer"> 
+   <div className="videoPlayer">
     <VideoPlayer/>
-  
+
   <form onSubmit={this.submit} class = "mainbar">
     <div class = "form-row">
       <div class = "inputs-row">
@@ -85,6 +87,10 @@ class MainBar extends Component {
     </div>
 </form>
 
+<div class="navarrow">
+  <button class="navarrowbutton" ><img src= {chevron} onClick={() => scrollToComponent(this.Bottom, { offset: 0, align: 'top', duration: 500})} /></button>
+</div>
+<section className='bottom' ref={(section) => { this.Bottom = section; }}></section>
 </div>
  )
 }
