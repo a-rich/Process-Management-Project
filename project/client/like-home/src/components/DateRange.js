@@ -80,8 +80,7 @@ const { focusedInput, startDate, endDate } = this.state;
   navPrev ="<" 
   navNext =">"
   small ="true"
-  withPortal="true"
-  keepOpenOnDateSelect="true"
+  withPortal = "true"
 
 />
 )
