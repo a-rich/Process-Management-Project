@@ -35,12 +35,17 @@
   border-radius: 0px !important;
 }
 
-.navbar-inverse, {
-  background-color: transparent !important;
+.navbar-inverse {
+  background-color: rgba(0, 0, 0, 0.2) !important;
   background-image: none !important;
- 
-  border-bottom:  1px solid rgba(255,255,255, .2) !important;
-
+  border-bottom: 1px solid rgba(255, 255, 255, .2) !important;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+  }
   a {
     color: $secondaryColor !important;
   }
