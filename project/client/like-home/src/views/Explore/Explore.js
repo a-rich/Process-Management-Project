@@ -1,6 +1,6 @@
 import React from 'react';
-import Mainbar from './MainBar.js'
-import ParallaxComp from './ParallaxComp.js'
+import Mainbar from '../../components/MainBar'
+import ParallaxComp from '../../components/ParallaxComp'
 
 const Explore = () => (
   <div>
