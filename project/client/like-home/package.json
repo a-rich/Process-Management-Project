@@ -47,6 +47,7 @@
     "react-player": "^1.2.1",
     "react-ripples": "^1.1.2",
     "react-router-dom": "^4.2.2",
+    "react-sidebar": "^2.3.2",
     "react-springy-parallax": "^1.2.0",
     "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",

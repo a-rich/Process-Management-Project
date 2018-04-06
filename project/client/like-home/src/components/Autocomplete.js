@@ -14,7 +14,7 @@ class Autocomplete extends Component {
 
 	render() {
 		return (
-			<div>
+			<div class = "input-text">
 			<input class = "input-text"
 				   ref = "inputLocation"
 			       type="text" 

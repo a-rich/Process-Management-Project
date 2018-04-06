@@ -4,19 +4,23 @@
     margin-top: 82px;
 }
 
+.searchBarContainer {
+    margin-bottom: 20px;
+}
+
 label {
     color: white !important;
 }
 
 .list-group-item {
     color: white !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
 }
 
 
 .searchContain{
     position: relative;
-    right:5%;
+    right: 5%;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 4%;

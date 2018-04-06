@@ -76,12 +76,11 @@ const { focusedInput, startDate, endDate } = this.state;
   anchorDirection="left" 
   displayFormat="MMM D"
   monthFormat = "MMMM  'YY"
-  verticalSpacing = {80}
+  verticalSpacing = {100}
   navPrev ="<" 
   navNext =">"
   small ="true"
-  withPortal="true"
-  keepOpenOnDateSelect="true"
+  withPortal = "true"
 
 />
 )
