@@ -7,11 +7,11 @@ import TiLocationOutline from 'react-icons/lib/ti/location-outline'
 import Bed from 'react-icons/lib/fa/bed'
 import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
-import VideoPlayer from '../components/VideoPlayer';
+import VideoPlayer from '../components/VideoPlayer'
 import Autocomplete from '../components/Autocomplete'
 import DateRange from '../components/DateRange'
 import chevron from '../assets/chevron.png'
-import scrollToComponent from 'react-scroll-to-component';
+import scrollToComponent from 'react-scroll-to-component'
 
 // to be read from backend
 const locations = [
