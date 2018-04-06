@@ -9,6 +9,7 @@ import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
 import Autocomplete from '../../components/Autocomplete'
 import DateRange from '../../components/DateRange'
+import SearchBar from '../../components/SearchBar'
 
 const locations = [
     "chicago",
@@ -58,48 +59,19 @@ class Listview extends Component {
     render() {
       return (
         <div class="contentListView">
-            <div id="SearchBar" class="searchContain">
-              <form onSubmit={this.submit} class="mainbar">
-                  <div class="form-row">
-                      <div class="inputs-row">
-                          <label class="location-input">
-                              <MdLocationOn class="icon-size" />
-                              <Autocomplete options={locations} placeholder="Where To?" ref="location" required />
-                          </label>
-
-                          <label class="date-input">
-                              <Calendar class="icon-size" />
-                              <DateRange />
-                          </label>
-
-                          <label class="price-input">
-                              <FaDollar class="icon-size" />
-                              <input id="Min-price" type="number" class="price-text" placeholder="Min?" ref="Min" required />
-                              <input id="Min-price" type="number" class="price-text" placeholder="Max?" ref="Max" required />
-                          </label>
-
-                          <label class="room-input" >
-                              <Bed class="icon-size" />
-                                  <select class="room-text" ref="roomNum" >
-                                      <option value="one">1</option>
-                                      <option value="two">2</option>
-                                      <option value="three">3</option>
-                                      <option value="4plus">4+</option>
-                                  </select>
-                          </label>
-
-                          <label>
-                              <button class="search"> <Search class="search-icon" /> </button>
-                          </label>
-
-                        </div>
-                  </div>
-              </form>
-        </div>
 
         <Grid>
+        <Row>
+            <Col>
+                <div className="searchBarContainer">
+                    <SearchBar />
+                </div>
+            </Col>
+        </Row>
+
+        <Row>
         <div class="BottomListViewContainer" align="center">
-            <div className="col-md-4">
+            <Col md={4}>
                 <div>
                     <ListGroup>
                         <ListGroupItem header="Hotel Name">
@@ -129,9 +101,9 @@ class Listview extends Component {
 
                     </ListGroup>
                 </div>
-            </div>
+            </Col>
 
-            <div className="col-md-8">
+            <Col md={8}>
                   <ListGroup>
                       <ListGroupItem>
 
@@ -158,8 +130,9 @@ class Listview extends Component {
 
                       </ListGroupItem>
                   </ListGroup>
-            </div>
+            </Col>
         </div>
+        </Row>
         </Grid>
 
 

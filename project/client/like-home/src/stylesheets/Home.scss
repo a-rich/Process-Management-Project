@@ -1,5 +1,6 @@
 @import '../variables/colors.scss';
 
+
 .react-player {
   position: absolute;
   top: 0;
@@ -32,38 +33,6 @@
   margin: auto;
 }
 
-.navarrow {
-  position: absolute;
-  width: 6%;
-  height: 10%;
-  left: 0; right: 0;
-  top: 60%; bottom: 0;
-  margin: auto;
-  z-index: 2;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
-  button {
-    border:none;
-    background-color: rgba(0, 0, 0, 0.0);
-  }
-  button:focus {outline:0;}
-  img {
-    width: 50%;
-    height: 50%;
-    border-width:0px;
-    background-color: rgba(0, 0, 0, 0.0) !important;
-
-  }
-}
-
-.navarrowbutton {
-  position: relative;
-  top:30%;
-  color: white;
-  background-color: rgba(0,0,0,0.5);
-}
-
 .videoPlayer {
   position: relative;
   z-index: 0;
@@ -76,7 +45,7 @@
   label {
     height: 80px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     border-color: $secondaryColor;
     border-radius: 8px;
     margin-left: 4px;
@@ -106,6 +75,7 @@ display: flex;
 align-items: center;
 flex-grow: 2;
 border: solid;
+font-size: 14px;
 }
 
 select, option {
@@ -113,15 +83,16 @@ select, option {
 }
 
 .input-text{
-font-size: 12px;
+font-size: 14px;
+width: 90%;
 font-weight: normal;
 position: relative;
 padding-right: 0;
-width: 100%;
+border: none;
 }
 
 .date-input {
-  width: 20%;
+  width: 25%;
   height: 40px;
   position: relative;
   z-index: 0;
@@ -129,13 +100,20 @@ width: 100%;
   align-items: center;
   flex-grow: 2;
   border: solid;
+  color: white !important;
   }
+
+
+.DateInput_input{
+  color: white !important;
+  font-size: 12px;
+}
 
 .date-text{
   font-size: 12px;
   font-weight: normal;
   line-height: 30px;
-  color: $secondaryColor;
+  color: white;
   border: transparent;
   background: transparent;
   }
@@ -158,23 +136,23 @@ width: 100%;
   border: solid;
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $secondaryColor;
+      color: white !important;
       opacity: 1; /* Firefox */
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: $secondaryColor;
+      color: white !important;
   }
 
   ::-ms-input-placeholder { /* Microsoft Edge */
-      color: $secondaryColor;
+      color: white !important;
   }
 
   }
 
   .price-text{
     width: 40%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 30px;
     color: $secondaryColor;
@@ -194,7 +172,7 @@ width: 100%;
 
   .room-text{
     width: 70%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 30px;
     color: $secondaryColor;
@@ -221,7 +199,7 @@ width: 100%;
 
     }
 
-
+ 
 
 
  .DateRangePickerInput {
@@ -229,7 +207,7 @@ width: 100%;
  color: white !important;
 
  :placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $secondaryColor;
+      color: white !important;
       opacity: 1; /* Firefox */
   }
 
@@ -243,6 +221,12 @@ width: 100%;
  type:text;
  }
 
+ .DateInput_input_focused {
+    border-bottom-width: 2px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: $primaryColor !important;
+ }
+
 .DateRangePickerInput_arrow {
   svg {
   fill: white !important;
@@ -254,17 +238,16 @@ width: 100%;
 }
 
 .DayPicker{
-background-color: $color_whiteSmoke;
 background-color: transparent !important;
 }
 
 .DateRangePicker_picker__portal {
   position: relative !important;
-
+ 
 }
 
 .DayPicker_transitionContainer {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
   border: solid;
   border-color: $color_whiteSmoke !important;
   border-radius: 8px;
