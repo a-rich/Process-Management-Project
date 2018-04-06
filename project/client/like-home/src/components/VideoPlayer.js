@@ -3,6 +3,8 @@ import { Component } from 'react'
 import '../stylesheets/Home.scss'
 import ReactPlayer from 'react-player'
 import MainBar from '../components/MainBar.js'
+import chevron from '../assets/chevron.png'
+ import scrollToComponent from 'react-scroll-to-component'
 
 class VideoPlayer extends Component {
 
@@ -31,6 +33,10 @@ constructor() {
           muted='true'
         />
       </div>
+<div class="navarrow">
+      <button class="navarrowbutton" ><img src= {chevron} onClick={() => scrollToComponent(this.Bottom, { offset: 0, align: 'top', duration: 500})} /></button>
+ </div>
+ <section className='bottom' ref={(section) => { this.Bottom = section; }}></section>
 </div>
     )
   }
