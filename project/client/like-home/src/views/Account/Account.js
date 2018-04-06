@@ -10,7 +10,7 @@ class Account extends Component {
 
     render() {
         return (
-            <div>
+            <div class="accountResultContainer">
             <h2>Account</h2>
           </div>
         );

@@ -10,7 +10,7 @@ class Reservation extends Component {
 
     render() {
         return (
-            <div>
+            <div class="reservationsResultContainer">
             <h2>Reservation</h2>
           </div>
         );
