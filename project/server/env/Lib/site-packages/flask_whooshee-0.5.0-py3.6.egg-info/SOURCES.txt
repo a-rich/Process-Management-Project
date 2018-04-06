@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+flask_whooshee.py
+requirements.txt
+setup.cfg
+setup.py
+test.py
+flask_whooshee.egg-info/PKG-INFO
+flask_whooshee.egg-info/SOURCES.txt
+flask_whooshee.egg-info/dependency_links.txt
+flask_whooshee.egg-info/not-zip-safe
+flask_whooshee.egg-info/requires.txt
+flask_whooshee.egg-info/top_level.txt
