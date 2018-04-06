@@ -46,7 +46,7 @@ class SearchBar extends Component {
   render() {
  return(
 <div>  
-  <form onSubmit={this.submit} class = "mainbar">
+  <form onSubmit={this.submit}>
     <div class = "form-row">
       <div class = "inputs-row">
         <label class = "location-input">

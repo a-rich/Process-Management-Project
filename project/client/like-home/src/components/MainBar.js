@@ -11,7 +11,9 @@ class MainBar extends Component {
  return(
   <div className="videoPlayer"> 
     <VideoPlayer/>
-    <SearchBar/>
+    <div className = "mainbar">
+      <SearchBar/>
+    </div>
   </div>
  )
 }
