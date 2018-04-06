@@ -206,7 +206,7 @@ border: none;
  background-color: transparent !important;
  color: white !important;
 
- :placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: white !important;
       opacity: 1; /* Firefox */
   }
@@ -221,7 +221,7 @@ border: none;
  type:text;
  }
 
- .DateInput_input_focused {
+ .DateInput_input__focused {
     border-bottom-width: 2px !important;
     border-bottom-style: solid !important;
     border-bottom-color: $primaryColor !important;
