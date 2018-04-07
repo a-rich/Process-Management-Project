@@ -51,11 +51,17 @@ b {
 
 .itemLink {
   position: relative;
-  width:400px;
-  height:400px;
+  width: 400px;
+  height: 400px;
   box-shadow: 0 0 10px #4f4f4f;
   box-sizing: border-box;
   margin-bottom: 30px;
+
+  &:hover .info {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0,0,0,.7); // Sets to 50%
+  }
 }
 
 .info {
@@ -73,10 +79,4 @@ b {
   color: #FFFFFF;//#1DE9B6;
   opacity: 0;
   visibility: hidden;
-}
-
-.itemLink:hover .info {
-  opacity: 1;
-  visibility: visible;
-  background-color: rgba(0,0,0,.7); // Sets to 50%
 }
