@@ -2,41 +2,60 @@
     margin-top: 82px;
 }
 
+.borderColored {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+
+    &:hover {
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+        box-shadow: -4px 4px 8px rgba(0, 0, 0, .75);
+        -webkit-transition:  box-shadow 1s ease-out;
+        -moz-transition:  box-shadow 1s ease-out;
+        -o-transition:  box-shadow 1s ease-out;
+        transition:  box-shadow 1s ease-out;
+    }
+}
+
 .sideBar {
-    display: block !important;
+    margin-top: 20px;
+    display: block;
     position: fixed;
+    width: auto;
 }
 
 .accountViewContainer {
-    
+    //background-color: rgba(0, 0, 0, 0.75);
+    //border: 1px solid rgba(0, 0, 0, 0.1);
+    //outline: 2px solid blue;
 }
 
 .MyBookings {
-    height: 600px;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .MyRewards {
-    height: 600px;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .MyFavorites {
-    height: 600px;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .MyUserInfo {
-    height: 600px;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .accountButton {
     display: block;
     margin: 4px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     outline: none;
     outline-color: black;
     border-radius: 4px;
     border: none;
-    font-size: 20px;
+    font-size: auto;
 
     &:active {
         outline: none;

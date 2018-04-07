@@ -1,6 +1,7 @@
 import React from 'react'
-import { Component } from 'react';
-import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap';
+import { Component } from 'react'
+import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap'
+import '../stylesheets/ListView.scss'
 
 class ListView extends Component {
 
@@ -47,15 +48,24 @@ class ListView extends Component {
             return (
               <div id="eachHotel" class="box">
                   <Grid align="left">
-                  <Row id="hotelName">{item.name}</Row>
-                  <Row id="hotelAddress">{item.address}</Row>
+                  
                   <Row id="hotelImageDescriptionPrice">
-                        <Col xs={6} md={3}><img src={item.photo} height={150} width={ 150 }/></Col>
-                        <Col xs={6} md={3}>{item.description}</Col>
-                        <Col xs={6} md={3}>
-                            <Row>{item.price}</Row>
-                            <Row><Button bsStyle="default" bsSize="small">Details</Button></Row>
-                        </Col>
+                    <Col xs={6} md={3}>
+                      <Row id="hotelName">
+                        {item.name}
+                      </Row>
+                      <Row id="hotelAddress">
+                        {item.address}
+                      </Row>
+                      <Row>
+                        <img src={item.photo} height={150} width={ 150 }/>
+                      </Row>
+                    </Col>
+                    <Col xs={6} md={3}>{item.description}</Col>
+                    <Col xs={6} md={3}>
+                        <Row>{item.price}</Row>
+                        <Row><Button bsStyle="default" bsSize="small">Details</Button></Row>
+                    </Col>
                   </Row>
                   </Grid>
               </div>

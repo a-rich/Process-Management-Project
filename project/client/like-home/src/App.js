@@ -5,7 +5,6 @@ import './App.scss'
 import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap'
 import Counter from './components/Counter'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import Reservation from './views/Reservation/Reservation'
 import Favorites from './views/Favorites/Favorites'
 import Account from './views/Account/Account'
 import SearchResults from './views/SearchResults/SearchResults'

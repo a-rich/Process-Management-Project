@@ -35,32 +35,30 @@ class SearchHotels extends Component {
     render() {
       return (
         <div class="contentListView">
-
-        <Grid>
-            <Row>
-                <Col>
-                    <div className="searchBarContainer">
-                        <SearchBar />
-                    </div>
-                </Col>
-            </Row>
-
-            <Row>
-                <div class="BottomListViewContainer" align="center">
-                    <Col md={4}>
-                        <div>
-                            <SearchFilter />
+            <Grid>
+                <Row>
+                    <Col>
+                        <div className="searchBarContainer">
+                            <SearchBar />
                         </div>
                     </Col>
+                </Row>
 
-                    <Col md={8}>
-                            <ListView />
-                    </Col>
-                </div>
-            </Row>
-        </Grid>
+                <Row>
+                    
+                        <Col md={4}>
+                            <div class="SearchFilterContainer" align="center">
+                                <SearchFilter />
+                            </div>
+                        </Col>
 
-
+                        <Col md={8}>
+                            <div className="ListViewContainer">
+                                <ListView />
+                            </div>
+                        </Col>
+                </Row>
+            </Grid>
         </div>
       );
     }
