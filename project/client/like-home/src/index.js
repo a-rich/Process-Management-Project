@@ -14,16 +14,18 @@ import storeFactory from './store'
 import { setcurrentuser } from './actions'
 import { Provider } from 'react-redux'
 
-
-ReactDOM.render(
-    <App />, document.getElementById('root')
-);
-registerServiceWorker();
-
 const initialState = (localStorage['redux-store'])? JSON.parse(localStorage['redux-store']) : {}
 const store = storeFactory(initialState)
 window.React = React
 window.store = store
+
+ReactDOM.render(
+  <Provider store={store}>
+  <App/>
+  </Provider>, document.getElementById('root')
+
+);
+registerServiceWorker();
 
 const saveState = () => {
     const state = JSON.stringify(store.getState())
