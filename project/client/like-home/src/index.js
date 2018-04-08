@@ -20,7 +20,6 @@ ReactDOM.render(
 registerServiceWorker();
 
 const initialState = (localStorage['redux-store'])? JSON.parse(localStorage['redux-store']) : {}
-
 const store = storeFactory(initialState)
 window.React = React
 window.store = store
