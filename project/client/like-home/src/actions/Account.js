@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { setcurrentuser } from '../actions.js'
 const ROOT_URL = "http://127.0.0.1:5000"
 
 
@@ -18,8 +19,7 @@ export function login(values){
   .then(function(response){
     console.log(response);
     console.log(response.data.jwt)
-    localStorage.jwt = response.data.jwt
-    localStorage.currenUserName = response.data.name
+    window.store.dispatch(setcurrentuser(response.data.name, response.data.jwt))
   })
   .catch(function (error){
     console.log(error)
