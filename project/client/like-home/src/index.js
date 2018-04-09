@@ -33,6 +33,3 @@ const saveState = () => {
  }
 
  store.subscribe(saveState)
- store.dispatch(
-   setcurrentuser("Alexis Action creater", "token action creator")
- )
