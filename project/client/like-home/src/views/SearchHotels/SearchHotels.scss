@@ -5,6 +5,40 @@
     overflow: hidden;
 }
 
+#hotelName {
+    text-align: center;  
+    padding-bottom: none;
+}
+
+#hotelAddress {
+    padding: 5px;
+    text-align: center;
+}
+
+#hotelImage {
+    text-align: center;  
+    padding-bottom: 15px;
+}
+
+img {
+    height:150px;
+    width:150px;
+}
+
+#hotelDescrip {
+    margin-top: 60px;
+    text-align: left;
+}
+
+#price{
+    margin-top: 25px;
+    text-align: center;
+}
+
+#detailButton {
+    margin-top: 30px;
+}
+
 .searchBarContainer {
     margin-bottom: 20px;
 }
