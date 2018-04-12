@@ -14,7 +14,8 @@ constructor() {
   this.state = {
     video:[
       {url: 'https://gcs-vimeo.akamaized.net/exp=1523323957~acl=%2A%2F955721028.mp4%2A~hmac=07e03f87b0eabf7d5c3ca9755c3c4ccc7eb80d8421f9a4f6467b646d34173e1a/vimeo-prod-skyfire-std-us/01/2003/10/260015882/955721028.mp4'},
-      {url: 'https://gcs-vimeo.akamaized.net/exp=1523323963~acl=%2A%2F375054934.mp4%2A~hmac=adf01a4a4b6e04716ebc5da9ae76d38426ec542ce883811a9da82257a16e2470/vimeo-prod-skyfire-std-us/01/917/5/129589425/375054934.mp4'}
+      {url: 'https://player.vimeo.com/external/260015882.hd.mp4?s=a1321e6df42f072dc1a0c62018580a2b2387f402&profile_id=174'},
+      {url: 'https://player.vimeo.com/external/129589425.hd.mp4?s=31aae396844ad80fad322d9ccc29e9bd&profile_id=113'}
     ]
   }
 }
