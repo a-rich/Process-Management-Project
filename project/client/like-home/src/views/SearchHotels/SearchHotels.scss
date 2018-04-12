@@ -2,6 +2,11 @@
 
 .contentListView {
     margin-top: 82px;
+    overflow: hidden;
+}
+
+.searchBarContainer {
+    margin-bottom: 20px;
 }
 
 label {
@@ -10,13 +15,21 @@ label {
 
 .list-group-item {
     color: white !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: transparent !important;
+    border: none !important;
 }
 
+.SearchFilterContainer {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ListViewContainer {
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
 .searchContain{
     position: relative;
-    right:5%;
+    right: 5%;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 4%;
@@ -48,9 +61,5 @@ dl label{
 }
 
 .box{
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-color:silver;
-    margin-bottom: 2%;
+    border-bottom: 1px solid #ccc;
 }

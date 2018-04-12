@@ -5,14 +5,13 @@ import './App.scss'
 import {Nav, Navbar, NavItem, MenuItem,} from 'react-bootstrap'
 import Counter from './components/Counter'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import Reservation from './views/Reservation/Reservation'
 import Favorites from './views/Favorites/Favorites'
 import Account from './views/Account/Account'
 import SearchResults from './views/SearchResults/SearchResults'
 import Login from './components/modals/Login'
 import SignUp from './components/modals/SignUp'
 import Ripples from 'react-ripples'
-import Listview from './views/Listview/Listview'
+import SearchHotels from './views/SearchHotels/SearchHotels'
 class App extends Component {
   render() {
     return (
@@ -40,7 +39,7 @@ class App extends Component {
               <Link to="/account">Account</Link>
             </NavItem>
             <NavItem>
-              <Link to="/listview">Listview</Link>
+              <Link to="/SearchHotels">SearchHotels</Link>
             </NavItem>
           </Nav>
           </Navbar.Collapse>
@@ -50,7 +49,7 @@ class App extends Component {
           <Route path="signup" component={SignUp}/>
           <Route path="/account" component={Account}/>
           <Route path="/search-results" component={SearchResults} />
-          <Route path="/listview" component={Listview} />
+          <Route path="/SearchHotels" component={SearchHotels} />
         </div>
       </div>
       </Router>

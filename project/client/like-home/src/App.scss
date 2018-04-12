@@ -11,7 +11,7 @@
 }
 
 .App-header {
-  
+
   height: 150px;
   padding: 20px;
   color: $secondaryColor;
@@ -25,7 +25,6 @@
   font-size: large;
 }
 
-
 .navbar-brand {
   height: 25px !important;
   font-size: 36px !important;
@@ -35,6 +34,7 @@
   border-radius: 0px !important;
 }
 
+<<<<<<< HEAD
 .navbar-inverse {
   background-color: rgba(0, 0, 0, 0.2) !important;
   background-image: none !important;
@@ -46,6 +46,22 @@
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
   }
+=======
+.navbar-inverse, {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  background-image: none !important;
+
+  border-bottom:  1px solid rgba(255,255,255, .2) !important;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    -webkit-transition:  background-color 1s ease-out;
+    -moz-transition:  background-color 1s ease-out;
+    -o-transition:  background-color 1s ease-out;
+    transition:  background-color 1s ease-out;
+  }
+
+>>>>>>> front-end-master
   a {
     color: $secondaryColor !important;
   }
@@ -76,7 +92,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
@@ -96,4 +112,17 @@
   top: 0; bottom: 0;
   margin: auto;
   //background-color: $primaryColor;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white !important;
 }
