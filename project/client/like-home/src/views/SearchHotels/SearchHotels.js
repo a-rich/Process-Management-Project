@@ -44,19 +44,18 @@ class SearchHotels extends Component {
                     </Col>
                 </Row>
 
-                <Row>
-                    
-                        <Col md={4}>
-                            <div class="SearchFilterContainer" align="center">
-                                <SearchFilter />
-                            </div>
-                        </Col>
+                <Row >
+                    <Col md={4}>
+                        <div class="SearchFilterContainer" >
+                            <SearchFilter />
+                        </div>
+                    </Col>
 
-                        <Col md={8}>
-                            <div className="ListViewContainer">
-                                <ListView />
-                            </div>
-                        </Col>
+                    <Col md={8}>
+                        <div className="ListViewContainer">
+                            <ListView />
+                        </div>
+                    </Col>
                 </Row>
             </Grid>
         </div>
