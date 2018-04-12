@@ -13,7 +13,7 @@ constructor() {
 
   this.state = {
     video:[
-      {url: 'https://gcs-vimeo.akamaized.net/exp=1523572054~acl=%2A%2F955721028.mp4%2A~hmac=1d57badb8c003975194afda95a2d24e4f2bd937c2a6d93a99a1eaa0cdca64cfb/vimeo-prod-skyfire-std-us/01/2003/10/260015882/955721028.mp4'},
+      {url: 'https://youtu.be/1G-2WaU5K7w'},
       {url: 'https://player.vimeo.com/external/260015882.hd.mp4?s=a1321e6df42f072dc1a0c62018580a2b2387f402&profile_id=174'},
       {url: 'https://player.vimeo.com/external/129589425.hd.mp4?s=31aae396844ad80fad322d9ccc29e9bd&profile_id=113'}
     ]
