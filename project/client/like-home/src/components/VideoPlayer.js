@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player'
 import MainBar from '../components/MainBar.js'
 import chevron from '../assets/chevron.png'
 import scrollToComponent from 'react-scroll-to-component'
+import video from '../LikeHome.mp4'
 
 class VideoPlayer extends Component {
 
@@ -13,7 +14,8 @@ constructor() {
 
   this.state = {
     video:[
-      {url: 'https://youtu.be/1G-2WaU5K7w'},
+      {url: video},
+      {url: 'https://1drv.ms/v/s!AlXqOfVdb_VBnvcl9sUnATToQtioZg'},
       {url: 'https://player.vimeo.com/external/260015882.hd.mp4?s=a1321e6df42f072dc1a0c62018580a2b2387f402&profile_id=174'},
       {url: 'https://player.vimeo.com/external/129589425.hd.mp4?s=31aae396844ad80fad322d9ccc29e9bd&profile_id=113'}
     ]
