@@ -24,23 +24,23 @@ constructor() {
 
   render() {
   return (
-<div class="aspect-ratio-box">
-    <div class="flexbox-centering">
-          <ReactPlayer
-          className='react-player'
-          url= {this.state.video[0].url}
-          height='100%'
-          width='100%'
-          playing='true'
-          loop='true'
-          muted='true'
-        />
+    <div class="aspect-ratio-box">
+      <div class="flexbox-centering">
+            <ReactPlayer
+            className='react-player'
+            url= {this.state.video[0].url}
+            height='100%'
+            width='100%'
+            playing='true'
+            loop='true'
+            muted='true'
+          />
       </div>
-<div class="navarrow">
-      <button class="navarrowbutton bounce" ><img src= {chevron} onClick={() => scrollToComponent(this.Bottom, { offset: 0, align: 'top', duration: 500})} /></button>
- </div>
- <section className='bottom' ref={(section) => { this.Bottom = section; }}></section>
-</div>
+      <div class="navarrow">
+            <button class="navarrowbutton bounce" ><img src= {chevron} onClick={() => scrollToComponent(this.Bottom, { offset: 0, align: 'top', duration: 500})} /></button>
+      </div>
+      <section className='bottom' ref={(section) => { this.Bottom = section; }}></section>
+    </div>
     )
   }
 };
