@@ -1,3 +1,6 @@
+@import '../variables/colors.scss';
+
+
 .react-player {
   position: absolute;
   top: 0;
@@ -30,6 +33,38 @@
   margin: auto;
 }
 
+.navarrow {
+  position: absolute;
+  width: 4%;
+  height: 7%;
+  left: 0; right: 0;
+  top: 50%; bottom: 0;
+  margin: auto;
+  z-index: 2;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  button {
+    border:none;
+    background-color: rgba(0, 0, 0, 0.0);
+  }
+  button:focus {outline:0;}
+  img {
+    width: 50%;
+    height: 50%;
+    border-width:0px;
+    background-color: rgba(0, 0, 0, 0.0) !important;
+
+  }
+}
+
+.navarrowbutton {
+  position: relative;
+  top:30%;
+  color: white;
+  background-color: rgba(0, 0, 0,0.5);
+}
+
 .videoPlayer {
   position: relative;
   z-index: 0;
@@ -41,14 +76,17 @@
 
   label {
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-color: $secondaryColor;
     border-radius: 8px;
     margin-left: 4px;
   }
 
-  textarea:focus, input:focus, input, select {
+  textarea:focus, input:focus, input, select, button{
     background-color: transparent;
     outline: none;
+    position: relative;
   }
   }
 
@@ -69,13 +107,20 @@ display: flex;
 align-items: center;
 flex-grow: 2;
 border: solid;
+font-size: 14px;
+}
+
+select, option {
+ background-color: rgba(0, 0, 0, 1);
 }
 
 .input-text{
-font-size: 12px;
+font-size: 14px;
+width: 90%;
 font-weight: normal;
-line-height: 15px;
-background-color:  red;
+position: relative;
+padding-right: 0;
+border: none;
 }
 
 .date-input {
@@ -87,14 +132,22 @@ background-color:  red;
   align-items: center;
   flex-grow: 2;
   border: solid;
+  color: white !important;
   }
+
+
+.DateInput_input{
+  color: white !important;
+  font-size: 12px;
+}
 
 .date-text{
   font-size: 12px;
   font-weight: normal;
   line-height: 30px;
-  color:white;
+  color: white;
   border: transparent;
+  background: transparent;
   }
 
 .icon-size {
@@ -114,27 +167,14 @@ background-color:  red;
   flex-grow: 2;
   border: solid;
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: white;
-      opacity: 1; /* Firefox */
-  }
-
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: white;
-  }
-
-  ::-ms-input-placeholder { /* Microsoft Edge */
-      color: white;
-  }
-
   }
 
   .price-text{
     width: 40%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 30px;
-    color:white;
+    color: $secondaryColor;
     border:  transparent;
     }
 
@@ -151,26 +191,154 @@ background-color:  red;
 
   .room-text{
     width: 70%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 30px;
-    color:white;
+    color: $secondaryColor;
     border: transparent;
     }
 
     .search {
-      background: transparent;
-      height: 40px;
+      height: 80px;
       width: fit-content;
-      padding-right: 5px;
-      padding-left: 5px;
-      border: none;
+      border: solid;
+      position: relative;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      flex-grow: 2;
+      border: transparent;
     }
 
     .search-icon {
-      height: 35px;
-      width: 35px;
+      height: 40px;
+      width: 30px;
       padding-right: 5px;
-      color: transparent;
+      padding-left: 5px;
 
     }
+
+ 
+
+
+ .DateRangePickerInput {
+ background-color: transparent !important;
+ color: white !important;
+
+ :placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white !important;
+      opacity: 1; /* Firefox */
+  }
+
+
+ }
+
+ .DateInput {
+ color: white !important;
+ background-color: transparent !important;
+ transition: none;
+ type:text;
+ }
+
+ .DateInput_input_focused {
+    border-bottom-width: 2px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: $primaryColor !important;
+ }
+
+.DateRangePickerInput_arrow {
+  svg {
+  fill: white !important;
+  }
+}
+
+.DateRangePicker_picker {
+  background-color: transparent !important;
+}
+
+.DayPicker{
+background-color: transparent !important;
+}
+
+.DateRangePicker_picker__portal {
+  position: relative !important;
+ 
+}
+
+.DayPicker_transitionContainer {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  border: solid;
+  border-color: $color_whiteSmoke !important;
+  border-radius: 8px;
+}
+
+.DayPicker_weekHeader_ul {
+  color: $color_whiteSmoke !important;
+}
+
+.DayPickerNavigation_button {
+   background-color: transparent !important;
+    border: solid;
+    color: $color_whiteSmoke !important;
+}
+
+.CalendarMonth {
+  background-color: transparent !important;
+
+}
+
+
+.CalendarMonthGrid {
+  background-color: transparent !important;
+}
+
+.CalendarMonth_caption {
+  background-color: transparent !important;
+  color: $primaryColor !important;
+}
+
+.CalendarMonth_table {
+  color: $color_whiteSmoke !important;
+}
+
+.CalendarDay {
+  background-color: transparent !important;
+  border: solid;
+  color: $color_whiteSmoke !important;
+
+}
+
+.CalendarDay__blocked_out_of_range {
+  color: gray !important;
+}
+
+.CalendarDay__selected {
+  background-color: $primaryColor !important;
+
+}
+
+.CalendarDay__selected_span {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected_span:hover {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected_span:active {
+  background-color: gray !important;
+  border: 1px;
+  border: $primaryColor !important;
+}
+
+.CalendarDay__selected:hover {
+  background-color: $primaryColor !important;
+}
+
+.CalendarDay__selected:active {
+  background-color: $primaryColor !important;
+}
