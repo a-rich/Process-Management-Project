@@ -13,9 +13,9 @@ class UserInfo extends Component {
     render() {
         return (
             <Grid bsClass="UserInfoContainer">
+                <h2>Account Info</h2> 
                 <Row>
                     <Col md={10}>
-                        <h2>Account Info</h2> 
                     </Col>
                     <Col md={2}>
                         <h4>Update Info</h4>                

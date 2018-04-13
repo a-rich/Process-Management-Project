@@ -40,7 +40,7 @@ class ListView extends Component {
 
   render() {
  return(
-     <div>
+     <Grid>
         <ListGroup>
           <ListGroupItem>
 
@@ -73,7 +73,7 @@ class ListView extends Component {
           })}
           </ListGroupItem>
         </ListGroup>
-    </div>
+    </Grid>
  )
 }
 };

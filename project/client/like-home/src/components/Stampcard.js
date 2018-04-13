@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 
-
-  var totalNights = 0;
-
-
 class Stampcard extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            totalNights : 4
         };
       }
 
     render() {
         return (
             <div>
-              <img src = {require('../images/StampCard' + totalNights + '.png')}/>
+              <img src = {require('../images/StampCard' + this.state.totalNights + '.png')}/>
             </div>
         );
     }

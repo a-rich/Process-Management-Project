@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './Account.scss'
 import scrollToComponent from 'react-scroll-to-component'
 import {Grid, Row, Col, Button} from 'react-bootstrap'
 import MyBookings from './MyBookings/MyBookings'
 import MyRewards from './MyRewards/MyRewards'
 import MyFavorites from './MyFavorites/MyFavorites'
 import UserInfo from './UserInfo/UserInfo'
+import './Account.scss'
 
 class Account extends Component {
     constructor(props) {
