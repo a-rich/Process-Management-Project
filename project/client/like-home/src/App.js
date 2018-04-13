@@ -12,6 +12,7 @@ import Login from './components/modals/Login'
 import SignUp from './components/modals/SignUp'
 import Ripples from 'react-ripples'
 import SearchHotels from './views/SearchHotels/SearchHotels'
+import Detailed from './views/Detailed/Detailed'
 class App extends Component {
   render() {
     return (
@@ -41,6 +42,9 @@ class App extends Component {
             <NavItem>
               <Link to="/SearchHotels">SearchHotels</Link>
             </NavItem>
+            <NavItem>
+              <Link to="/Detailed">Detailed</Link>
+            </NavItem>
           </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -50,6 +54,7 @@ class App extends Component {
           <Route path="/account" component={Account}/>
           <Route path="/search-results" component={SearchResults} />
           <Route path="/SearchHotels" component={SearchHotels} />
+          <Route path="/Detailed" component={Detailed} />
         </div>
       </div>
       </Router>
