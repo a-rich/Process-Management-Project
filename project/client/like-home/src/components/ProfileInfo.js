@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component }  from 'react'
+import {Form, FormControl, FormGroup, Checkbox, Button, ControlLabel, HelpBlock } from 'react-bootstrap'
 
 class ProfileInfo extends Component {
     constructor(props) {
@@ -12,19 +13,36 @@ class ProfileInfo extends Component {
     }
 
     render() {
+        function FieldGroup({ id, label, help, ...props }) {
+            return (
+              <FormGroup controlId={id}>
+                <ControlLabel>{label}</ControlLabel>
+                <FormControl {...props} />
+                {help && <HelpBlock>{help}</HelpBlock>}
+              </FormGroup>
+            );
+          }
         return (
-            <div class="MyRewardsContainer">
-                <form>
-                    First Name: <br></br>
-                    <input type="text" name="firstname"></input>
-                    <br></br>
-                    Last Name: <br></br>
-                    <input type="text" name="lastname"></input>
-                    <br></br>
-                    Email: <br></br>
-                    <input type="text" name="lastname"></input>
-                </form>
-            </div>
+            <form>
+                <FieldGroup
+                    id="formControlsText"
+                    type="text"
+                    name="firstname"
+                    placeholder="First Name"
+                />
+                <FieldGroup
+                    id="formControlsText"
+                    type="text"
+                    name="lastname"
+                    placeholder="Last Name"
+                />
+                <FieldGroup
+                    id="formControlsText"
+                    type="text"
+                    name="email"
+                    placeholder="Email"
+                />
+            </form>
         );
     }
 }

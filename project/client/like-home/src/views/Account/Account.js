@@ -23,7 +23,7 @@ class Account extends Component {
         return (
             <div class="accountResultContainer">
                 <div className="sideBar">
-                    <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyUserInfo, { offset: 0, align: 'top', duration: 1500 })}>User Info</Button>
+                    <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyUserInfo, { offset: 0, align: 'top', duration: 1500 })}>Account Info</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyBookings, { offset: 0, align: 'top', duration: 1500})}>My Bookings</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyRewards, { offset: 0, align: 'top', duration: 1500})}>Rewards</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyFavorites, { offset: 0, align: 'top', duration: 1500 })}>Favorites</Button>

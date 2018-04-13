@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import Modal from 'react-modal';
+import React, { Component } from 'react'
+import Modal from 'react-modal'
 import '../../stylesheets/SignUp.scss'
-import {Row, Col, Grid} from 'react-bootstrap';
-import { login } from '../../actions/Account.js';
+import {Row, Col, Grid} from 'react-bootstrap'
+import { login } from '../../actions/Account.js'
+import SignUp from './SignUp'
 
 const customStyles = {
     content : {
@@ -73,7 +74,7 @@ class Login extends Component {
               onAfterOpen={this.afterOpenModal}
               onRequestClose={this.closeModal}
               style={customStyles}
-              contentLabel="Sign Up"
+              contentLabel="Sign In"
 
               >
               <div className="closebuttondiv">
@@ -94,7 +95,7 @@ class Login extends Component {
                 <div className="col-4">
                   <p><a href="#" >Forgot your password?</a></p>
                   <button type="submit" class="button2" onClick={this.submit}>Login</button>
-                  <p>Don't have an account? <a href="#" >Sign Up</a>.</p>
+                  <p>Don't have an account?<SignUp /></p>
                 </div>
               </div>
            </Modal>
