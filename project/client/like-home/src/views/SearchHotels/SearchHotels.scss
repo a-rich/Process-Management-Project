@@ -1,0 +1,65 @@
+@import '../../variables/colors.scss';
+
+.contentListView {
+    margin-top: 82px;
+    overflow: hidden;
+}
+
+.searchBarContainer {
+    margin-bottom: 20px;
+}
+
+label {
+    color: white !important;
+}
+
+.list-group-item {
+    color: white !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.SearchFilterContainer {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ListViewContainer {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.searchContain{
+    position: relative;
+    right: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4%;
+    max-width: 90%;
+    padding: 10%;
+
+}
+
+.searchHotel{
+   margin-left: 5px;
+}
+
+.borderline{
+    border-radius: 5px;
+}
+
+dl input{
+    width: 20px;
+    position: relative;
+    left: 0px;
+    vertical-align: left;
+}
+
+dl label{
+    width:150px;
+    position:relative;
+    display:inline-block;
+    vertical-align:left;
+}
+
+.box{
+    border-bottom: 1px solid #ccc;
+}

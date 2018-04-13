@@ -142,10 +142,14 @@ def login():
 
     try:
         user = User.query.filter_by(email=email).first()
+        schema = User.UserSchema()
+        obj = schema.dump(user)
+        text = obj.data
         token = create_jwt(identity=email)
         return json.dumps({
                 'jwt': token,
-                'name': user.name
+                'name': user.name,
+                'user':text
                 })
     except Exception as e:
         return json.dumps({'msg': 'Invalid credentials.'})

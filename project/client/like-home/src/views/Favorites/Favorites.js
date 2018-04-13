@@ -10,7 +10,7 @@ class Favorites extends Component {
 
     render() {
         return (
-            <div>
+            <div class="favoritesResultContainer">
             <h2>Favorites</h2>
           </div>
         );
