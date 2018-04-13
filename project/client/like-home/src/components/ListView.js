@@ -47,26 +47,27 @@ class ListView extends Component {
           {this.state.items.map((item, index) => {
             return (
               <div id="eachHotel" class="box">
-                  <Grid align="left">
-                  
-                  <Row id="hotelImageDescriptionPrice">
-                    <Col xs={6} md={3}>
+                  <Grid>
+                    
+                    <Col xs={6} md={2}>
                       <Row id="hotelName">
-                        {item.name}
+                        <h4>{item.name}</h4>
                       </Row>
                       <Row id="hotelAddress">
-                        {item.address}
+                       {item.address}
                       </Row>
-                      <Row>
-                        <img src={item.photo} height={150} width={ 150 }/>
+                      <Row id="hotelImage">
+                        <img src={item.photo}/>
                       </Row>
                     </Col>
-                    <Col xs={6} md={3}>{item.description}</Col>
-                    <Col xs={6} md={3}>
-                        <Row>{item.price}</Row>
-                        <Row><Button bsStyle="default" bsSize="small">Details</Button></Row>
+                    
+                    <Col xs={6} md={4} id="hotelDescrip">{item.description}</Col>
+                    
+                    <Col xs={6} md={1}>
+                        <Row id="price"><h3>{item.price}</h3></Row>
+                        <Row><Button id="detailButton">Details</Button></Row>
                     </Col>
-                  </Row>
+                  
                   </Grid>
               </div>
             )
