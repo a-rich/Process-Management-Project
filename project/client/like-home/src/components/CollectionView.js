@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Grid, Col, Row} from 'react-bootstrap';
 //import './newitems.css';
 import '../stylesheets/CollectionView.scss';
 
@@ -8,79 +9,56 @@ export class CollectionView extends React.Component {
     super(props);
     this.state = {
       items: [
-        {'name':"Las Vegas",
-          'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
-        },
-        {'name':"Miami",
-        'photo': "http://www.djoybeat.com/wp-content/uploads/2014/07/miami3-250x250.jpg"
-        },
-        {'name':"Italy",
-        'photo': "http://uncarvedblocktraveler.com/wp-content/uploads/2015/09/rome-italy-250x250.jpg"
-        },
-        {
-          'name': "Malaysia",
-          'photo': "https://i.pinimg.com/736x/2d/b4/8a/2db48a923748bd647190bfb6adbc9f4c--dream-vacations-vacation-places.jpg"
-        },
-        {'name':"London",
-          'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2017/04/best-time-to-go-to-london-feature-250x250.jpg"
+        //chicago il', 'san francisco ca', 'los angeles ca', 'san jose ca',
+        //'washington dc', 'new york ny', 'miami fl', 'las vegas nv', 'austin tx
+        {'name':"Chicago",
+          'photo': "https://thehealingclinic.org/wp-content/uploads/2014/09/home-slide-colorful-chicago.jpg"
         },
         {'name':"San Francisco",
-         'photo': "http://tomsphotocafe.com/wp-content/uploads/2016/06/WS_130630-USA-CA-San-Francisco-8TP2935-250x250.jpg"
+        'photo': "https://dr5dymrsxhdzh.cloudfront.net/blog/images/a18496/2015/04/SanFrancisco.jpg"
         },
         {'name':"Los Angeles",
-        'photo': "http://www.djoybeat.com/wp-content/uploads/2014/05/Los_Angeles-250x250.jpg"
+        'photo': "https://www.lacity.org/sites/g/files/wph781/f/styles/tiled_homepage_blog/public/bigstock-Los-Angeles-5909078.jpg?itok=Pu2dewLz"
+        },
+        {
+          'name': "San Jose",
+          'photo': "https://www.mercurynews.com/wp-content/uploads/2016/08/20150213__0215downtownsj1.jpg?w=620"
+        },
+        {'name':"Washington D.C.",
+          'photo': "https://media-cdn.tripadvisor.com/media/photo-s/0d/f4/d9/92/washington-dc-day-tour.jpg"
         },
         {'name':"New York",
-        'photo': "http://tomsphotocafe.com/wp-content/uploads/2016/03/WS_NewYork_8TP8173_4_5_6_7E-1-250x250.jpg"
+         'photo': "https://s2.15min.lt/images/photos/2016/05/11/original/laisves-statula-niujorke-57333e1ac8175.jpg"
         },
-        {'name':"New Zealand",
-        'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2017/01/MilfordSound.Shutterstock300-250x250.jpg"
+        {'name':"Miami",
+        'photo': "http://www.pullmanhotels.com/imagerie/destinations/city/miami-1400x788-1.jpg"
         },
-        {'name':"Paris",
-        'photo': "https://paris-day-trip.com/wp-content/uploads/2016/10/Paris-Arc-De-Triomphe-Gallery-250x250.jpg"
-
-      },
-        {'name':"Tokyo",
-        'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2017/12/Tokyo-things-to-do-Feature-250x250.jpg"
-      },
+        {'name':"Las Vegas",
+        'photo': "http://www.vegaslegalmagazine.com/wp-content/uploads/2016/05/las-vegas-backgrounds_030839316_281.jpg"
+        },
+        {'name':"Austin",
+        'photo': "https://austinot.com/wp-content/uploads/2012/06/Downtown-Austin-Texas-1024x543.jpg"
+        },
       ]
     }
   }
 
-  componentDidMount() {
-    /*fetch(`https://picsum.photos/400/250`)
-      .then(response => {
-        if (response.status !== 200) {
-          console.log('Error: ' + response.status);
-          return;
-        }
-
-        response.json().then(data => {
-          const items = data.results;
-          this.setState({ items });
-        });
-
-      })
-      .catch(err => {
-        console.log('Fetch Error :-S', err);
-      })*/
-  }
-
   render() {
+    var row = '';
     return(
       <section>
+      <b>Popular Destinations</b>
         <div className="items">
           {this.state.items.map((item, index) => {
             return (
-              <div className="itemLink">
-              <Link to={`/item/${this.state.items[index].name}`} key={index} className="">
-                <img src={item.photo}/>
-                <div className="info">
-                  <h3>{item.name}</h3>
+                <div className="itemLink">
+                <Link to={`/item/${this.state.items[index].name}`} key={index} className="">
+                  <img src={item.photo}/>
+                  <div className="info">
+                    <h3>{item.name}</h3>
+                  </div>
+                </Link>
                 </div>
-              </Link>
-            </div>
-
             )
           })}
         </div>
