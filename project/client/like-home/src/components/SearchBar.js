@@ -7,9 +7,10 @@ import TiLocationOutline from 'react-icons/lib/ti/location-outline'
 import Bed from 'react-icons/lib/fa/bed'
 import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
-import VideoPlayer from '../components/VideoPlayer';
+import VideoPlayer from '../components/VideoPlayer'
 import Autocomplete from '../components/Autocomplete'
 import DateRange from '../components/DateRange'
+import {searchHotels}from '../actions/Search'
 
 // to be read from backend
 const locations = [
@@ -28,19 +29,24 @@ class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.submit = this.submit.bind(this)
+    this.state = { searchResults: [] }
   }
 
 
   submit(e) {
     e.preventDefault()
     console.log('Location', this.refs.location.value)
-    console.log('From date', this.refs.fromDate.value)
-    console.log('To date', this.refs.toDate.value)
+    //console.log('From date', this.refs.fromDate.value)
+    //console.log('To date', this.refs.toDate.value)
     console.log('Min', this.refs.Min.value)
     console.log('Max', this.refs.Max.value)
     console.log('Room Num', this.refs.roomNum.value)
 
     // inputs ready for query to backend
+    searchHotels(
+      {"query": this.refs.location.value,
+      "sort": {"name": 1, "price": 1, "rating": 1 }
+    }) 
   }
 
   render() {

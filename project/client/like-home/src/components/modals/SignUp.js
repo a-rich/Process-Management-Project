@@ -55,7 +55,7 @@ class SignUp extends Component {
       this.setState({name: e.target.value});
     }
 
-      submit(e){
+    submit(e){
         e.preventDefault()
         createUser(
           { "name": this.refs.name.value,
