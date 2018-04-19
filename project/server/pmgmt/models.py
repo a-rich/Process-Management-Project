@@ -75,14 +75,13 @@ class Reservation(db.Model):
     start_date = Column(Date)
     end_date = Column(Date)
 
-"""
     class ReservationSchema(ma.ModelSchema):
         class Meta:
             def __init__(self):
                 model = self.Outer.Outer
 
-    reservation_schema = ReservationSchema(many=True)
-"""
+    reservations_schema = ReservationSchema(many=True)
+
 
 class Reward(db.Model):
     __tablename__ = 'reward'

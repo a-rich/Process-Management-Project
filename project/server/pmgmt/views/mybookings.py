@@ -25,17 +25,30 @@ def my_bookings():
 			cancelledRerservation = Reservation.query.filter(Reservation.user_id==user.id, Reservation.active==-1).all()
 
 			reservations = Reservation.query.filter(Reservation.user_id==user.id).all()
+			openR=[]
 			for res in reservations:
-				print(res.id)
+				if res.id == 1:
+					openR.append(res)
+			print("printing.........")
+			#print(openR)
+			for item in openR:
+				output = {} 
+				output['start_date'] = item.start_date
+
+			print(output)
+
+				
+
+			output = {}
 
 			schema = ReservationSchema(many=True)
 			cr = schema.dump(cancelledRerservation)
 			print(cr)
 
 			return jsonify({
-				# 'openReservation': Reservation.reservation_schema.dump(openReservation).data
-				# , 'closedReservation': Reservation.reservation_schema.dump(closedReservation).data
-				# , 'cancelledRerservation' : Reservation.reservation_schema.dump(cancelledRerservation).data
+				'openReservation': Reservation.reservations_schema.dump(openReservation).data
+				, 'closedReservation': Reservation.reservations_schema.dump(closedReservation).data
+				, 'cancelledRerservation' : Reservation.reservations_schema.dump(cancelledRerservation).data
 				})
 		else:
 			return jsonify({'msg': requestLogInMsg})
