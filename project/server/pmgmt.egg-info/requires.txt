@@ -4,6 +4,7 @@ flask_jwt_simple
 pytest-flask
 flask-sqlalchemy
 bcrypt
-flask-marshmallow
-marshmallow-sqlalchemy
+flask_marshmallow
 flask_whooshee
+marshmallow
+marshmallow-sqlalchemy
