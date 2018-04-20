@@ -1,6 +1,5 @@
-import React from 'react'
-import { Component } from 'react'
-import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap'
+import React, { Component } from 'react'
+import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/ListView.scss'
 
 class ListView extends Component {
@@ -42,13 +41,13 @@ class ListView extends Component {
  return(
      <div>
         <ListGroup>
-          <ListGroupItem>
+          <ListGroupItem id="hotel">
 
           {this.state.items.map((item, index) => {
             return (
-              <div id="eachHotel" class="box">
+              <div class="box">
                   <Grid>
-                    
+                  
                     <Col xs={6} md={2}>
                       <Row id="hotelName">
                         <h4>{item.name}</h4>
@@ -65,9 +64,9 @@ class ListView extends Component {
                     
                     <Col xs={6} md={1}>
                         <Row id="price"><h3>{item.price}</h3></Row>
-                        <Row><Button id="detailButton">Details</Button></Row>
+                        <Row><Button class="button button1">Details</Button></Row>
                     </Col>
-                  
+
                   </Grid>
               </div>
             )

@@ -7,7 +7,7 @@ class SearchFilter extends Component {
 
   render() {
  return(
-     <div>
+     <div id="SearchFilterContainer">
         <ListGroup>
             <ListGroupItem header="Hotel Name">
                 <input placeholder="Hotel name..." class="borderline"></input>
