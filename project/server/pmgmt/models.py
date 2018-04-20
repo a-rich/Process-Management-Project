@@ -25,7 +25,7 @@ class Hotel(db.Model):
     image_url = Column(Text)
     rating = Column(Float)
     coordinates = Column(String(250))
-    price = Column(String(50))
+    price = Column(Integer)
     tiers = Column(String(250))
     location = Column(String(250))
     city = Column(String(250))

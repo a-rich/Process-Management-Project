@@ -6,6 +6,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'flask', 'flask_cors', 'flask_jwt_simple', 'pytest-flask',
-        'flask-sqlalchemy', 'bcrypt', 'flask_marshmallow', 'flask_whooshee'
+        'flask-sqlalchemy', 'bcrypt', 'flask_marshmallow', 'flask_whooshee',
+        'marshmallow-sqlalchemy',
         ],
 )
