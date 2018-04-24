@@ -23,12 +23,12 @@ class SearchFilter extends Component {
         <option value="highRate">high to low</option>
         <option value="lowRate">low to high</option>
         </select>
-        
+
         </label>
         <ListGroup>
             <ListGroupItem header="Hotel Name">
                 <input placeholder="Hotel name..." class="borderline"></input>
-                <Button type="submit" bsStyle="default" bsSize="xsmall" className="searchHotel">Details</Button>
+                <Button type="submit" bsStyle="default" bsSize="xsmall" className="searchHotel"> > </Button>
             </ListGroupItem>
 
             <ListGroupItem header="Additional Filter">
