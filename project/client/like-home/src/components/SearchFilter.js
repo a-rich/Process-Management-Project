@@ -5,9 +5,26 @@ import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox 
 
 class SearchFilter extends Component {
 
-  render() {
+  render(title, i) {
  return(
      <div id="SearchFilterContainer">
+
+        <label>Price$
+        <select class = "room-text" ref="priceFilter" >
+        <option value="default"></option>
+        <option value="highPrice">high to low</option>
+        <option value="lowPrice">low to high</option>
+        </select>
+        </label>
+
+        <label>Rating
+        <select class = "room-text" ref="rateFilter" >
+        <option value="default"></option>
+        <option value="highRate">high to low</option>
+        <option value="lowRate">low to high</option>
+        </select>
+        
+        </label>
         <ListGroup>
             <ListGroupItem header="Hotel Name">
                 <input placeholder="Hotel name..." class="borderline"></input>
@@ -15,6 +32,7 @@ class SearchFilter extends Component {
             </ListGroupItem>
 
             <ListGroupItem header="Additional Filter">
+                
                 <dl>
                     <dt><Checkbox>swimming pool</Checkbox></dt>
                     <dt><Checkbox>Free Breakfast</Checkbox></dt>
@@ -38,4 +56,5 @@ class SearchFilter extends Component {
  )
 }
 };
+
 export default SearchFilter;
