@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
 import './Detailed.scss';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import Carousels from '../../components/Carousels'
@@ -17,6 +18,10 @@ class Detailed extends Component {
         };
       }
 
+      handleClick=() => {
+          this.props.history.push('/payment');
+      }
+
     render() {
         return (
             <div class="detailPic">
@@ -30,13 +35,15 @@ class Detailed extends Component {
                 <h3>Description</h3>{item.description} 
                 <h4>{item.price}</h4>
                 
-                <button>Book Now!</button>
+                <Button onClick={this.handleClick}>Book Now!</Button>
                 </div>
 
             )
             })}
             
           </div>
+
+          
 
         );
     }
