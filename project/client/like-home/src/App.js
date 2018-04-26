@@ -9,7 +9,6 @@ import Favorites from './views/Favorites/Favorites'
 import Account from './views/Account/Account'
 import SearchResults from './views/SearchResults/SearchResults'
 import Login from './components/modals/Login'
-import SignUp from './components/modals/SignUp'
 import Ripples from 'react-ripples'
 import SearchHotels from './views/SearchHotels/SearchHotels'
 import Detailed from './views/Detailed/Detailed'
@@ -34,9 +33,6 @@ class App extends Component {
              <NavItem>
               <Login/>
             </NavItem>
-             <NavItem>
-              <SignUp/>
-            </NavItem>
             <NavItem>
               <Link to="/account">Account</Link>
             </NavItem>
@@ -52,7 +48,6 @@ class App extends Component {
         </Navbar>
         <div className="routeOverlay">
           <Route exact path="/" component={Explore}/>
-          <Route path="signup" component={SignUp}/>
           <Route path="/account" component={Account}/>
           <Route path="/search-results" component={SearchResults} />
           <Route path="/SearchHotels" component={SearchHotels} />

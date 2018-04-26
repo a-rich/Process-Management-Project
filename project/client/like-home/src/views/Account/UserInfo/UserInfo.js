@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './UserInfo.scss'
+import ProfileInfo from '../../../components/ProfileInfo'
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 class UserInfo extends Component {
     constructor(props) {
@@ -10,9 +12,21 @@ class UserInfo extends Component {
 
     render() {
         return (
-            <div class="MyRewardsContainer">
-            <h2>Account</h2>
-          </div>
+            <Grid bsClass="UserInfoContainer">
+                <h2>Account Info</h2> 
+                <Row>
+                    <Col md={10}>
+                    </Col>
+                    <Col md={2}>
+                        <h4>Update Info</h4>                
+                        <ProfileInfo /> <br></br>
+                        <Button>
+                        Update
+                        </Button>
+                    </Col>
+                </Row>
+        
+          </Grid>
         );
     }
 }

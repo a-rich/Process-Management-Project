@@ -55,13 +55,14 @@ class SignUp extends Component {
       this.setState({name: e.target.value});
     }
 
-      submit(e){
+    submit(e){
         e.preventDefault()
         createUser(
           { "name": this.refs.name.value,
             "email": this.refs.email.value,
             "password": this.refs.password.value
           })
+          this.closeModal();
       }
 
     render() {
@@ -107,7 +108,6 @@ class SignUp extends Component {
                 <div className="col-4">
                   <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
                   <button class="button2"  onClick={this.submit}>Sign Up</button>
-                  <p>Already have an account? <a href="#" >Sign in</a>.</p>
                 </div>
               </div>
            </Modal>

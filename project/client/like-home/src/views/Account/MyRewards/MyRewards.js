@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './MyRewards.scss'
+import Stampcard from  '../../../components/Stampcard'
 
 class MyRewards extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class MyRewards extends Component {
         return (
             <div class="MyRewardsContainer">
             <h2>My Rewards</h2>
+            <Stampcard />
           </div>
         );
     }

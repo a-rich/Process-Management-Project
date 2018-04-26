@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './MyBookings.scss'
 import ListView from '../../../components/ListView'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 class MyBookings extends Component {
     constructor(props) {
@@ -11,10 +12,20 @@ class MyBookings extends Component {
 
     render() {
         return (
-            <div class="MyBookingsContainer">
-                <h2>MyBookings</h2>
-                <ListView />
-            </div>
+            <Grid>
+                <Row>
+                    <Col>
+                        <div class="MyBookingsContainer">
+                            <h2>MyBookings</h2>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <ListView />
+                    </Col>
+                </Row>
+            </Grid>
         );
     }
 }

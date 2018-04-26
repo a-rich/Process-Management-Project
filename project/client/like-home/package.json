@@ -38,6 +38,7 @@
     "raf": "3.4.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
+    "react-bootstrap-dropdown-menu": "^1.1.14",
     "react-date-range": "^0.9.4",
     "react-dates": "^16.3.6",
     "react-dev-utils": "^5.0.0",

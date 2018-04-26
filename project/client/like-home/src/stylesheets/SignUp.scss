@@ -11,21 +11,32 @@ input[type=word], input[type=password] {
     margin-right: auto;
     display: inline-block;
     border: none;
-    background: $color_whiteSmoke;
-    color: black;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    box-shadow: 0 0 5px white;
+    
+    /* Add a background color when the inputs get focus */
+    &:focus {
+        box-shadow: 0 0 5px $primaryColor;
+        -webkit-transition: box-shadow 0.5s ease-in;
+        -moz-transition: box-shadow 0.5s ease-in;
+        -o-transition: box-shadow 0.5s ease-in;
+        transition: box-shadow 0.5s ease-in;
+        outline: none;
+    }
+    &:hover {
+        box-shadow: 0 0 10px $secondaryColor;
+        -webkit-transition: box-shadow 0.5s ease-in;
+        -moz-transition: box-shadow 0.5s ease-in;
+        -o-transition: box-shadow 0.5s ease-in;
+        transition: box-shadow 0.5s ease-in;
+        outline: none;
+    }
 }
 
-/* Add a background color when the inputs get focus */
-input[type=word]:focus, input[type=password]:focus {
-    box-shadow: 0 0 5px $primaryColor;
-    -webkit-transition: box-shadow 2s ease-out;
-    -moz-transition: box-shadow 2s ease-out;
-    -o-transition: box-shadow 2s ease-out;
-    transition: box-shadow 2s ease-out;
-    outline: none;
-}
 
 .ReactModal__Content {
+    p { color: $color_whiteSmoke; }
     position: absolute;
     width: 40%;
     border-radius: 20px !important;
@@ -35,7 +46,7 @@ input[type=word]:focus, input[type=password]:focus {
     @media only screen and (min-width: 769px) and (max-width: 992px) {
         width: 60%;
     }
-     background: white !important;
+     background: rgba(0, 0, 0, 0.75) !important;
 
     h2 {
         color: $primaryColor !important;
@@ -80,7 +91,7 @@ b {
 }
 /* submit button style */
 .button2 {
-    background-color: $primaryColor; /* Green */
+    background-color: $primaryColor;
     border: none;
     border-radius: 5px;
     padding: 10px;

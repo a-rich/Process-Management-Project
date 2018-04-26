@@ -1,3 +1,11 @@
 .UserInfoContainer {
-    h2 { color: white; }
+    h2, h4 { 
+        color: white; 
+    }
+    form { 
+        color: white; 
+    }
+    input {
+        background-color:  rgba(255, 255, 255, 0.1);
+    }
 }
