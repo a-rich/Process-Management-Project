@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/ListView.scss'
 
@@ -36,6 +37,10 @@ class ListView extends Component {
         ]
     };
   }
+    handleClick=() => {
+      this.props.history.push('/Detailed');
+  }
+
 
   render() {
  return(
@@ -64,7 +69,7 @@ class ListView extends Component {
                     
                     <Col xs={6} md={1}>
                         <Row id="price"><h3>{item.price}</h3></Row>
-                        <Row><Button class="button button1">Details</Button></Row>
+                        <Row><Button onClick={this.handleClick}>Details</Button></Row>
                     </Col>
 
                   </Grid>
@@ -77,4 +82,4 @@ class ListView extends Component {
  )
 }
 };
-export default ListView;
+export default withRouter(ListView);
