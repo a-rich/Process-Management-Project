@@ -7,5 +7,5 @@ export const setcurrentuser = (name, token) => ({
 
 export const setSearchResults = (searchResults) => ({
 type: C.SET_SEARCHRESULTS,
-    payload: {"searchResults":  {searchResults}}
+    payload: {"searchResults":  searchResults}
 })

@@ -10,7 +10,8 @@ import Search from 'react-icons/lib/fa/search'
 import VideoPlayer from '../components/VideoPlayer'
 import Autocomplete from '../components/Autocomplete'
 import DateRange from '../components/DateRange'
-import {searchHotels}from '../actions/Search'
+import {searchHotels} from '../actions/Search'
+import { withRouter } from "react-router-dom"
 
 // to be read from backend
 const locations = [
@@ -46,7 +47,8 @@ class SearchBar extends Component {
     searchHotels(
       {"query": this.refs.location.value,
       "sort": {"name": 1, "price": 1, "rating": 1 }
-    }) 
+    })
+    this.props.history.push('/SearchHotels');
   }
 
   render() {
@@ -93,4 +95,4 @@ class SearchBar extends Component {
 }
 };
 
-export default SearchBar;
+export default withRouter(SearchBar);
