@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/ListView.scss'
@@ -18,6 +19,17 @@ const mapDispatchToProps = dispatch => {
 }
 
 class ListView extends Component {
+  constructor(props) {
+    console.log(window.store.getState().searchResults.searchResults)
+    super(props);
+   
+    
+    this.state = {
+        items: [ 
+        ]
+    };
+  }
+
   static propTypes = {
     searchHotels: PropTypes.func.isRequired
   }
@@ -27,6 +39,11 @@ class ListView extends Component {
   }
     handleClick=() => {
       this.props.history.push('/Detailed');
+  }
+
+  componentWillMount() {
+    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults)
+    ]})
   }
 
 
