@@ -25,11 +25,11 @@ def hotel_search():
     """
     Search hotel database by city or state
 
-    all sorting criteria can be defined by 1 or 2 meaning ascending, descending, respectively 
+    all sorting criteria can be defined by 1 or 2 meaning ascending, descending, respectively
     """
     # word = request.form['query']
     req = request.get_json()
-    word = req['query']
+    word = req['query'].lower()
     sort = req['sort']
 
     name_sort = sort['name']
