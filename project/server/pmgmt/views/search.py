@@ -1,12 +1,16 @@
 from flask import Blueprint, request, jsonify
 from flask_marshmallow import Marshmallow
-from pmgmt.models import Hotel
+from pmgmt.models import Hotel, Room
 from pmgmt import ma
 import itertools
 
 class HotelSchema(ma.ModelSchema):
     class Meta:
         model = Hotel
+
+class RoomSchema(ma.ModelSchema):
+    class Meta:
+        model = Room
 
 search = Blueprint('search', __name__)
 
@@ -29,7 +33,7 @@ def hotel_search():
     """
     # word = request.form['query']
     req = request.get_json()
-    word = req['query']
+    word = req['query'].lower()
     sort = req['sort']
 
     name_sort = sort['name']
@@ -118,3 +122,13 @@ def search_index():
             }
 
     return jsonify(data)
+
+
+@search.route('/api/hotel/<int:hid>', methods=['GET'])
+def searchRoomByHotelId(hid):
+
+    rooms = Room.query.filter(Room.hotel_id==hid, Room.vacant==0)
+
+    room_schema = RoomSchema(many=True)
+
+    return jsonify({'rooms': room_schema.dump(rooms).data})
