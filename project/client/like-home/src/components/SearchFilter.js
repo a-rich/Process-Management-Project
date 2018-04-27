@@ -26,7 +26,7 @@ class SearchFilter extends Component {
 
         </label>
         <ListGroup>
-            <ListGroupItem header="Hotel Name">
+            <ListGroupItem header="Hotel Name" class="headColor">
                 <input placeholder="Hotel name..." class="borderline"></input>
                 <Button type="submit" bsStyle="default" bsSize="xsmall" className="searchHotel"> > </Button>
             </ListGroupItem>
