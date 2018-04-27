@@ -5,6 +5,7 @@ import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox 
 import '../stylesheets/ListView.scss'
 import {searchHotels} from '../actions/Search'
 import { setSearchResults } from '../actions.js'
+import { connect as reduxConnect } from 'react-redux'
 
 const mapStateToProps = (searchHotels) => ({
   searchHotels
@@ -42,7 +43,7 @@ class ListView extends Component {
   }
 
   componentWillMount() {
-    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults)
+    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))
     ]})
   }
 
@@ -85,4 +86,4 @@ class ListView extends Component {
  )
 }
 };
-export default withRouter(ListView);
+export default withRouter(reduxConnect(mapStateToProps, mapDispatchToProps)(ListView))
