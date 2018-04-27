@@ -29,7 +29,7 @@ def hotel_search():
     """
     # word = request.form['query']
     req = request.get_json()
-    word = req['query']
+    word = req['query'].lower()
     sort = req['sort']
 
     name_sort = sort['name']
