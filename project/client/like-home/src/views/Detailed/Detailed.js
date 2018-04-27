@@ -29,15 +29,15 @@ class Detailed extends Component {
 
             {this.state.items.map((item, index) => {
             return (
-                <div id="hotelDetails"> 
-                <h2>{item.name}</h2>
+                <div id="hotelDetails" class= "boxRadius"> 
+                <h2 class= "theColor">{item.name}</h2>
                 <b>Address:</b> {item.address}
-                <h3>Description</h3>{item.description} 
-                <h4>{item.price}</h4>
-                
+                <h3 class= "theColor">Description</h3>{item.description} 
+                <h4 class= "theColor">{item.price}</h4>
+                <dt><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/></dt>
                 <Button onClick={this.handleClick}>Book Now!</Button>
                 </div>
-
+                
             )
             })}
             
