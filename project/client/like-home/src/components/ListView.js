@@ -36,25 +36,11 @@ this.setState({
   items: [[].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))]})
 }
 
-componentDidMount() {
-  console.log("componentDidMount")
-}
-
-componentWillReceiveProps() {
-  console.log("componentWillReceiveProps")
-}
-
-componentDidUpdate() {
-  console.log("componentDidUpdate")
-}
-
   constructor(props, context) {
     super(props, context);
   }
 
   render() {
-    const { items } = this.state
-    console.log("ITESMS",items)
  return(
      <Grid>
         <ListGroup>
