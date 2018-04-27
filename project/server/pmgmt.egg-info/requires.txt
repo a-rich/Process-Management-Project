@@ -6,5 +6,4 @@ flask-sqlalchemy
 bcrypt
 flask_marshmallow
 flask_whooshee
-marshmallow
 marshmallow-sqlalchemy
