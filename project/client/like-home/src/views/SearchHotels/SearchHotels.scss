@@ -9,57 +9,99 @@
     margin-bottom: 20px;
 }
 
-label {
-    color: white !important;
-}
 
-.list-group-item {
-    color: white !important;
-    background-color: transparent !important;
-    border: none !important;
-}
 
 .SearchFilterContainer {
-    background-color: rgba(0, 0, 0, 0.75);
+     background-color: rgba(0, 0, 0, 0.75);
+
+     label {
+        color: white !important;
+    }
+
+    .list-group-item {
+        color: black !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    .searchContain{
+        position: relative;
+        right: 5%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 4%;
+        max-width: 90%;
+        padding: 10%;
+    }
+    
+    .searchHotel{
+        margin-left: 5px;
+     }
+    
+     .borderline{
+         border-radius: 5px;
+     }
+    
+    dl {
+        border-bottom: 1px solid #ccc;
+    }
+    
+    dl label{
+        width:150px;
+        position:relative;
+        display:inline-block;
+        vertical-align:left;
+    }
+    
+    dl input{
+        width: 20px;
+        position: relative;
+        left: 0px;
+        vertical-align: left;
+    }
 }
+
 
 .ListViewContainer {
-    background-color: rgba(0, 0, 0, 0.75);
-}
+    background-color: rgba(0, 0, 0, 0);
 
-.searchContain{
-    position: relative;
-    right: 5%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 4%;
-    max-width: 90%;
-    padding: 10%;
-
-}
-
-.searchHotel{
-   margin-left: 5px;
-}
-
-.borderline{
-    border-radius: 5px;
-}
-
-dl input{
-    width: 20px;
-    position: relative;
-    left: 0px;
-    vertical-align: left;
-}
-
-dl label{
-    width:150px;
-    position:relative;
-    display:inline-block;
-    vertical-align:left;
-}
-
-.box{
-    border-bottom: 1px solid #ccc;
+    #hotelName {
+        text-align: center;  
+        padding-bottom: none;
+    }
+    
+    #hotelAddress {
+        padding: 5px;
+        text-align: center;
+    }
+    
+    #hotelImage {
+        text-align: center;  
+        padding-bottom: 15px;
+    }
+    
+    img {
+        height:150px;
+        width:150px;
+    }
+    
+    #hotelDescrip {
+        margin-top: 60px;
+        text-align: left;
+    }
+    
+    #price{
+        margin-top: 25px;
+        text-align: center;
+    }
+    
+    #detailButton {
+        margin-top: 30px;
+    }
+    
+    .box{
+        // border-bottom: 1px solid #ccc;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 6px 20px 0 rgba(0, 0, 0, 0.13);    
+        margin-bottom: 20px;
+    }
 }
