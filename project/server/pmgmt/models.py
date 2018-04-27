@@ -16,6 +16,7 @@ class User(db.Model):
 
 class Hotel(db.Model):
     __tablename__ = 'hotel'
+    __searchable__ = ['name', 'location']
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
@@ -24,7 +25,7 @@ class Hotel(db.Model):
     image_url = Column(Text)
     rating = Column(Float)
     coordinates = Column(String(250))
-    price = Column(String(50))
+    price = Column(Integer)
     tiers = Column(String(250))
     location = Column(String(250))
     city = Column(String(250))
@@ -32,14 +33,6 @@ class Hotel(db.Model):
     address = Column(Text)
     phone = Column(String(20))
 
-"""
-    class HotelSchema(ma.ModelSchema):
-        class Meta:
-            def __init__(self):
-                model = self.Outer.Outer
-
-    hotel_schema = HotelSchema(many=True)
-"""
 
 class Room(db.Model):
     __tablename__ = 'room'
@@ -52,7 +45,7 @@ class Room(db.Model):
     tier = Column(String(250))
     vacant = Column(SmallInteger, default=0)
     created_date = Column(DateTime(timezone=True), server_default=func.now())
-    
+
 
 class Tier(db.Model):
     __tablename__ = 'tier'
@@ -75,14 +68,14 @@ class Reservation(db.Model):
     start_date = Column(Date)
     end_date = Column(Date)
 
-"""
+    """
     class ReservationSchema(ma.ModelSchema):
         class Meta:
             def __init__(self):
                 model = self.Outer.Outer
 
     reservations_schema = ReservationSchema(many=True)
-"""
+    """
 
 class Reward(db.Model):
     __tablename__ = 'reward'
@@ -107,4 +100,3 @@ class City(db.Model):
     state_id = Column(Integer, ForeignKey('state.id'))
     state = relationship(State)
     name = Column(String(50))
-
