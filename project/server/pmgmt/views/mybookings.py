@@ -42,7 +42,7 @@ def my_bookings():
 			output = {}
 			'''
 
-
+			schema = ReservationSchema(many=True)
 
 			return jsonify({
 				'openReservation': schema.dump(openReservation).data
@@ -54,3 +54,4 @@ def my_bookings():
 
 	except Exception as e:
 		return jsonify({'msg': str(e)})
+
