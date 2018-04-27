@@ -1,5 +1,4 @@
 from datetime import timedelta
-from whoosh.analysis import StemmingAnalyzer
 
 
 class DevelopmentConfig():
