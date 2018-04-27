@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Payment.scss';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
-import PaymentForm from '../../components/PaymentForm'
+import PaymentForm from '../../components/PaymentForm';
+import {Elements} from 'react-stripe-elements';
 
 class Payment extends Component {
     constructor(props) {
@@ -20,7 +21,9 @@ class Payment extends Component {
     render() {
         return (
             <div class="paymentForm">
+            <Elements>
             <PaymentForm />
+            </Elements>
           </div>
 
         );
