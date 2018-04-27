@@ -20,8 +20,10 @@ ma = Marshmallow(app)
 from pmgmt.views.authentication import authentication
 from pmgmt.views.reservations import reservation
 from pmgmt.views.mybookings import mybookings
+from pmgmt.views.rewards import reward
 
 # Register views with Flask app
 app.register_blueprint(authentication)
 app.register_blueprint(reservation)
 app.register_blueprint(mybookings)
+app.register_blueprint(reward)
