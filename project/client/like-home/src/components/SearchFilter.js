@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap';
-
+import '../stylesheets/SearchFilter.scss'
 
 class SearchFilter extends Component {
 
@@ -9,7 +9,7 @@ class SearchFilter extends Component {
  return(
      <div id="SearchFilterContainer">
 
-        <label>Price$
+        <label>Price &nbsp;
         <select class = "room-text" ref="priceFilter" >
         <option value="default"></option>
         <option value="highPrice">high to low</option>
@@ -31,16 +31,7 @@ class SearchFilter extends Component {
                 <Button type="submit" bsStyle="default" bsSize="xsmall" className="searchHotel"> > </Button>
             </ListGroupItem>
 
-            <ListGroupItem header="Additional Filter">
-                
-                <dl>
-                    <dt><Checkbox>swimming pool</Checkbox></dt>
-                    <dt><Checkbox>Free Breakfast</Checkbox></dt>
-                    <dt><Checkbox>Free Parking</Checkbox></dt>
-                    <dt><Checkbox>Free Wifi</Checkbox></dt>
-                    <dt><Checkbox>Pet Friendly</Checkbox></dt>
-                    </dl>
-            </ListGroupItem>
+            <hr/>
 
             <ListGroupItem header="Rating">
                     <dl>
