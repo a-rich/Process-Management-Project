@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom';
-import './Detailed.scss';
+import './Detailed.scss'
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import Carousels from '../../components/Carousels'
+import store from '../../store'
 
 class Detailed extends Component {
     constructor(props) {
         super(props);
         this.state = {
             items: [
-                {'name':"New York",
-                'address': "1234 NYC Ave",
-                  'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
-                  'price': "$99",
-                'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
-                } ]
+             ],
+             roomIndex: 1
         };
+      }
+
+      componentWillMount() {
+        this.setState({items: [].concat.apply([], window.store.getState().detailResults.detailResults.rooms)
+        })
       }
 
       handleClick=() => {
@@ -23,19 +25,20 @@ class Detailed extends Component {
       }
 
     render() {
+        console.log(this.state.items)
+       
         return (
             <div class="detailPic">
             <Carousels />
-
             {this.state.items.map((item, index) => {
+                console.log("index", index)
+
             return (
                 <div id="hotelDetails" class= "boxRadius"> 
-                <h2 class= "theColor">{item.name}</h2>
-                <b>Address:</b> {item.address}
-                <h3 class= "theColor">Description</h3>{item.description} 
-                <h4 class= "theColor">{item.price}</h4>
-                <dt><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/></dt>
-                <Button onClick={this.handleClick}>Book Now!</Button>
+                    <h3>Room: {this.state.roomIndex++} </h3>
+                    <h4 class= "theColor">${item.price}</h4>
+                    <dt><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/></dt>
+                    <Button bsStyle="bookNow" onClick={this.handleClick}>Book Now!</Button>
                 </div>
                 
             )
