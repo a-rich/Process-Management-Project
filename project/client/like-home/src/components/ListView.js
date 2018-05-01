@@ -24,7 +24,6 @@ class ListView extends Component {
     console.log(window.store.getState().searchResults.searchResults)
     super(props);
    
-    
     this.state = {
         items: [ 
         ]
@@ -67,7 +66,7 @@ class ListView extends Component {
                        {item.address}
                       </Row>
                       <Row>
-                        <img src={item.image_url} height={150} width={ 150 }/>
+                        <img src={item.image_url === null ? 'http://www.ebuzzingvideo.com/banniere/radisson/rad6.jpg' : item.image_url} height={150} width={ 150 }/>
                       </Row>
                     </Col>
                     <Col xs={6} md={3}>{item.description}</Col>
