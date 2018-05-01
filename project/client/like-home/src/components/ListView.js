@@ -1,28 +1,53 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/ListView.scss'
 import {searchHotels} from '../actions/Search'
+import { setSearchResults } from '../actions.js'
+import { connect as reduxConnect } from 'react-redux'
+
+const mapStateToProps = (searchHotels) => ({
+  searchHotels
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setSearchResults(results) {
+      dispatch(searchHotels)
+    }
+  }
+}
 
 class ListView extends Component {
-
   constructor(props) {
     console.log(window.store.getState().searchResults.searchResults)
     super(props);
    
-    
     this.state = {
-        items: [ [].concat.apply([], window.store.getState().searchResults.searchResults)
+        items: [ 
         ]
     };
+  }
+
+  static propTypes = {
+    searchHotels: PropTypes.func.isRequired
+  }
+
+  static defaultProps = { 
+    items: new Map()
   }
     handleClick=() => {
       this.props.history.push('/Detailed');
   }
 
+  componentWillMount() {
+    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))
+    ]})
+  }
+
 
   render() {
-    
  return(
      <Grid>
         <ListGroup>
@@ -41,7 +66,7 @@ class ListView extends Component {
                        {item.address}
                       </Row>
                       <Row>
-                        <img src={item.image_url} height={150} width={ 150 }/>
+                        <img src={item.image_url === null ? 'http://www.ebuzzingvideo.com/banniere/radisson/rad6.jpg' : item.image_url} height={150} width={ 150 }/>
                       </Row>
                     </Col>
                     <Col xs={6} md={3}>{item.description}</Col>
@@ -60,4 +85,4 @@ class ListView extends Component {
  )
 }
 };
-export default withRouter(ListView);
+export default withRouter(reduxConnect(mapStateToProps, mapDispatchToProps)(ListView))

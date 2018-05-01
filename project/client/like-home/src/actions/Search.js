@@ -15,3 +15,16 @@ export function searchHotels(values) {
   });
     return { }
 }
+
+export function showHotelRooms(id) {
+    console.log("id: ", id)
+    const request = axios.post(`${ROOT_URL}/api/hotels/`, id)
+    .then(function (response) {
+        console.log("response.data: ", response.data)
+        window.store.dispatch(setSearchResults(response.data))
+    })
+    .catch(function (error) {
+    console.log(error);
+  });
+    return { }
+}
