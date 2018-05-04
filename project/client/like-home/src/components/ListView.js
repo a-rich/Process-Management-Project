@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
-import '../stylesheets/ListView.scss'
-import {searchHotels, showHotelRooms} from '../actions/Search'
-import { setSearchResults } from '../actions.js'
-import { connect as reduxConnect } from 'react-redux'
-import store from '../store'
-import ReactTable from "react-table"
+import '../stylesheets/ListView.scss';
+import {searchHotels, showHotelRooms} from '../actions/Search';
+import { setSearchResults } from '../actions.js';
+import { connect as reduxConnect } from 'react-redux';
+import store from '../store';
+import ReactTable from "react-table";
 import "react-table/react-table.css";
-import matchSorter from 'match-sorter'
+import matchSorter from 'match-sorter';
 
 const mapStateToProps = (searchHotels) => ({
   searchHotels
