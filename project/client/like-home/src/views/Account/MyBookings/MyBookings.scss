@@ -1,3 +1,47 @@
 .MyBookingsContainer {
     h2 { color: white; }
 }
+
+.ListViewContainer {
+        background-color: rgba(0, 0, 0, 0);
+    
+        #hotelName {
+            text-align: center;  
+            padding-bottom: none;
+        }
+        
+        #hotelAddress {
+            padding: 5px;
+            text-align: center;
+        }
+        
+        #hotelImage {
+            text-align: center;  
+            padding-bottom: 15px;
+        }
+       
+        img {
+            height:150px;
+            width:150px;
+        }
+       
+        #hotelDescrip {
+            margin-top: 80px;
+            text-align: left;
+        }
+        
+        #price{
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        #detailButton {
+            margin-top: 30px;
+        }
+        
+        .box{
+            // border-bottom: 1px solid #ccc;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 6px 20px 0 rgba(0, 0, 0, 0.13);    
+            margin-bottom: 20px;
+       }
+     }
