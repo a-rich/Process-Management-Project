@@ -10,6 +10,9 @@ export const searchResults = (state = {}, action) =>
 export const detailResults = (state = {}, action) =>
 (action.type === C.SET_DETAILRESULTS) ? action.payload : state
 
+export const cityData = (state = {}, action) =>
+(action.type === C.SET_CITYDATA)? action.payload : state
+
 export default combineReducers({
-  currentUser, searchResults, detailResults
+  currentUser, searchResults, detailResults, cityData
 })
