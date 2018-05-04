@@ -1,4 +1,37 @@
 .paymentForm {
-    margin-top: 82px;
+    margin-top: 90px;
     overflow: hidden;
 }
+
+.header {
+    color: black !important;
+}
+
+.paymentForm {
+    #nameBox{
+        width: 400px;
+    }
+
+    #cardBox {
+        width: 400px;
+    }
+
+    #expBox {
+        width: 160px;
+    }
+
+    #cvcBox {
+        width: 160px;
+        margin-left: 80px;
+    }
+
+    #payButton {
+        width: 400px;
+    }
+
+    input {
+        font-size: 15px;
+    }
+}
+
+
