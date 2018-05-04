@@ -24,9 +24,9 @@ class ListView extends Component {
   constructor(props) {
     console.log(window.store.getState().searchResults.searchResults)
     super(props);
-   
+
     this.state = {
-        items: [ 
+        items: [
         ]
     };
   }
@@ -35,7 +35,7 @@ class ListView extends Component {
     searchHotels: PropTypes.func.isRequired
   }
 
-  static defaultProps = { 
+  static defaultProps = {
     items: new Map()
   }
     showDetail= (e, id) => {
@@ -45,8 +45,8 @@ class ListView extends Component {
   }
 
   componentWillMount() {
-    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))
-    ]})
+    console.log(window.store.getState().searchResults)
+    this.setState({items: window.store.getState().searchResults})
   }
 
 
@@ -56,7 +56,7 @@ class ListView extends Component {
         <ListGroup>
           <ListGroupItem id="hotel">
 
-          {this.state.items[0].map((item, index) => {
+          {this.state.items.map((item, index) => {
             return (
               <div class="box">
                   <Grid>
