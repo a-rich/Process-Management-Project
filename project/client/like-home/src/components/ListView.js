@@ -237,7 +237,7 @@ class ListView extends Component {
                   id: "zip",
                   accessor: a => a.location.zip_code,
                   filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["zip "] }),
+                    matchSorter(rows, filter.value, { keys: ["zip"] }),
                   filterAll: true
                 },
                 {
