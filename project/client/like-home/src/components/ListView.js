@@ -27,7 +27,7 @@ class ListView extends Component {
   constructor(props) {
     console.log(window.store.getState().searchResults.searchResults)
     super(props);
-   
+
     this.state = {
         items: [
           {
@@ -164,7 +164,7 @@ class ListView extends Component {
     searchHotels: PropTypes.func.isRequired
   }
 
-  static defaultProps = { 
+  static defaultProps = {
     items: new Map()
   }
     showDetail= (e, id) => {
