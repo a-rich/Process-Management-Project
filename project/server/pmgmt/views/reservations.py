@@ -26,11 +26,10 @@ def new_reservation():
 	redeem = req['redeem']
 
 	try:
-		# user = User.query.filter(User.email==get_jwt_identity()).first()
-		#user = User.query.filter(User.email=='jiajun.wu@sjsu.edu').first()
 		# created a user in sqlite to test this, if you want to test this endpoint, do the same, and provide your email here,
-		
-		user = User.query.filter(User.email=='brandonabajelo@gmail.com').first()
+		# user = User.query.filter(User.email==get_jwt_identity()).first()
+		user = User.query.filter(User.email=='jiajun.wu@sjsu.edu').first()
+		# user = User.query.filter(User.email=='brandonabajelo@gmail.com').first()
 
 
 		if user:
@@ -56,6 +55,7 @@ def new_reservation():
 					reward = Reward(user_id=user.id, reservation_id=new_reservation.id, alter=roomPrice, reward=user.reward+roomPrice, active=1)
 					db.session.add(reward)
 
+					room.vacant = 1
 					user.reward = user.reward+roomPrice
 
 					db.session.commit()
@@ -140,6 +140,7 @@ def cancel_reservation():
 				user_reward.active = -1
 				user_reward.reward -= user_reward.alter
 
+				room.vacant = 0
 				user.reward -= user_reward.alter
 
 				db.session.commit()
