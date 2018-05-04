@@ -36,10 +36,6 @@ class App extends Component {
             <NavItem>
               <Link to="/account">Account</Link>
             </NavItem>
-            <NavItem>
-              <Link to="/SearchHotels">SearchHotels</Link>
-            </NavItem>
-
           </Nav>
           </Navbar.Collapse>
         </Navbar>
