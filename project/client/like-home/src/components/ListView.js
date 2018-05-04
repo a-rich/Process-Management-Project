@@ -29,134 +29,7 @@ class ListView extends Component {
     super(props);
 
     this.state = {
-        items: [
-          {
-            "id": "5LNZ67Yw9RD6nf4_UhXOjw",
-            "alias": "the-cosmopolitan-of-las-vegas-las-vegas",
-            "name": "The Cosmopolitan of Las Vegas",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/CvChZm5SAGt5bm9IL2evog/o.jpg",
-            "is_closed": false,
-            "url": "https://www.yelp.com/biz/the-cosmopolitan-of-las-vegas-las-vegas?adjust_creative=-SxmL2JanjVMHYmRgJBIPQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=-SxmL2JanjVMHYmRgJBIPQ",
-            "review_count": 4005,
-            "categories": [
-                {
-                    "alias": "hotels",
-                    "title": "Hotels"
-                },
-                {
-                    "alias": "casinos",
-                    "title": "Casinos"
-                }
-            ],
-            "rating": 4,
-            "coordinates": {
-                "latitude": 36.1097192163669,
-                "longitude": -115.173992335813
-            },
-            "transactions": [],
-            "price": "$$$",
-            "location": {
-                "address1": "3708 Las Vegas Blvd S",
-                "address2": null,
-                "address3": null,
-                "city": "Las Vegas",
-                "zip_code": "89109",
-                "country": "US",
-                "state": "NV",
-                "display_address": [
-                    "3708 Las Vegas Blvd S",
-                    "Las Vegas, NV 89109"
-                ]
-            },
-            "phone": "+17026987000",
-            "display_phone": "(702) 698-7000",
-            "distance": 3335.747681764089
-        },
-        {
-          "id": "5LNZ67Yw9RD6nf4_UhXOjw",
-          "alias": "the-cosmopolitan-of-las-vegas-las-vegas",
-          "name": "HACKS",
-          "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/CvChZm5SAGt5bm9IL2evog/o.jpg",
-          "is_closed": false,
-          "url": "https://www.yelp.com/biz/the-cosmopolitan-of-las-vegas-las-vegas?adjust_creative=-SxmL2JanjVMHYmRgJBIPQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=-SxmL2JanjVMHYmRgJBIPQ",
-          "review_count": 4005,
-          "categories": [
-              {
-                  "alias": "hotels",
-                  "title": "Hotels"
-              },
-              {
-                  "alias": "casinos",
-                  "title": "Casinos"
-              }
-          ],
-          "rating": 4,
-          "coordinates": {
-              "latitude": 36.1097192163669,
-              "longitude": -115.173992335813
-          },
-          "transactions": [],
-          "price": "$",
-          "location": {
-              "address1": "3708 Las Vegas Blvd S",
-              "address2": null,
-              "address3": null,
-              "city": "Las Vegas",
-              "zip_code": "89109",
-              "country": "US",
-              "state": "NV",
-              "display_address": [
-                  "3708 Las Vegas Blvd S",
-                  "Las Vegas, NV 89109"
-              ]
-          },
-          "phone": "+17026987000",
-          "display_phone": "(702) 698-7000",
-          "distance": 3335.747681764089
-      },
-      {
-        "id": "5LNZ67Yw9RD6nf4_UhXOjw",
-        "alias": "the-cosmopolitan-of-las-vegas-las-vegas",
-        "name": "YEEEEEEEEEEEEEEEE",
-        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/CvChZm5SAGt5bm9IL2evog/o.jpg",
-        "is_closed": false,
-        "url": "https://www.yelp.com/biz/the-cosmopolitan-of-las-vegas-las-vegas?adjust_creative=-SxmL2JanjVMHYmRgJBIPQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=-SxmL2JanjVMHYmRgJBIPQ",
-        "review_count": 4005,
-        "categories": [
-            {
-                "alias": "hotels",
-                "title": "Hotels"
-            },
-            {
-                "alias": "casinos",
-                "title": "Casinos"
-            }
-        ],
-        "rating": 4,
-        "coordinates": {
-            "latitude": 36.1097192163669,
-            "longitude": -115.173992335813
-        },
-        "transactions": [],
-        "price": "$$",
-        "location": {
-            "address1": "3708 Las Vegas Blvd S",
-            "address2": null,
-            "address3": null,
-            "city": "Las Vegas",
-            "zip_code": "89109",
-            "country": "US",
-            "state": "NV",
-            "display_address": [
-                "3708 Las Vegas Blvd S",
-                "Las Vegas, NV 89109"
-            ]
-        },
-        "phone": "+17026987000",
-        "display_phone": "(702) 698-7000",
-        "distance": 3335.747681764089
-    },
-        ]
+        items:[]
     };
   }
 
@@ -174,21 +47,22 @@ class ListView extends Component {
   }
 
   componentWillMount() {
-    // this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))
-    // ]})
+    this.setState({items:  window.store.getState().searchResults.searchResults })
+
   }
 
   getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    var result = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-    return result.toString();
+   var result = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+   return result.toString();
   }
 
 
   render() {
     const { items } = this.state;
     const prices = {"$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
+    console.log("TYPE: ", items)
  return(
         <div>
         <ReactTable
@@ -226,11 +100,17 @@ class ListView extends Component {
                   Header: "City",
                   id: "city",
                   accessor: a => a.location.city,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["city"] }),
+                    filterAll: true
                 },
                 {
                   Header: "Address",
                   id: "location",
                   accessor: a => a.location.address1,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["location"] }),
+                    filterAll: true
                 },
                 {
                   Header: "Zip",
@@ -238,20 +118,22 @@ class ListView extends Component {
                   accessor: a => a.location.zip_code,
                   filterMethod: (filter, rows) =>
                     matchSorter(rows, filter.value, { keys: ["zip"] }),
-                  filterAll: true
+                    filterAll: true
+                  
                 },
                 {
                   Header: "($) Price",
                   id: "price",
                   accessor: a => a.price,
-                  filterAll: true,
-                  filterMethod: (filter, rows) =>
+                    filterMethod: (filter, rows) =>
                     matchSorter(rows, filter.value, { keys: ["price"] }),
-                    Cell: ({ value }) => (
+                    Cell: ({ value } ) => (
                       value = prices[value]
-                    )
-                  
-                 
+                      
+                    ),
+                    
+                    filterAll: true,
+                    //filterable: true,
                 },
               ]
             }
