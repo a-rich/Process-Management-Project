@@ -188,7 +188,7 @@ class ListView extends Component {
 
   render() {
     const { items } = this.state;
-    const prices = {"$$$": this.getRandomInt(100, 300), "$$": this.getRandomInt(100, 300), "$": this.getRandomInt(100, 300)}
+    const prices = {"$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
  return(
         <div>
         <ReactTable
@@ -205,7 +205,7 @@ class ListView extends Component {
                   id: "image",
                   accessor: a => a.image_url,
                   Cell: (row) => {
-                    return <div><img src={row.original.image_url}/></div>
+                    return <div><img src={row.original.image_url} onClick={this.showDetail}/></div>
                   },
                   filterable: false,
                 },
