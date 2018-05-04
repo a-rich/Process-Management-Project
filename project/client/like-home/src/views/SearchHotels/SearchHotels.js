@@ -10,7 +10,6 @@ import Search from 'react-icons/lib/fa/search'
 import Autocomplete from '../../components/Autocomplete'
 import DateRange from '../../components/DateRange'
 import SearchBar from '../../components/SearchBar'
-import SearchFilter from '../../components/SearchFilter'
 import ListView from '../../components/ListView'
 
 const locations = [
@@ -28,7 +27,7 @@ class SearchHotels extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            
         };
       }
 
@@ -45,13 +44,8 @@ class SearchHotels extends Component {
                 </Row>
 
                 <Row >
-                    <Col md={4}>
-                        <div class="SearchFilterContainer" >
-                            <SearchFilter />
-                        </div>
-                    </Col>
 
-                    <Col md={8}>
+                    <Col md={12}>
                         <div className="ListViewContainer">
                             <ListView />
                         </div>

@@ -9,3 +9,13 @@ export const setSearchResults = (searchResults) => ({
 type: C.SET_SEARCHRESULTS,
     payload: {"searchResults":  searchResults}
 })
+
+export const setDetailResults = (detailResults) => ({
+    type: C.SET_DETAILRESULTS,
+        payload: {"detailResults":  detailResults}
+    })
+
+export const setCityData = (cityData) => ({
+  type: C.SET_CITYDATA,
+    payload: {"citydata":cityData}
+})
