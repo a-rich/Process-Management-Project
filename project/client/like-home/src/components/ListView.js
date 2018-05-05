@@ -7,9 +7,6 @@ import {searchHotels, showHotelRooms} from '../actions/Search'
 import { setSearchResults } from '../actions.js'
 import { connect as reduxConnect } from 'react-redux'
 import store from '../store'
-import ReactTable from "react-table"
-import "react-table/react-table.css";
-import matchSorter from 'match-sorter'
 
 const mapStateToProps = (searchHotels) => ({
   searchHotels
@@ -27,9 +24,10 @@ class ListView extends Component {
   constructor(props) {
     console.log(window.store.getState().searchResults.searchResults)
     super(props);
-
+   
     this.state = {
-        items:[]
+        items: [ 
+        ]
     };
   }
 
@@ -37,7 +35,7 @@ class ListView extends Component {
     searchHotels: PropTypes.func.isRequired
   }
 
-  static defaultProps = {
+  static defaultProps = { 
     items: new Map()
   }
     showDetail= (e, id) => {
@@ -47,101 +45,48 @@ class ListView extends Component {
   }
 
   componentWillMount() {
-    this.setState({items:  window.store.getState().searchResults.searchResults })
-
-  }
-
-  getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-   var result = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-   return result.toString();
+    this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))
+    ]})
   }
 
 
   render() {
-    const { items } = this.state;
-    const prices = {"$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
-    console.log("TYPE: ", items)
  return(
-        <div>
-        <ReactTable
-          data={items}
-          filterable
-          defaultFilterMethod={(filter, row) =>
-            String(row[filter.id]) === filter.value}
-          columns={[
-            {
-              Header: "Hotel",
-              columns: [
-                {
-                  Header: "Image",
-                  id: "image",
-                  accessor: a => a.image_url,
-                  Cell: (row) => {
-                    return <div><img src={row.original.image_url} onClick={this.showDetail}/></div>
-                  },
-                  filterable: false,
-                },
-                {
-                  Header: "Name",
-                  id: "name",
-                  accessor: d => d.name,
-                  filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["name"] }),
-                  filterAll: true
-                }
-              ]
-            },
-            {
-              Header: "Info",
-              columns: [
-                {
-                  Header: "City",
-                  id: "city",
-                  accessor: a => a.location.city,
-                  filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["city"] }),
-                    filterAll: true
-                },
-                {
-                  Header: "Address",
-                  id: "location",
-                  accessor: a => a.location.address1,
-                  filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["location"] }),
-                    filterAll: true
-                },
-                {
-                  Header: "Zip",
-                  id: "zip",
-                  accessor: a => a.location.zip_code,
-                  filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["zip"] }),
-                    filterAll: true
-                  
-                },
-                {
-                  Header: "($) Price",
-                  id: "price",
-                  accessor: a => a.price,
-                    filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["price"] }),
-                    Cell: ({ value } ) => (
-                      value = prices[value]
-                      
-                    ),
-                    
-                    filterAll: true,
-                    //filterable: true,
-                },
-              ]
-            }
-          ]}
-          defaultPageSize={10}
-          className="-striped -highlight"
-        />
-      </div>
+     <Grid>
+        <ListGroup>
+          <ListGroupItem id="hotel">
+
+          {this.state.items[0].map((item, index) => {
+            return (
+              <div class="box">
+                  <Grid>
+                    <Col xs={6} md={2}>
+                      <Row id="hotelName">
+                      <h4 className="hotelNameHeader">{item.name}</h4>
+                      </Row>
+                      <Row id="hotelAddress">
+                       {item.address}
+                      </Row>
+                      <Row>
+                      Rating: {item.rating}
+                      </Row>
+                      <Row>
+                        <img src={item.image_url === null ? 'http://www.ebuzzingvideo.com/banniere/radisson/rad6.jpg' : item.image_url} height={150} width={ 150 }/>
+                      </Row>
+                    </Col>
+                    <Col xs={6} md={3}>{item.description}</Col>
+                    <Col xs={6} md={3}>
+                        <Row>${item.price}</Row>
+                        <Row><Button bsStyle="default" bsSize="small" onClick={this.showDetail.bind(this, item.id)}>Details</Button></Row>
+                    </Col>
+
+                  </Grid>
+              </div>
+            )
+          })}
+          </ListGroupItem>
+        </ListGroup>
+    </Grid>
  )
 }
 };

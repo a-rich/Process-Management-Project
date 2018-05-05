@@ -10,7 +10,7 @@ import Search from 'react-icons/lib/fa/search'
 import Autocomplete from '../../components/Autocomplete'
 import DateRange from '../../components/DateRange'
 import SearchBar from '../../components/SearchBar'
-import ListView from '../../components/ListView'
+import TableView from '../../components/TableView'
 
 const locations = [
     "chicago",
@@ -47,7 +47,7 @@ class SearchHotels extends Component {
 
                     <Col md={12}>
                         <div className="ListViewContainer">
-                            <ListView />
+                            <TableView />
                         </div>
                     </Col>
                 </Row>
