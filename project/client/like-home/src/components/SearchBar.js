@@ -38,16 +38,8 @@ class SearchBar extends Component {
   submit(e) {
     e.preventDefault()
     console.log('Location', this.refs.location.value)
-    console.log('Min', this.refs.Min.value)
-    console.log('Max', this.refs.Max.value)
-    console.log('Room Num', this.refs.roomNum.value)
 
     localStorage.setItem('location', this.refs.location.value);
-    localStorage.setItem('min', this.refs.Min.value);
-    localStorage.setItem('max', this.refs.Max.value);
-    localStorage.setItem('roomNum', this.refs.roomNum.value);
-    
-
 
     // inputs ready for query to backend
     searchHotels(
@@ -66,27 +58,6 @@ class SearchBar extends Component {
         <label class = "location-input">
         <MdLocationOn class = "icon-size" />
         <Autocomplete options = {locations} placeholder = "Where To?" ref="location" required/>
-        </label>
-
-        <label class = "date-input">
-        <Calendar class = "icon-size"/>
-        <DateRange/>
-        </label>
-
-        <label class = "price-input">
-        <FaDollar class = "icon-size"/>
-        <input id = "Min-price" type = "number" class = "price-text" placeholder = "Min?" ref="Min" required />
-        <input id = "Min-price" type = "number" class = "price-text" placeholder = "Max?" ref="Max" required />
-        </label>
-
-        <label class = "room-input" >
-        <Bed class = "icon-size" />
-        <select class = "room-text" ref="roomNum" >
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="4plus">4+</option>
-        </select>
         </label>
 
         <label>

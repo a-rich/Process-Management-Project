@@ -9,26 +9,21 @@ class AccountListView extends Component {
     super(props);
     this.state = {
         items: [
-            {'name':"Las Vegas",
-            'address': "1234 Las Vegas Ave",
-              'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
-              'price': "$99",
-            'photo': "https://d1ic4altzx8ueg.cloudfront.net/finder-au/wp-uploads/2016/02/LasVegasSign.Shutterstock-250x250.jpg"
-            },
-            {'name':"Miami",
-            'address': "1234 Miami Ave",
-              'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
-              'price': "$99",
-            'photo': "http://www.djoybeat.com/wp-content/uploads/2014/07/miami3-250x250.jpg"
-            },
-            {'name':"Italy",
-            'address': "1234 Italy Ave",
-              'description': "Experience this all-suite boutique hotel and enjoy an exclusive non-gaming, smoke-free stay known for its sustainable environment",
-              'price': "$99",
-            'photo': "http://uncarvedblocktraveler.com/wp-content/uploads/2015/09/rome-italy-250x250.jpg"
-            }
         ]
     };
+  }
+
+  componentWillMount() {
+    this.setState({items:  window.store.getState().reservations })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      items: window.store.getState().reservations  })
+  }
+
+  cancelReservation = (item) => {
+    console.log("HIT ME: ", item)
   }
 
   render() {
@@ -41,26 +36,28 @@ class AccountListView extends Component {
             return (
               <div id="eachHotel" class="box">
                   <Grid>
-                    
-                    <Col xs={6} md={3}>
-                      <Row id="hotelName">
-                        <h4>{item.name}</h4>
-                      </Row>
-                      <Row id="hotelAddress">
-                       {item.address}
-                      </Row>
-                      <Row id="hotelImage">
-                        <img src={item.photo}/>
-                      </Row>
-                    </Col>
-                    
-                    <Col xs={8} md={6} id="hotelDescrip">{item.description}</Col>
-                    
-                    <Col xs={6} md={2}>
-                        <Row id="price"><h3>{item.price}</h3></Row>
-                        <Row><Button id="detailButton">Details</Button></Row>
-                    </Col>
-                  
+                    <Row>
+                      <Col md={4}>
+                      <div id="hotelImage">
+                          <img className="reservationImg" src={item.hotel.image_url}/>
+                        </div>
+                        </Col>
+
+                        <Col md={6}>
+                          <div id="hotelName">
+                            <h4>{item.hotel.name}</h4>
+                          </div>
+                          <div id="hotelAddress">
+                            {item.hotel.location.display_address}
+                          </div>
+                          <a href={item.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
+                        </Col>
+                      
+                      <Col md={2}>
+                          <Row id="price"><h3>{item.price}</h3></Row>
+                          <Row><Button id="detailButton" bsStyle="danger" onClick={this.cancelReservation.bind(this, item.hotel)}>Cancel</Button></Row>
+                      </Col>
+                    </Row>
                   </Grid>
               </div>
             )

@@ -24,3 +24,23 @@ export const setSearchDates = (startDate, endDate) => ({
     type: C.SET_SEARCHDATES,
       payload: {"startDate":startDate, "endDate":endDate}
   })
+
+export const selectedHotel = (selectedHotel) => ({
+    type: C.SET_SELECTEDHOTEL,
+      payload: {selectedHotel}
+})
+
+export const addBooking = (hotel) => ({
+    type: C.ADD_BOOKING,
+      payload: { hotel }
+})
+
+export const cancelBooking = (booking) => ({
+    type: C.CANCEL_BOOKING,
+      payload: {booking}
+})
+
+export const updateBooking = (booking) => ({
+    type: C.UPDATE_BOOKING,
+      payload: {booking}
+})

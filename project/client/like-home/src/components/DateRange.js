@@ -16,8 +16,8 @@ const END_DATE = 'endDate';
 const propTypes = {
   autoFocus: PropTypes.bool,
   autoFocusEndDate: PropTypes.bool,
-  initialStartDate: momentPropTypes.momentObj,
-  initialEndDate: momentPropTypes.momentObj
+  initialStartDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "",
+  initialEndDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""
 }
 
 class DateRange extends Component {
@@ -55,7 +55,7 @@ constructor(props) {
   }
 
  componentWillMount() {
-  
+  console.log("CHANGES")
 
     //if (localStorage.getItem('startDate') !== null)
     //this.setState({ startDate: localStorage.getItem('startDate')});
@@ -71,7 +71,7 @@ constructor(props) {
  }
 
 componentWillRecieveProps(nextProps) {
-  console.log("CHANGES")
+ 
    //   console.log("MOUNTING: ", this.state)
    // this.setState({ startDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "", 
    //     endDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""})
