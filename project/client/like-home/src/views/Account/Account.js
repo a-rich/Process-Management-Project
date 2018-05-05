@@ -26,7 +26,6 @@ class Account extends Component {
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyUserInfo, { offset: 0, align: 'top', duration: 1500 })}>Account Info</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyBookings, { offset: 0, align: 'top', duration: 1500})}>My Bookings</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyRewards, { offset: 0, align: 'top', duration: 1500})}>Rewards</Button>
-                    <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyFavorites, { offset: 0, align: 'top', duration: 1500 })}>Favorites</Button>
                 </div>
                 <Grid>
                 
@@ -41,9 +40,6 @@ class Account extends Component {
                                 </section>
                                 <section className='MyRewards borderColored' ref={(section) => { this.MyRewards = section; }}>
                                     <MyRewards />
-                                </section>
-                                <section className='MyFavorites borderColored' ref={(section) => { this.MyFavorites = section; }}>
-                                    <MyFavorites />
                                 </section>
                             </div>
                         </Col>
