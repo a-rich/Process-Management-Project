@@ -39,7 +39,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.94808
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "345",
             "location": {
                 "address1": "355 Santana Row",
                 "address2": "",
@@ -77,7 +77,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.88898
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "462",
             "location": {
                 "address1": "170 South Market St",
                 "address2": null,
@@ -115,7 +115,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.820315
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "319",
             "location": {
                 "address1": "200 Edenvale Ave",
                 "address2": "",
@@ -153,7 +153,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.89511
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "475",
             "location": {
                 "address1": "233 W Santa Clara St",
                 "address2": "",
@@ -195,7 +195,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.888289451599
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "525",
             "location": {
                 "address1": "301 South Market St",
                 "address2": "",
@@ -237,7 +237,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.88805
             },
             "transactions": [],
-            "price": "$$",
+            "price": "278",
             "location": {
                 "address1": "211 S. First Street",
                 "address2": "",
@@ -275,7 +275,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.95296
             },
             "transactions": [],
-            "price": "$$",
+            "price": "342",
             "location": {
                 "address1": "75 Headquarters Drive",
                 "address2": "",
@@ -317,7 +317,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.891091
             },
             "transactions": [],
-            "price": "$$",
+            "price": "325",
             "location": {
                 "address1": "282 Almaden Blvd",
                 "address2": "",
@@ -359,7 +359,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.917981
             },
             "transactions": [],
-            "price": "$$",
+            "price": "167",
             "location": {
                 "address1": "1755 North First St",
                 "address2": "",
@@ -397,7 +397,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.9286435
             },
             "transactions": [],
-            "price": "$$",
+            "price": "213",
             "location": {
                 "address1": "2118 The Alameda",
                 "address2": "",
@@ -435,7 +435,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.922760009766
             },
             "transactions": [],
-            "price": "$$",
+            "price": "111",
             "location": {
                 "address1": "2050 Gateway Pl",
                 "address2": "",
@@ -473,7 +473,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.89057248995
             },
             "transactions": [],
-            "price": "$$",
+            "price": "132",
             "location": {
                 "address1": "300 Almaden Blvd",
                 "address2": "",
@@ -511,7 +511,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.918431553581
             },
             "transactions": [],
-            "price": "$$",
+            "price": "110",
             "location": {
                 "address1": "1727 Technology Dr",
                 "address2": "",
@@ -549,7 +549,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.939132
             },
             "transactions": [],
-            "price": "$$",
+            "price": "255",
             "location": {
                 "address1": "2585 Seaboard Ave",
                 "address2": "",
@@ -587,7 +587,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.913750767721
             },
             "transactions": [],
-            "price": "$$",
+            "price": "189",
             "location": {
                 "address1": "10 Skyport Dr",
                 "address2": null,
@@ -625,7 +625,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.906135559082
             },
             "transactions": [],
-            "price": "$$",
+            "price": "198",
             "location": {
                 "address1": "817 The Alameda",
                 "address2": "",
@@ -663,7 +663,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.887687295771
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "295",
             "location": {
                 "address1": "302 S Market St",
                 "address2": null,
@@ -705,7 +705,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.896172384741
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "425",
             "location": {
                 "address1": "350 W Santa Clara St",
                 "address2": "",
@@ -743,7 +743,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.972237903706
             },
             "transactions": [],
-            "price": "$$",
+            "price": "154",
             "location": {
                 "address1": "440 Saratoga Ave",
                 "address2": "",
@@ -781,7 +781,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -121.857786
             },
             "transactions": [],
-            "price": "$$",
+            "price": "108",
             "location": {
                 "address1": "55 Old Tully Rd",
                 "address2": "",
@@ -818,7 +818,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6251194
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "685",
             "location": {
                 "address1": "108 E Superior St",
                 "address2": "",
@@ -860,7 +860,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.62757
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "330 N Wabash Ave",
                 "address2": "",
@@ -906,7 +906,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.62754
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "315",
             "location": {
                 "address1": "505 N State St",
                 "address2": "",
@@ -944,7 +944,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6257629325409
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "451",
             "location": {
                 "address1": "55 E Ontario St",
                 "address2": null,
@@ -982,7 +982,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6251117
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "698",
             "location": {
                 "address1": "120 E Delaware Pl",
                 "address2": "",
@@ -1020,7 +1020,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.62603
             },
             "transactions": [],
-            "price": "$$",
+            "price": "178",
             "location": {
                 "address1": "203 N Wabash",
                 "address2": "",
@@ -1058,7 +1058,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.627307
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "330",
             "location": {
                 "address1": "20 E Chestnut St",
                 "address2": "",
@@ -1096,7 +1096,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.626560916989
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "579",
             "location": {
                 "address1": "401 N Wabash Ave",
                 "address2": "",
@@ -1138,7 +1138,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6249418
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "500",
             "location": {
                 "address1": "12 S Michigan Ave",
                 "address2": null,
@@ -1184,7 +1184,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6265341082282
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "695",
             "location": {
                 "address1": "225 N Wabash Ave",
                 "address2": "",
@@ -1226,7 +1226,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6216910678688
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "343",
             "location": {
                 "address1": "151 E Wacker Dr",
                 "address2": "",
@@ -1264,7 +1264,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6247443334887
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "401",
             "location": {
                 "address1": "636 S Michigan Ave",
                 "address2": null,
@@ -1306,7 +1306,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6270550489426
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "465",
             "location": {
                 "address1": "17 E Monroe St",
                 "address2": "",
@@ -1348,7 +1348,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.620290517807
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "346",
             "location": {
                 "address1": "221 N Columbus Dr",
                 "address2": null,
@@ -1386,7 +1386,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6276199
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "201 N State St",
                 "address2": "",
@@ -1428,7 +1428,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.625112
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "609",
             "location": {
                 "address1": "800 N Michigan Ave",
                 "address2": "",
@@ -1470,7 +1470,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.62826
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "299",
             "location": {
                 "address1": "1 W Washington St",
                 "address2": null,
@@ -1508,7 +1508,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6275
             },
             "transactions": [],
-            "price": "$$",
+            "price": "178",
             "location": {
                 "address1": "15 E Ohio St",
                 "address2": "",
@@ -1550,7 +1550,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6283025
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "427",
             "location": {
                 "address1": "660 North State St",
                 "address2": "",
@@ -1588,7 +1588,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6275053
             },
             "transactions": [],
-            "price": "$$",
+            "price": "176",
             "location": {
                 "address1": "20 E Delaware Pl",
                 "address2": "",
@@ -1625,7 +1625,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.4028272
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "335",
             "location": {
                 "address1": "500 California St",
                 "address2": null,
@@ -1663,7 +1663,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.40138
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "579",
             "location": {
                 "address1": "125 3rd St",
                 "address2": "",
@@ -1701,7 +1701,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.4006895
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "289",
             "location": {
                 "address1": "181 3rd St",
                 "address2": "",
@@ -1743,7 +1743,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.404625415802
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "321",
             "location": {
                 "address1": "888 Howard St",
                 "address2": "",
@@ -1785,7 +1785,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.410663910663
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "445",
             "location": {
                 "address1": "950 Mason St",
                 "address2": "",
@@ -1827,7 +1827,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.420507050817
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "302",
             "location": {
                 "address1": "495 Jefferson St",
                 "address2": null,
@@ -1865,7 +1865,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.408389763786
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "394",
             "location": {
                 "address1": "335 Powell St",
                 "address2": "",
@@ -1903,7 +1903,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.401775
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "276",
             "location": {
                 "address1": "2 New Montgomery St",
                 "address2": "",
@@ -1941,7 +1941,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.400290966034
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "396",
             "location": {
                 "address1": "333 Battery St",
                 "address2": "",
@@ -1979,7 +1979,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.409351
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "456",
             "location": {
                 "address1": "222 Mason St",
                 "address2": "",
@@ -2021,7 +2021,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.404481490667
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "398",
             "location": {
                 "address1": "780 Mission St",
                 "address2": "",
@@ -2059,7 +2059,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.41041
             },
             "transactions": [],
-            "price": "$$",
+            "price": "233",
             "location": {
                 "address1": "609 Sutter St",
                 "address2": "",
@@ -2097,7 +2097,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.392735183239
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "487",
             "location": {
                 "address1": "8 Mission Street",
                 "address2": "",
@@ -2139,7 +2139,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.407129131949
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "378",
             "location": {
                 "address1": "345 Stockton St",
                 "address2": "",
@@ -2181,7 +2181,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.395849227905
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "500",
             "location": {
                 "address1": "5 Embarcadero Ctr",
                 "address2": null,
@@ -2223,7 +2223,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.407137304544
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "585",
             "location": {
                 "address1": "600 Stockton St",
                 "address2": "",
@@ -2265,7 +2265,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.404476803829
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "599",
             "location": {
                 "address1": "757 Market St",
                 "address2": "",
@@ -2303,7 +2303,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.40872
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "473",
             "location": {
                 "address1": "55 Cyril Magnin St",
                 "address2": null,
@@ -2341,7 +2341,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.41205
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "355",
             "location": {
                 "address1": "1075 California St",
                 "address2": "",
@@ -2379,7 +2379,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.4034966
             },
             "transactions": [],
-            "price": "$$",
+            "price": "111",
             "location": {
                 "address1": "191 Sutter St",
                 "address2": null,
@@ -2420,7 +2420,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.266663551331
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "398",
             "location": {
                 "address1": "900 West Olympic Blvd",
                 "address2": "",
@@ -2458,7 +2458,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.389457
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "669",
             "location": {
                 "address1": "300 S Doheny Dr",
                 "address2": "",
@@ -2496,7 +2496,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.25056
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "251 S Olive St",
                 "address2": "",
@@ -2534,7 +2534,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.34252
             },
             "transactions": [],
-            "price": "$$",
+            "price": "189",
             "location": {
                 "address1": "7025 Franklin Ave",
                 "address2": "",
@@ -2572,7 +2572,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.3677
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "510",
             "location": {
                 "address1": "8221 W Sunset Blvd",
                 "address2": "",
@@ -2614,7 +2614,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.3765221
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "378",
             "location": {
                 "address1": "465 S La Cienega Blvd",
                 "address2": "",
@@ -2652,7 +2652,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.255921580179
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "678",
             "location": {
                 "address1": "404 S Figueroa St",
                 "address2": "",
@@ -2690,7 +2690,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.3417471
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "405",
             "location": {
                 "address1": "7000 Hollywood Blvd",
                 "address2": "",
@@ -2728,7 +2728,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.256975
             },
             "transactions": [],
-            "price": "$$",
+            "price": "122",
             "location": {
                 "address1": "550 S Flower St",
                 "address2": "",
@@ -2770,7 +2770,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.43738
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "299",
             "location": {
                 "address1": "10740 Wilshire Blvd",
                 "address2": "",
@@ -2808,7 +2808,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.25679388103
             },
             "transactions": [],
-            "price": "$$",
+            "price": "126",
             "location": {
                 "address1": "929 S Broadway",
                 "address2": "",
@@ -2854,7 +2854,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.300995
             },
             "transactions": [],
-            "price": "$$",
+            "price": "195",
             "location": {
                 "address1": "3515 Wilshire Blvd",
                 "address2": "",
@@ -2892,7 +2892,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.2640141
             },
             "transactions": [],
-            "price": "$$",
+            "price": "134",
             "location": {
                 "address1": "939 S Figueroa St",
                 "address2": "",
@@ -2930,7 +2930,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.3394699
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "366",
             "location": {
                 "address1": "1755 N Highland Ave",
                 "address2": "",
@@ -2968,7 +2968,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.3779835
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "434",
             "location": {
                 "address1": "8555 Beverly Blvd",
                 "address2": "",
@@ -3006,7 +3006,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.25394
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "378",
             "location": {
                 "address1": "506 South Grand Avenue",
                 "address2": "",
@@ -3048,7 +3048,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.44101599607
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "518",
             "location": {
                 "address1": "930 Hilgard Ave",
                 "address2": "",
@@ -3086,7 +3086,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.33135
             },
             "transactions": [],
-            "price": "$$",
+            "price": "172",
             "location": {
                 "address1": "6500 Selma Ave",
                 "address2": null,
@@ -3128,7 +3128,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.266620451555
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "695",
             "location": {
                 "address1": "900 W Olympic Blvd",
                 "address2": "",
@@ -3170,7 +3170,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.41229
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "525",
             "location": {
                 "address1": "2151 Avenue Of The Stars",
                 "address2": "",
@@ -3215,7 +3215,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.047455
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "356",
             "location": {
                 "address1": "2121 P St NW",
                 "address2": "NW",
@@ -3254,7 +3254,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0323499
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "388",
             "location": {
                 "address1": "1401 Pennsylvania Ave NW",
                 "address2": "",
@@ -3292,7 +3292,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.03041
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "625",
             "location": {
                 "address1": "1330 Maryland Ave SW",
                 "address2": "",
@@ -3334,7 +3334,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0510406494141
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "455",
             "location": {
                 "address1": "1201 24th St NW",
                 "address2": "",
@@ -3376,7 +3376,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0099
             },
             "transactions": [],
-            "price": "$$",
+            "price": "156",
             "location": {
                 "address1": "15 E St NW",
                 "address2": "",
@@ -3418,7 +3418,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0428711161911
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "387",
             "location": {
                 "address1": "1500 New Hampshire Ave NW",
                 "address2": "",
@@ -3456,7 +3456,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0337715731464
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "654",
             "location": {
                 "address1": "806 15th St NW",
                 "address2": "",
@@ -3494,7 +3494,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0575662467342
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "729",
             "location": {
                 "address1": "2800 Pennsylvania Ave NW",
                 "address2": "",
@@ -3536,7 +3536,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.03971
             },
             "transactions": [],
-            "price": "$$",
+            "price": "176",
             "location": {
                 "address1": "1733 N St NW",
                 "address2": "NW",
@@ -3575,7 +3575,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.051519069884
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "345",
             "location": {
                 "address1": "2401 M St NW",
                 "address2": "",
@@ -3617,7 +3617,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0397779
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "1127 Connecticut Ave NW",
                 "address2": "",
@@ -3663,7 +3663,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.02247
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "578",
             "location": {
                 "address1": "700 F St NW",
                 "address2": "",
@@ -3705,7 +3705,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.031471
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "344",
             "location": {
                 "address1": "1331 Pennsylvania Ave NW",
                 "address2": "",
@@ -3747,7 +3747,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.026481628418
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "567",
             "location": {
                 "address1": "1000 H St NW",
                 "address2": "",
@@ -3789,7 +3789,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.03159
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "1155 14th St NW",
                 "address2": "",
@@ -3827,7 +3827,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0368560061169
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "256",
             "location": {
                 "address1": "1200 16th St NW",
                 "address2": "",
@@ -3865,7 +3865,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0370769500732
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "800 16th St NW",
                 "address2": "",
@@ -3907,7 +3907,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.03339
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "489",
             "location": {
                 "address1": "515 15th St NW",
                 "address2": "F St. Between 14th and 15th Street",
@@ -3950,7 +3950,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0491026341915
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "899",
             "location": {
                 "address1": "1150 22nd St NW",
                 "address2": "",
@@ -3988,7 +3988,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.053684798602
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "387",
             "location": {
                 "address1": "2500 Calvert St NW",
                 "address2": "",
@@ -4025,7 +4025,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.988286
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "240",
             "location": {
                 "address1": "20 W 29th St",
                 "address2": "",
@@ -4063,7 +4063,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9946056902409
             },
             "transactions": [],
-            "price": "$",
+            "price": "145",
             "location": {
                 "address1": "110 W 20th St",
                 "address2": "",
@@ -4109,7 +4109,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9898801
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "497",
             "location": {
                 "address1": "851 Avenue Of The Americas",
                 "address2": "",
@@ -4155,7 +4155,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.995994
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "389",
             "location": {
                 "address1": "653 11th Ave",
                 "address2": "",
@@ -4197,7 +4197,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9858202037049
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "381",
             "location": {
                 "address1": "1535 Broadway",
                 "address2": "",
@@ -4235,7 +4235,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -74.0158004760742
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "459",
             "location": {
                 "address1": "102 N End Ave",
                 "address2": null,
@@ -4277,7 +4277,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -74.0079346716969
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "456",
             "location": {
                 "address1": "75 Wall St",
                 "address2": "",
@@ -4315,7 +4315,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.98461
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "387",
             "location": {
                 "address1": "365 Park Ave S",
                 "address2": "",
@@ -4353,7 +4353,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9749775
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "381",
             "location": {
                 "address1": "455 Madison Ave",
                 "address2": "",
@@ -4391,7 +4391,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.984968
             },
             "transactions": [],
-            "price": "$$",
+            "price": "176",
             "location": {
                 "address1": "218 W 50th St",
                 "address2": "",
@@ -4429,7 +4429,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.984735
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "499",
             "location": {
                 "address1": "45 W 38th St",
                 "address2": null,
@@ -4467,7 +4467,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -74.00529
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "789",
             "location": {
                 "address1": "246 Spring St",
                 "address2": "",
@@ -4505,7 +4505,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9810109138489
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "419",
             "location": {
                 "address1": "485 5th Ave At 41st St",
                 "address2": "",
@@ -4543,7 +4543,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9691277840614
             },
             "transactions": [],
-            "price": "$$",
+            "price": "133",
             "location": {
                 "address1": "230 E 51st St",
                 "address2": "",
@@ -4585,7 +4585,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.9954561
             },
             "transactions": [],
-            "price": "$$",
+            "price": "146",
             "location": {
                 "address1": "570 Tenth Ave",
                 "address2": "",
@@ -4623,7 +4623,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.98164
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "534",
             "location": {
                 "address1": "45 W 44th St",
                 "address2": "",
@@ -4661,7 +4661,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.97732
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "619",
             "location": {
                 "address1": "28 W 53rd St",
                 "address2": "",
@@ -4699,7 +4699,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.98548
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "438",
             "location": {
                 "address1": "233 W 49th St",
                 "address2": "",
@@ -4741,7 +4741,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.97449483766
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "649",
             "location": {
                 "address1": "Fifth Avenue At Central Park S",
                 "address2": "",
@@ -4779,7 +4779,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -74.0071598
             },
             "transactions": [],
-            "price": "$$",
+            "price": "155",
             "location": {
                 "address1": "15 Gold St",
                 "address2": "",
@@ -4820,7 +4820,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.184939
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "575",
             "location": {
                 "address1": "500 Brickell Key Dr",
                 "address2": "",
@@ -4858,7 +4858,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.19235
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "398",
             "location": {
                 "address1": "1435 Brickell Ave",
                 "address2": "",
@@ -4904,7 +4904,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.1895137107562
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "399",
             "location": {
                 "address1": "270 Biscayne Boulevard Way",
                 "address2": "",
@@ -4946,7 +4946,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.2786786055573
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "278",
             "location": {
                 "address1": "1200 Anastasia Ave",
                 "address2": "",
@@ -4984,7 +4984,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.1920798
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "459",
             "location": {
                 "address1": "1395 Brickell Ave",
                 "address2": null,
@@ -5022,7 +5022,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.18532
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "376",
             "location": {
                 "address1": "100 Chopin Plz",
                 "address2": "",
@@ -5060,7 +5060,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.1894852519035
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "438",
             "location": {
                 "address1": "255 Biscayne Boulevard Way",
                 "address2": null,
@@ -5098,7 +5098,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.194221
             },
             "transactions": [],
-            "price": "$$",
+            "price": "110",
             "location": {
                 "address1": "50 SW 12th St",
                 "address2": null,
@@ -5140,7 +5140,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.26607
             },
             "transactions": [],
-            "price": "$$",
+            "price": "189",
             "location": {
                 "address1": "4299 NW 36th St",
                 "address2": "",
@@ -5182,7 +5182,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.2378615736961
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "487",
             "location": {
                 "address1": "3300 SW Twenty-seventh Ave",
                 "address2": "",
@@ -5224,7 +5224,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.18617
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "1633 N Bayshore Dr",
                 "address2": "",
@@ -5262,7 +5262,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.18395
             },
             "transactions": [],
-            "price": "$$",
+            "price": "176",
             "location": {
                 "address1": "7301 Biscayne Blvd",
                 "address2": "",
@@ -5300,7 +5300,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.33758
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "389",
             "location": {
                 "address1": "4400 NW 87th Ave",
                 "address2": "",
@@ -5342,7 +5342,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.1905126390888
             },
             "transactions": [],
-            "price": "$$",
+            "price": "104",
             "location": {
                 "address1": "400 SE 2nd Ave",
                 "address2": "",
@@ -5380,7 +5380,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.20367
             },
             "transactions": [],
-            "price": "$$",
+            "price": "122",
             "location": {
                 "address1": "2500 Brickell Ave",
                 "address2": "",
@@ -5418,7 +5418,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.254
             },
             "transactions": [],
-            "price": "$$",
+            "price": "222",
             "location": {
                 "address1": "3525 NW 25th St",
                 "address2": null,
@@ -5456,7 +5456,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.2405534
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "456",
             "location": {
                 "address1": "2889 Mcfarlane Rd",
                 "address2": "",
@@ -5494,7 +5494,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.18847
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "339",
             "location": {
                 "address1": "1601 Biscayne Blvd",
                 "address2": "",
@@ -5532,7 +5532,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.336922
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "367",
             "location": {
                 "address1": "4101 NW 87th Ave",
                 "address2": "",
@@ -5570,7 +5570,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -80.23904
             },
             "transactions": [],
-            "price": "$$",
+            "price": "138",
             "location": {
                 "address1": "2800 SW 28th Ter",
                 "address2": "",
@@ -5611,7 +5611,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.173992335813
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "654",
             "location": {
                 "address1": "3708 Las Vegas Blvd S",
                 "address2": null,
@@ -5657,7 +5657,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.169657
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "444",
             "location": {
                 "address1": "3355 South Las Vegas Boulevard",
                 "address2": "",
@@ -5703,7 +5703,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.165905
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "567",
             "location": {
                 "address1": "3131 Las Vegas Blvd S",
                 "address2": "",
@@ -5749,7 +5749,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.167752796129
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "327",
             "location": {
                 "address1": "3325 South Las Vegas Boulevard",
                 "address2": "",
@@ -5795,7 +5795,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.1732348
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "578",
             "location": {
                 "address1": "3600 S Las Vegas Blvd",
                 "address2": "",
@@ -5841,7 +5841,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.178147449179
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "344",
             "location": {
                 "address1": "2600 W Harmon Ave",
                 "address2": "",
@@ -5887,7 +5887,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.17704
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "476",
             "location": {
                 "address1": "3730 Las Vegas Blvd S",
                 "address2": "",
@@ -5929,7 +5929,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.174213
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "629",
             "location": {
                 "address1": "3752 Las Vegas Blvd S",
                 "address2": "",
@@ -5967,7 +5967,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.172825
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "456",
             "location": {
                 "address1": "2000 Fashion Show Dr",
                 "address2": "",
@@ -6013,7 +6013,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.166586184683
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "525",
             "location": {
                 "address1": "145 E Harmon Ave",
                 "address2": "",
@@ -6051,7 +6051,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.174222740489
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "739",
             "location": {
                 "address1": "3960 S Las Vegas Blvd",
                 "address2": "",
@@ -6097,7 +6097,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.175256
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "317",
             "location": {
                 "address1": "3950 S Las Vegas Blvd",
                 "address2": "",
@@ -6139,7 +6139,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.174595
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "429",
             "location": {
                 "address1": "3570 Las Vegas Blvd S",
                 "address2": "",
@@ -6185,7 +6185,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.17521904078
             },
             "transactions": [],
-            "price": "$$",
+            "price": "102",
             "location": {
                 "address1": "3400 Las Vegas Blvd S",
                 "address2": "",
@@ -6223,7 +6223,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.17149
             },
             "transactions": [],
-            "price": "$$",
+            "price": "198",
             "location": {
                 "address1": "3799 Las Vegas Blvd S",
                 "address2": "",
@@ -6265,7 +6265,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.170142948067
             },
             "transactions": [],
-            "price": "$$",
+            "price": "166",
             "location": {
                 "address1": "3667 Las Vegas Blvd S",
                 "address2": "",
@@ -6311,7 +6311,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.173585823718
             },
             "transactions": [],
-            "price": "$$",
+            "price": "203",
             "location": {
                 "address1": "3790 Las Vegas Blvd S",
                 "address2": "",
@@ -6353,7 +6353,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.1716132
             },
             "transactions": [],
-            "price": "$$",
+            "price": "200",
             "location": {
                 "address1": "3300 S Las Vegas Blvd",
                 "address2": "",
@@ -6391,7 +6391,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.16935
             },
             "transactions": [],
-            "price": "$$",
+            "price": "145",
             "location": {
                 "address1": "75 E Harmon Ave",
                 "address2": null,
@@ -6437,7 +6437,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.163103023133
             },
             "transactions": [],
-            "price": "$$",
+            "price": "233",
             "location": {
                 "address1": "211 E Flamingo Rd",
                 "address2": "",
@@ -6474,7 +6474,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74966
             },
             "transactions": [],
-            "price": "$$",
+            "price": "135",
             "location": {
                 "address1": "1316 S Congress Ave",
                 "address2": "",
@@ -6516,7 +6516,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.748366
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "471",
             "location": {
                 "address1": "110 The Cir",
                 "address2": null,
@@ -6558,7 +6558,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74168
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "599",
             "location": {
                 "address1": "604 Brazos St",
                 "address2": null,
@@ -6596,7 +6596,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7433533978119
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "499",
             "location": {
                 "address1": "110 E. Second Street",
                 "address2": "",
@@ -6634,7 +6634,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74232
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "578",
             "location": {
                 "address1": "98 San Jacinto Blvd",
                 "address2": "",
@@ -6672,7 +6672,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.73862
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "345",
             "location": {
                 "address1": "500 E 4th St",
                 "address2": null,
@@ -6710,7 +6710,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74691
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "432",
             "location": {
                 "address1": "208 Barton Springs Rd",
                 "address2": "",
@@ -6748,7 +6748,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.72147
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "431",
             "location": {
                 "address1": "3121 Palm Way",
                 "address2": null,
@@ -6786,7 +6786,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7422881871462
             },
             "transactions": [],
-            "price": "$$",
+            "price": "23",
             "location": {
                 "address1": "211 East 3rd Street",
                 "address2": "",
@@ -6832,7 +6832,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7389892523869
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "543",
             "location": {
                 "address1": "605 Davis St",
                 "address2": "",
@@ -6870,7 +6870,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7266079932451
             },
             "transactions": [],
-            "price": "$$",
+            "price": "173",
             "location": {
                 "address1": "10901 Domain Dr",
                 "address2": null,
@@ -6908,7 +6908,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74671
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "371",
             "location": {
                 "address1": "200 Lavaca St",
                 "address2": null,
@@ -6946,7 +6946,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74101
             },
             "transactions": [],
-            "price": "$$",
+            "price": "143",
             "location": {
                 "address1": "1701 Lavaca St",
                 "address2": "",
@@ -6988,7 +6988,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.740685919422
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "376",
             "location": {
                 "address1": "1900 University Ave",
                 "address2": "",
@@ -7026,7 +7026,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74735
             },
             "transactions": [],
-            "price": "$$$$",
+            "price": "588",
             "location": {
                 "address1": "112 Academy Dr",
                 "address2": "",
@@ -7064,7 +7064,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.74019
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "397",
             "location": {
                 "address1": "700 San Jacinto Blvd",
                 "address2": "",
@@ -7106,7 +7106,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7419586181641
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "486",
             "location": {
                 "address1": "701 Congress Ave",
                 "address2": "",
@@ -7144,7 +7144,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.72526
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "362",
             "location": {
                 "address1": "11301 Domain Dr",
                 "address2": "",
@@ -7182,7 +7182,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.7491
             },
             "transactions": [],
-            "price": "$$",
+            "price": "195",
             "location": {
                 "address1": "1220 S Congress Ave",
                 "address2": "",
@@ -7220,7 +7220,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -97.745491027832
             },
             "transactions": [],
-            "price": "$$$",
+            "price": "455",
             "location": {
                 "address1": "1900 Rio Grande",
                 "address2": "",

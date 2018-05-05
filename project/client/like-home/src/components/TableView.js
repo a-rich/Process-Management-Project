@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/TableView.scss'
 import {searchHotels, showHotelRooms} from '../actions/Search'
+import {selectedHotel} from '../actions.js'
 import { setSearchResults } from '../actions.js'
 import { connect as reduxConnect } from 'react-redux'
 import store from '../store'
@@ -32,6 +33,7 @@ class TableView extends Component {
         items:[]
     };
   }
+  
 
   static propTypes = {
     searchHotels: PropTypes.func.isRequired
@@ -40,9 +42,8 @@ class TableView extends Component {
   static defaultProps = {
     items: new Map()
   }
-    showDetail= (e, id) => {
-      console.log(e);
-      showHotelRooms(e);
+    showDetail= (h, id) => {
+      window.store.dispatch(selectedHotel({h}))
       this.props.history.push('/Detailed');
   }
 
@@ -66,8 +67,7 @@ class TableView extends Component {
 
   render() {
     const { items } = this.state;
-    const prices = {"$$$$": this.getRandomInt(500, 1000), "$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
-    console.log("TYPE: ", items)
+      console.log("TYPE: ", items)
  return(
         <div>
         <ReactTable
@@ -85,7 +85,7 @@ class TableView extends Component {
                   accessor: a => a.image_url,
                   width: 150,
                   Cell: (row) => {
-                    return <div className="tableImg"><img src={row.original.image_url} onClick={this.showDetail}/></div>
+                    return <div className="tableImg"><img src={row.original.image_url} onClick={this.showDetail.bind(this, row.original)}/></div>
                   },
                   filterable: false,
                   sortable: false
@@ -137,9 +137,6 @@ class TableView extends Component {
                   width: 80,
                   filterMethod: (filter, rows) =>
                     matchSorter(rows, filter.value, { keys: ["price"] }),
-                    Cell: ({ value } ) => (
-                      value = prices[value]
-                    ),
                     filterAll: true,
                 },
               ]

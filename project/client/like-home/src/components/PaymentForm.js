@@ -5,7 +5,6 @@ import {Grid, Row, Col} from 'react-bootstrap';
 //import PaymentRequestForm from '../components/PaymentRequestForm';
 // import ReactScriptLoaderMixin from 'react-script-loader'
 
-// var ReactScriptLoaderMixin = require('react-script-loader').ReactScriptLoaderMixin;
 
 
 class PaymentForm extends Component {

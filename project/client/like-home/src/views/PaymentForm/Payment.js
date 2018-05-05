@@ -24,6 +24,7 @@ class Payment extends Component {
             <Elements>
             <PaymentForm />
             </Elements>
+
           </div>
 
         );

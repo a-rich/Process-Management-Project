@@ -13,6 +13,30 @@ export const detailResults = (state = {}, action) =>
 export const cityData = (state = {}, action) =>
 (action.type === C.SET_CITYDATA)? action.payload : state
 
+export const searchDates = (state = {}, action) =>
+(action.type === C.SET_SEARCHDATES)? action.payload : state
+
+export const selectedHotel = (state = {}, action) =>
+(action.type === C.SET_SELECTEDHOTEL)? action.payload : state
+
+export const reservations = (state = {}, action) => {
+  switch (action.type) {
+    case C.ADD_BOOKING:
+    return [
+      ...state, action.payload
+    ]
+    break;
+    case C.UPDATE_BOOKING:
+    break;
+    case C.CANCEL_BOOKING:
+    break;
+    default:
+    return state;
+  }
+}
+
+
 export default combineReducers({
-  currentUser, searchResults, detailResults, cityData
+  currentUser, searchResults, detailResults, cityData, searchDates, selectedHotel, reservations
 })
+
