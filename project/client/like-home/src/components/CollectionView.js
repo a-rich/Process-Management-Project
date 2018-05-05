@@ -67,7 +67,7 @@ export class CollectionView extends React.Component {
     var row = '';
     return(
       <section>
-      <b>Popular Destinations</b>
+      <h1 className="popularDestHeader">Popular Destinations</h1>
         <div className="items">
           {this.state.items.map((item, index) => {
             return (
