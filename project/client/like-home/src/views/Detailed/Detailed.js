@@ -11,10 +11,8 @@ class Detailed extends Component {
         this.state = {
             items: [
              ],
-             roomIndex: 1
         };
       }
-
 
       handleClick=() => {
           this.props.history.push('/payment');
@@ -22,7 +20,7 @@ class Detailed extends Component {
 
     render() {
         console.log(this.state.items)
-       
+
         return (
             <div class="detailPic">
             <Carousels />
@@ -31,23 +29,22 @@ class Detailed extends Component {
                 console.log("index", index)
 
             return (
-                <div id="hotelDetails" class= "boxRadius"> 
+                <div id="hotelDetails" class= "boxRadius">
                     <h3>Room: {this.state.roomIndex++} </h3>
                     <h4 class= "theColor">${item.price}</h4>
                     <dt><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/></dt>
                     <Button bsStyle="bookNow" onClick={this.handleClick}>Book Now!</Button>
                 </div>
-                
+
             )
             })}
-            
+
           </div>
 
-          
+
 
         );
     }
 }
-
 
 export default Detailed;

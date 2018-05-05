@@ -4,7 +4,7 @@ const ROOT_URL = "http://127.0.0.1:5000"
 
 
 export function searchHotels(values) {
-    console.log("values: ",values)
+    console.log("values: ", values)
     /*const request = axios.post(`${ROOT_URL}/api/hotels/`, values)
     .then(function (response) {
         console.log("response.data: ", response.data)
@@ -21,7 +21,7 @@ export function searchHotels(values) {
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.losangeles))
     } else if(values.query === "San Jose"){
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.sanjose))
-    } else if(values.query === "Washington"){
+    } else if(values.query === "Washington" || values.query === "Washington D.C." ){
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.washington))
     } else if(values.query === "New York"){
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.newyork))
@@ -29,6 +29,8 @@ export function searchHotels(values) {
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.miami))
     } else if(values.query === "Las Vegas"){
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.lasvegas))
+    } else if(values.query === "Austin"){
+      window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.austin))
     }
     return { }
 }

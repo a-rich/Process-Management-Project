@@ -10,7 +10,9 @@ import Search from 'react-icons/lib/fa/search'
 import Autocomplete from '../../components/Autocomplete'
 import DateRange from '../../components/DateRange'
 import SearchBar from '../../components/SearchBar'
-import ListView from '../../components/ListView'
+import TableView from '../../components/TableView'
+import { withRouter } from "react-router-dom"
+import { connect as reduxConnect } from 'react-redux'
 
 const locations = [
     "chicago",
@@ -23,13 +25,29 @@ const locations = [
     "las vegas"
 ]
 
+const mapStateToProps = (locations) => ({
+    SearchBar, TableView, locations
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    
+  }
+}
+
 class SearchHotels extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
             
         };
       }
+
+    update= (e) => {
+        this.props.history.push('/SearchHotels');
+    }
+      
 
     render() {
       return (
@@ -47,7 +65,7 @@ class SearchHotels extends Component {
 
                     <Col md={12}>
                         <div className="ListViewContainer">
-                            <ListView />
+                            <TableView />
                         </div>
                     </Col>
                 </Row>
@@ -59,4 +77,4 @@ class SearchHotels extends Component {
 
 
 
-export default SearchHotels;
+export default withRouter(reduxConnect(mapStateToProps, mapDispatchToProps)(SearchHotels));;
