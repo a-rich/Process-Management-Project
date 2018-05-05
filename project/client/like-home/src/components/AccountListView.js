@@ -2,6 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap'
 import '../stylesheets/ListView.scss'
+import {cancelBooking} from '../actions.js'
 
 class AccountListView extends Component {
 
@@ -24,6 +25,7 @@ class AccountListView extends Component {
 
   cancelReservation = (item) => {
     console.log("HIT ME: ", item)
+    window.store.dispatch(cancelBooking(item.id))
   }
 
   render() {

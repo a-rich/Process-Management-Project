@@ -32,12 +32,12 @@ export const selectedHotel = (selectedHotel) => ({
 
 export const addBooking = (hotel) => ({
     type: C.ADD_BOOKING,
-      payload: { hotel }
+      payload: {hotel}
 })
 
-export const cancelBooking = (booking) => ({
+export const cancelBooking = (hotelID) => ({
     type: C.CANCEL_BOOKING,
-      payload: {booking}
+      payload: {hotelID}
 })
 
 export const updateBooking = (booking) => ({
