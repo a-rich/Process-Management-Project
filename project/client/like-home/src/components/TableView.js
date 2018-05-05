@@ -48,20 +48,25 @@ class TableView extends Component {
 
   componentWillMount() {
     this.setState({items:  window.store.getState().searchResults.searchResults })
+  }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      items: window.store.getState().searchResults.searchResults })
   }
 
   getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
    var result = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-   return result.toString();
+   console.log(typeof result)
+   return result;
   }
 
 
   render() {
     const { items } = this.state;
-    const prices = {"$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
+    const prices = {"$$$$": this.getRandomInt(500, 1000), "$$$": this.getRandomInt(300, 500), "$$": this.getRandomInt(200, 300), "$": this.getRandomInt(100, 200)}
     console.log("TYPE: ", items)
  return(
         <div>
@@ -83,6 +88,7 @@ class TableView extends Component {
                     return <div className="tableImg"><img src={row.original.image_url} onClick={this.showDetail}/></div>
                   },
                   filterable: false,
+                  sortable: false
                 },
                 {
                   Header: "Name",
@@ -129,10 +135,12 @@ class TableView extends Component {
                   id: "price",
                   accessor: a => a.price,
                   width: 80,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["price"] }),
                     Cell: ({ value } ) => (
                       value = prices[value]
                     ),
-                    filterable: false,
+                    filterAll: true,
                 },
               ]
             }
