@@ -22,7 +22,8 @@ const locations = [
 "Washington",
 "New York",
 "Miami",
-"Las Vegas"
+"Las Vegas",
+"Austin"
 ]
 
 class SearchBar extends Component {

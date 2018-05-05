@@ -78,8 +78,9 @@ class TableView extends Component {
                   Header: "Image",
                   id: "image",
                   accessor: a => a.image_url,
+                  width: 150,
                   Cell: (row) => {
-                    return <div><img src={row.original.image_url} onClick={this.showDetail}/></div>
+                    return <div className="tableImg"><img src={row.original.image_url} onClick={this.showDetail}/></div>
                   },
                   filterable: false,
                 },
@@ -97,14 +98,6 @@ class TableView extends Component {
               Header: "Info",
               columns: [
                 {
-                  Header: "City",
-                  id: "city",
-                  accessor: a => a.location.city,
-                  filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["city"] }),
-                    filterAll: true
-                },
-                {
                   Header: "Address",
                   id: "location",
                   accessor: a => a.location.address1,
@@ -113,8 +106,18 @@ class TableView extends Component {
                     filterAll: true
                 },
                 {
+                  Header: "City",
+                  id: "city",
+                  accessor: a => a.location.city,
+                  width: 150,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["city"] }),
+                    filterAll: true
+                },
+                {
                   Header: "Zip",
                   id: "zip",
+                  width: 100,
                   accessor: a => a.location.zip_code,
                   filterMethod: (filter, rows) =>
                     matchSorter(rows, filter.value, { keys: ["zip"] }),
@@ -125,15 +128,11 @@ class TableView extends Component {
                   Header: "($) Price",
                   id: "price",
                   accessor: a => a.price,
-                    filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["price"] }),
+                  width: 80,
                     Cell: ({ value } ) => (
                       value = prices[value]
-                      
                     ),
-                    
-                    filterAll: true,
-                    //filterable: true,
+                    filterable: false,
                 },
               ]
             }
