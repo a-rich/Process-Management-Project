@@ -17,7 +17,6 @@ const propTypes = {
   autoFocusEndDate: PropTypes.bool,
   initialStartDate: momentPropTypes.momentObj,
   initialEndDate: momentPropTypes.momentObj
-
 }
 
 class DateRange extends Component {
