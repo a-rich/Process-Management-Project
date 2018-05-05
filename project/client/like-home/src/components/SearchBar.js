@@ -37,11 +37,16 @@ class SearchBar extends Component {
   submit(e) {
     e.preventDefault()
     console.log('Location', this.refs.location.value)
-    //console.log('From date', this.refs.fromDate.value)
-    //console.log('To date', this.refs.toDate.value)
     console.log('Min', this.refs.Min.value)
     console.log('Max', this.refs.Max.value)
     console.log('Room Num', this.refs.roomNum.value)
+
+    localStorage.setItem('location', this.refs.location.value);
+    localStorage.setItem('min', this.refs.Min.value);
+    localStorage.setItem('max', this.refs.Max.value);
+    localStorage.setItem('roomNum', this.refs.roomNum.value);
+    
+
 
     // inputs ready for query to backend
     searchHotels(

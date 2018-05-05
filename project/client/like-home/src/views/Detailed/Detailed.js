@@ -15,10 +15,6 @@ class Detailed extends Component {
         };
       }
 
-      componentWillMount() {
-        this.setState({items: [].concat.apply([], window.store.getState().detailResults.detailResults.rooms)
-        })
-      }
 
       handleClick=() => {
           this.props.history.push('/payment');
@@ -30,6 +26,7 @@ class Detailed extends Component {
         return (
             <div class="detailPic">
             <Carousels />
+            <Button bsStyle="bookNow" onClick={this.handleClick}>Book Now!</Button>
             {this.state.items.map((item, index) => {
                 console.log("index", index)
 

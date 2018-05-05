@@ -15,8 +15,8 @@ const END_DATE = 'endDate';
 const propTypes = {
   autoFocus: PropTypes.bool,
   autoFocusEndDate: PropTypes.bool,
-  initialStartDate: momentPropTypes.momentObj,
-  initialEndDate: momentPropTypes.momentObj
+  initialStartDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "",
+  initialEndDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""
 
 }
 
@@ -24,6 +24,10 @@ class DateRange extends Component {
 
 constructor(props) {
     super(props)
+
+    //localStorage.setItem('startDate', localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "")
+    //localStorage.setItem('endDate', localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): "")
+
 
     let focusedInput = null
     if (props.autoFocus) {
@@ -44,23 +48,59 @@ constructor(props) {
 
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate })
+
   }
 
   onFocusChange(focusedInput) {
     this.setState({ focusedInput })
   }
 
+ componentWillMount() {
+  
+
+    //if (localStorage.getItem('startDate') !== null)
+    //this.setState({ startDate: localStorage.getItem('startDate')});
+
+
+    //if (localStorage.getItem('endDate') !== null)
+    //this.setState({ endDate: localStorage.getItem('endDate')});
+
+  //console.log("MOUNTING: ", this.state)
+
+
+  
+ }
+
+componentWillRecieveProps(nextProps) {
+   //   console.log("MOUNTING: ", this.state)
+   // this.setState({ startDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "", 
+   //     endDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""})
+   // console.log("MOUNTING AGAIN: ", this.state)
+ }
+
+
 render() {
+
+    console.log('Start Date', this.state.startDate);
+    console.log('End Date', this.state.endDate);
+
+    if (this.state.startDate !== null)
+    localStorage.setItem('startDate', this.state.startDate);
+    if (this.state.endDate !== null)
+    localStorage.setItem('endDate', this.state.endDate);
+
+   
 
 const { focusedInput, startDate, endDate } = this.state;
 
 	return (
 
   <DateRangePicker daySize={26} autoFocus
-  startDate={this.state.startDate} 
-  startDateId="FromDate" 
-  endDate={this.state.endDate} 
+  
+  startDateId="FromDate"
   endDateId="ToDate" 
+  startDate= {this.state.startDate}
+  endDate = {this.state.endDate}
   onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} 
   focusedInput={this.state.focusedInput} 
   onFocusChange={focusedInput => this.setState({ focusedInput })} 
@@ -84,6 +124,8 @@ const { focusedInput, startDate, endDate } = this.state;
 
 />
 )
+     
+  
 }
 
 }
