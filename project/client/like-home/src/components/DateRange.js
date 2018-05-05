@@ -7,6 +7,7 @@ import moment from 'moment';
 import 'react-dates/lib/css/_datepicker.css';
 import '../stylesheets/Home.scss'
 import { DateRangePicker } from 'react-dates';
+import {setSearchDates} from '../actions.js'
 
 
 const START_DATE = 'startDate';
@@ -17,7 +18,6 @@ const propTypes = {
   autoFocusEndDate: PropTypes.bool,
   initialStartDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "",
   initialEndDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""
-
 }
 
 class DateRange extends Component {
@@ -48,7 +48,6 @@ constructor(props) {
 
   onDatesChange({ startDate, endDate }) {
     this.setState({ startDate, endDate })
-
   }
 
   onFocusChange(focusedInput) {
@@ -72,6 +71,7 @@ constructor(props) {
  }
 
 componentWillRecieveProps(nextProps) {
+  console.log("CHANGES")
    //   console.log("MOUNTING: ", this.state)
    // this.setState({ startDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "", 
    //     endDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""})
@@ -81,13 +81,8 @@ componentWillRecieveProps(nextProps) {
 
 render() {
 
-    console.log('Start Date', this.state.startDate);
-    console.log('End Date', this.state.endDate);
-
-    if (this.state.startDate !== null)
-    localStorage.setItem('startDate', this.state.startDate);
-    if (this.state.endDate !== null)
-    localStorage.setItem('endDate', this.state.endDate);
+    //console.log('Start Date', this.state.startDate);
+    //console.log('End Date', this.state.endDate);
 
    
 

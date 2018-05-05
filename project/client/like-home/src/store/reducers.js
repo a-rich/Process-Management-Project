@@ -13,6 +13,10 @@ export const detailResults = (state = {}, action) =>
 export const cityData = (state = {}, action) =>
 (action.type === C.SET_CITYDATA)? action.payload : state
 
+export const searchDates = (state = {}, action) =>
+(action.type === C.SET_SEARCHDATES)? action.payload : state
+
 export default combineReducers({
-  currentUser, searchResults, detailResults, cityData
+  currentUser, searchResults, detailResults, cityData, searchDates
 })
+

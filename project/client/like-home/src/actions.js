@@ -19,3 +19,8 @@ export const setCityData = (cityData) => ({
   type: C.SET_CITYDATA,
     payload: {"citydata":cityData}
 })
+
+export const setSearchDates = (startDate, endDate) => ({
+    type: C.SET_SEARCHDATES,
+      payload: {"startDate":startDate, "endDate":endDate}
+  })
