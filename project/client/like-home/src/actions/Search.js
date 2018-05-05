@@ -29,6 +29,8 @@ export function searchHotels(values) {
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.miami))
     } else if(values.query === "Las Vegas"){
       window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.lasvegas))
+    } else if(values.query === "Austin"){
+      window.store.dispatch(setSearchResults(window.store.getState().cityData.citydata.austin))
     }
     return { }
 }
