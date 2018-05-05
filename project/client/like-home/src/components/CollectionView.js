@@ -3,6 +3,19 @@ import {Link} from 'react-router-dom';
 import {Grid, Col, Row} from 'react-bootstrap';
 //import './newitems.css';
 import '../stylesheets/CollectionView.scss';
+import {withRouter} from 'react-router-dom';
+import { connect as reduxConnect } from 'react-redux'
+import {searchHotels} from '../actions/Search'
+
+const mapStateToProps = () => ({
+  
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    
+  }
+}
 
 export class CollectionView extends React.Component {
   constructor(props) {
@@ -43,7 +56,14 @@ export class CollectionView extends React.Component {
     }
   }
 
+  showHotel= (e, id) => {
+    console.log("SHOW HOTEL e: ", e);
+    searchHotels({"query": e})
+    this.props.history.push('/SearchHotels');
+}
+
   render() {
+    //const { item } = this.state;
     var row = '';
     return(
       <section>
@@ -51,13 +71,13 @@ export class CollectionView extends React.Component {
         <div className="items">
           {this.state.items.map((item, index) => {
             return (
-                <div className="itemLink">
-                <Link to={`/item/${this.state.items[index].name}`} key={index} className="">
+                <div className="itemLink" onClick={this.showHotel.bind(this, item.name)}>
+                <div key={index} className="">
                   <img src={item.photo}/>
                   <div className="info">
                     <h3>{item.name}</h3>
                   </div>
-                </Link>
+                </div>
                 </div>
             )
           })}
@@ -67,4 +87,4 @@ export class CollectionView extends React.Component {
   }
 }
 
-export default CollectionView;
+export default withRouter(reduxConnect(mapStateToProps, mapDispatchToProps)(CollectionView));
