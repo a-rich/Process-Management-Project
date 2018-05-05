@@ -16,8 +16,8 @@ const END_DATE = 'endDate';
 const propTypes = {
   autoFocus: PropTypes.bool,
   autoFocusEndDate: PropTypes.bool,
-  initialStartDate: localStorage.getItem('startDate') !== null? localStorage.getItem('startDate'): "",
-  initialEndDate: localStorage.getItem('endDate') !== null? localStorage.getItem('endDate'): ""
+  initialStartDate: momentPropTypes.momentObj,
+  initialEndDate: momentPropTypes.momentObj
 }
 
 class DateRange extends Component {
