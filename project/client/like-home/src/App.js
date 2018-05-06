@@ -16,7 +16,23 @@ import Payment from './views/PaymentForm/Payment';
 import Logout from './components/Logout'
 class App extends Component {
 
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+        hideNavItem: false,
+    };
+    this.unHide = this.unHide.bind(this);
+    this.hide = this.hide.bind(this);
+  }
+
+  hide() {
+    this.setState({hideNavItem: true});
+  }
+
+  unHide(){
+    this.setState({hideNavItem: true});
+  }
+
   render() {
     return (
       <Router>
