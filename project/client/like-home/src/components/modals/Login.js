@@ -94,7 +94,7 @@ class Login extends Component {
                 </div>
                 <div className="col-4">
                   <p><a href="#" >Forgot your password?</a></p>
-                  <button type="submit" class="button2" onClick={this.submit}>Login</button>
+                  <button type="submit" class="button2" onClick={this.submit} onClick={this.closeModal}>Login</button>
                   <p>Don't have an account?<SignUp /></p>
                 </div>
               </div>

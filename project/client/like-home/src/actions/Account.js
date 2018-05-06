@@ -27,3 +27,11 @@ export function login(values){
 
   return {}
 }
+
+export function logout(){
+  return dispatch => {
+      localStorage.removeItem('redux-store');
+      // setAuthorizationToken(false);
+      dispatch(setcurrentuser({}));
+  }
+}

@@ -13,7 +13,10 @@ import Ripples from 'react-ripples'
 import SearchHotels from './views/SearchHotels/SearchHotels'
 import Detailed from './views/Detailed/Detailed'
 import Payment from './views/PaymentForm/Payment';
+import Logout from './components/Logout'
 class App extends Component {
+
+  
   render() {
     return (
       <Router>
@@ -32,6 +35,9 @@ class App extends Component {
             </NavItem>
             <NavItem>
               <Link to="/account">Account</Link>
+            </NavItem>
+            <NavItem>
+              <Logout/>
             </NavItem>
           </Nav>
           </Navbar.Collapse>
