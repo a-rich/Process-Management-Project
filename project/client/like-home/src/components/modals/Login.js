@@ -59,6 +59,7 @@ class Login extends Component {
           login({"email": this.refs.email.value,
                 "password": this.refs.password.value
           })
+          this.closeModal();
       }
 
     render() {
@@ -94,7 +95,7 @@ class Login extends Component {
                 </div>
                 <div className="col-4">
                   <p><a href="#" >Forgot your password?</a></p>
-                  <button type="submit" class="button2" onClick={this.submit} onClick={this.closeModal}>Login</button>
+                  <button type="submit" class="button2" onClick={this.submit}>Login</button>
                   <p>Don't have an account?<SignUp /></p>
                 </div>
               </div>
