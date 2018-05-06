@@ -60,6 +60,7 @@ class Login extends Component {
                 "password": this.refs.password.value
           })
           this.closeModal();
+          window.location.reload(true);
       }
 
     render() {

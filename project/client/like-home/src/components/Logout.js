@@ -6,6 +6,7 @@ class Logout extends Component {
   logout(e){
     e.preventDefault();
     localStorage.clear();
+    window.location.reload(true);
   }
 
 render() {

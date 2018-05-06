@@ -14,24 +14,22 @@ import SearchHotels from './views/SearchHotels/SearchHotels'
 import Detailed from './views/Detailed/Detailed'
 import Payment from './views/PaymentForm/Payment';
 import Logout from './components/Logout'
+
+
+const userLinks = (
+  <NavItem>
+  <Link to="/account">Account &emsp;&emsp;</Link>
+  <Logout/>
+  </NavItem>
+);
+
+const guessLinks = (
+  <NavItem>
+  <Login/>
+  </NavItem>
+);
+
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-        hideNavItem: false,
-    };
-    this.unHide = this.unHide.bind(this);
-    this.hide = this.hide.bind(this);
-  }
-
-  hide() {
-    this.setState({hideNavItem: true});
-  }
-
-  unHide(){
-    this.setState({hideNavItem: true});
-  }
 
   render() {
     return (
@@ -46,15 +44,7 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
           <Nav pullRight>
-             <NavItem>
-              <Login/>
-            </NavItem>
-            <NavItem>
-              <Link to="/account">Account</Link>
-            </NavItem>
-            <NavItem>
-              <Logout/>
-            </NavItem>
+          {localStorage.getItem("redux-store")===null ? guessLinks : userLinks }
           </Nav>
           </Navbar.Collapse>
         </Navbar>
