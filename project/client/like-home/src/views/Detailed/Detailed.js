@@ -117,7 +117,7 @@ class Detailed extends Component {
                         <div id="hotelDetails" class= "boxRadius">
                         <Grid>
                             <Row>
-                                <Col md={6}>
+                                <Col md={4} lg={4}>
                                     <h3>{this.state.hotel.name}</h3>
                                     <h3>Phone number: {this.state.hotel.phone}</h3>
                                         <h4 class= "theColor">Address: {this.state.hotel.location.address1} {this.state.hotel.location.city} {this.state.hotel.location.state} {this.state.hotel.location.zip_code}</h4>
@@ -127,12 +127,12 @@ class Detailed extends Component {
                                         <a href={this.state.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
 
                                 </Col>
-                                <Col md={6}>
+                                <Col md={8} lg={8}>
                                     <GoogleMap  />
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md={4}>
+                                <Col md={4} lg={4}>
                                         <div>
                                         <h4>Enter Date</h4>
                                         <DateRangePicker
@@ -146,7 +146,7 @@ class Detailed extends Component {
                                         />
                                         </div>
                                 </Col>
-                            <Col md={1}>
+                            <Col md={1} lg={1} >
                                     <div className="bookNowContainer">
                                     { this.state.startDate && this.state.endDate ? <Button bsStyle="bookNow zoomHover" onClick={this.handleClick}>Book Now!</Button>  : null }
                                     </div>

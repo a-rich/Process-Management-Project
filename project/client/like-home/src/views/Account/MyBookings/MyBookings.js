@@ -13,20 +13,10 @@ class MyBookings extends Component {
 
     render() {
         return (
-            <Grid>
-                <Row>
-                    <Col>
-                        <div class="MyBookingsContainer">
-                            <h2>My Bookings</h2>
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <AccountListView />
-                    </Col>
-                </Row>
-            </Grid>
+                <div class="MyBookingsContainer">
+                    <h2>My Bookings</h2>
+                <AccountListView />
+                </div>
         );
     }
 }

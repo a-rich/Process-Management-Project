@@ -38,7 +38,7 @@ class AccountListView extends Component {
     console.log("CANCEL", item)
     if(window.confirm("Are you sure you want to cancel? You will be charged a $50 cancellation fee.")){
       window.store.dispatch(cancelBooking(item))
-      window.store.dispatch(redeemReward(parseInt(item.price)/100))
+      window.store.dispatch(redeemReward(parseInt(item.price)/10))
       window.location.reload(true)
     }
   }
@@ -85,6 +85,8 @@ daysDiff (d1, d2) {
   render() {
  return(
      <div>
+     { window.store.getState().reservations.length === 0 ?  <h2>You have no reservations at this time</h2>  : 
+                           
         <ListGroup>
           <ListGroupItem>
           
@@ -93,13 +95,13 @@ daysDiff (d1, d2) {
               <div id="eachHotel" class="box">
                   <Grid>
                     <Row>
-                      <Col md={4}>
+                      <Col md={4} lg={4}>
                       <div id="hotelImage">
                           <img className="reservationImg zoomHover" src={item.hotel.image_url} onClick={this.showDetail.bind(this, item.hotel)}/>
                         </div>
                         </Col>
 
-                        <Col md={5}>
+                        <Col md={4} lg={4}>
                           <div id="hotelName">
                             <h4>{item.hotel.name}</h4>
                           </div>
@@ -109,7 +111,7 @@ daysDiff (d1, d2) {
                           <a href={item.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
                         </Col>
 
-                        <Col md={3}>
+                        <Col md={3} lg={3}>
                         <h4>{this.formatSmallDate(item.startDate)} to {this.formatSmallDate(item.endDate)}</h4>
                           <h4>{this.daysDiff(this.formatDate(item.startDate), this.formatDate(item.endDate))} days</h4>
                           <Row id="price"><h3>${item.price}</h3></Row>
@@ -122,6 +124,7 @@ daysDiff (d1, d2) {
           })}
           </ListGroupItem>
         </ListGroup>
+        }
     </div>
  )
 }

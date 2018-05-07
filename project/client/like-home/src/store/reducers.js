@@ -30,9 +30,9 @@ export const selectedHotel = (state = {}, action) =>
 export const rewards = (state = 0, action) => {
   switch (action.type) {
     case C.ADD_REWARD:
-    return state+action.payload
+    return parseInt(state+action.payload)
     case C.REDEEM_REWARD:
-    return (state-action.payload > 0?state-action.payload:0)
+    return parseInt((state-action.payload)) > 0 ? parseInt(state-action.payload ): 0
     default:
     return state
   }
