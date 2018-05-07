@@ -24,9 +24,10 @@ class AccountListView extends Component {
   }
 
   cancelReservation = (item) => {
-    console.log("HIT ME: ", item)
-    window.store.dispatch(cancelBooking(item))
-    window.location.reload(true)
+    if(window.confirm("Are you sure you want to cancel? You will be charged a $50 cancellation fee.")){
+      window.store.dispatch(cancelBooking(item))
+      window.location.reload(true)
+    }
   }
 
   render() {
