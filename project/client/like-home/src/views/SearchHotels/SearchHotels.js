@@ -12,6 +12,7 @@ import SearchBar from '../../components/SearchBar'
 import TableView from '../../components/TableView'
 import { withRouter } from "react-router-dom"
 import { connect as reduxConnect } from 'react-redux'
+import scrollToComponent from 'react-scroll-to-component'
 
 const locations = [
     "chicago",
@@ -46,17 +47,26 @@ class SearchHotels extends Component {
     update= (e) => {
         this.props.history.push('/SearchHotels');
     }
-      
+
+    componentDidMount() {
+        scrollToComponent(this.Top, { offset: 0, align: 'top', duration: 1})
+    }
 
     render() {
       return (
+        
         <div class="contentListView">
+        
             <Grid>
+            <section className='top' ref={(section) => { this.Top = section; }}>
+            </section>
                 <Row>
                     <Col>
+                   
                         <div className="searchBarContainer">
                             <SearchBar />
                         </div>
+                     
                     </Col>
                 </Row>
 

@@ -29,17 +29,20 @@ class Account extends Component {
                 <Grid>
                 
                     <Row>
-                        <Col xsOffset={2} smOffset={1} mdOffset={0} lgOffset={0}>
+                        <Col xsOffset={2} smOffset={1} mdOffset={1} lgOffset={1}>
                             <div className="accountViewContainer">
                                  <section className='MyRewards borderColored' ref={(section) => { this.MyRewards = section; }}>
                                     <MyRewards />
                                 </section>
-                                <section className='MyBookings borderColored' ref={(section) => { this.MyBookings = section; }}>
-                                    <MyBookings />
-                                </section>
+                                
                             </div>
                         </Col>
-                        <Col>
+                    </Row>
+                    <Row>
+                    <Col xsOffset={2} smOffset={1} mdOffset={1} lgOffset={1}>
+                        <section className='MyBookings borderColored' ref={(section) => { this.MyBookings = section; }}>
+                        <MyBookings />
+                        </section>
                         </Col>
                     </Row>
                 </Grid>

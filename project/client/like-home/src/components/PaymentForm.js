@@ -35,15 +35,14 @@ class PaymentForm extends Component {
       }
 
       onClick = (e) => {
-          console.log("TESTING")
-          window.store.dispatch(addReward(parseInt(window.store.getState().selectedHotel.h.price)/10))
+          window.store.dispatch(addReward(parseInt(window.store.getState().selectedHotelClientPrice)/10))
           this.props.history.push('/Account');
       }
 
       calculate = (e) => {
         window.store.dispatch(setSelectedHotelClientPrice(window.store.getState().selectedHotel.h.price-window.store.getState().rewards))
-        window.store.dispatch(redeemReward(window.store.getState().selectedHotel.h.price))
-        window.location.reload(true)
+        window.store.dispatch(redeemReward(window.store.getState().selectedHotel.h.price)/10)
+        // window.location.reload(true)
         this.props.history.push('/Account');
     }
       componentWillMount() {

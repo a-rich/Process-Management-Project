@@ -9,7 +9,7 @@ import { connect as reduxConnect } from 'react-redux';
 import store from '../store';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import matchSorter from 'match-sorter';
+import matchSorter from 'match-sorter'
 
 
 const mapStateToProps = (searchHotels) => ({
@@ -45,6 +45,7 @@ class ListView extends Component {
       showHotelRooms(e);
       this.props.history.push('/Detailed');
   }
+
 
   componentWillMount() {
     this.setState({items: [ [].concat.apply([], window.store.getState().searchResults.searchResults.slice(1, 20))

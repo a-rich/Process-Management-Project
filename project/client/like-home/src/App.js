@@ -34,6 +34,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
+      <section className='top' ref={(section) => { this.Top = section; }}> 
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
@@ -47,6 +48,7 @@ class App extends Component {
           </Nav>
           </Navbar.Collapse>
         </Navbar>
+        </section>
         <div className="routeOverlay">
           <Route exact path="/" component={Explore}/>
           <Route path="/account" component={Account}/>
