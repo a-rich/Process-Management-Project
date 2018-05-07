@@ -48,7 +48,7 @@ export const reservations = (state = {}, action) => {
     case C.UPDATE_BOOKING:
     return state;
     case C.CANCEL_BOOKING:
-    return state.filter(reservation => {return reservation.id !== action.payload.id});
+    return state.filter(reservation => {return reservation.hotel.id !== action.payload.hotel.id});
     case C.CANCELALL_BOOKING:
     return [];
     default:
