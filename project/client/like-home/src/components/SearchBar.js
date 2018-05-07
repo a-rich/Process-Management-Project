@@ -9,7 +9,6 @@ import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
 import VideoPlayer from '../components/VideoPlayer'
 import Autocomplete from '../components/Autocomplete'
-import DateRange from '../components/DateRange'
 import {searchHotels} from '../actions/Search'
 import { withRouter } from "react-router-dom"
 

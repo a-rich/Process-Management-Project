@@ -85,7 +85,7 @@ class TableView extends Component {
                   accessor: a => a.image_url,
                   width: 150,
                   Cell: (row) => {
-                    return <div className="tableImg"><img src={row.original.image_url} onClick={this.showDetail.bind(this, row.original)}/></div>
+                    return <div className="tableImg zoomHover"><img src={row.original.image_url} onClick={this.showDetail.bind(this, row.original)}/></div>
                   },
                   filterable: false,
                   sortable: false

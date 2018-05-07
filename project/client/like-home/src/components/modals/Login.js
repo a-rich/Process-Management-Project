@@ -66,7 +66,7 @@ class Login extends Component {
                return (
             <div>
 
-            <a onClick={this.openModal}>Login</a>
+            <div className="zoomHover"><a onClick={this.openModal}>Login</a></div>
 
             <form>
               <Modal
@@ -100,8 +100,6 @@ class Login extends Component {
               </div>
            </Modal>
          </form>
-
-
           </div>
         );    }
 }

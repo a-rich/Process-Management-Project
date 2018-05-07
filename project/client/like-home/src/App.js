@@ -21,7 +21,7 @@ class App extends Component {
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-            <Link to="/">LIKEHOME</Link>
+            <Link to="/" className="zoomHover">LIKEHOME</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -31,7 +31,7 @@ class App extends Component {
               <Login/>
             </NavItem>
             <NavItem>
-              <Link to="/account">Account</Link>
+            <div className="zoomHover"><Link to="/account">Account</Link></div>
             </NavItem>
           </Nav>
           </Navbar.Collapse>
