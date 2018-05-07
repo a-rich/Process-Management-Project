@@ -132,6 +132,26 @@ class TableView extends Component {
                   
                 },
                 {
+                  Header: "Rating",
+                  id: "rating",
+                  width: 60,
+                  accessor: a => a.rating,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["rating"] }),
+                    filterAll: true
+                  
+                },
+                {
+                  Header: "# Review",
+                  id: "review",
+                  width: 80,
+                  accessor: a => a.review_count,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["review"] }),
+                    filterAll: true
+                  
+                },
+                {
                   Header: "($) Price",
                   id: "price",
                   accessor: a => a.price,
