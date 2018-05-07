@@ -52,3 +52,8 @@ export const cancelAllBooking = () => ({
 export const clearUser = () => ({
     type: C.CLEAR_CURRENTUSER
 })
+
+export const addReward = (reward) => ({
+    type: C.ADD_REWARD,
+    payload: reward
+})

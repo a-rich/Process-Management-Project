@@ -13,7 +13,7 @@ class Logout extends Component {
 
 render() {
  return(
-        <a href="details.html" onClick={this.logout}>Logout</a>
+        <a onClick={this.logout}>Logout</a>
        )
     }
 }

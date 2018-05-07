@@ -17,7 +17,7 @@ import Logout from './components/Logout'
 
 const userLinks = (
   <NavItem>
-  <Link to="/account">Account &nbsp;&nbsp;&nbsp;</Link>
+  <Link to="/account">Account &nbsp;&nbsp;</Link>
   <Logout/>
   </NavItem>
 );
