@@ -32,7 +32,7 @@ export const rewards = (state = 0, action) => {
     case C.ADD_REWARD:
     return parseInt(state+action.payload)
     case C.REDEEM_REWARD:
-    return parseInt((state-action.payload)) > 0 ? parseInt(state-action.payload ): 0
+    return parseInt((state-action.payload)) > 0 ? parseInt(state-action.payload ) : 0
     default:
     return state
   }
