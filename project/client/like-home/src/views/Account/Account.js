@@ -23,19 +23,19 @@ class Account extends Component {
         return (
             <div class="accountResultContainer">
                 <div className="sideBar">
-                    <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyBookings, { offset: 0, align: 'top', duration: 1500})}>My Bookings</Button>
                     <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyRewards, { offset: 0, align: 'top', duration: 1500})}>Rewards</Button>
+                    <Button block bsClass="accountButton" onClick={() => scrollToComponent(this.MyBookings, { offset: 0, align: 'top', duration: 1500})}>My Bookings</Button>
                 </div>
                 <Grid>
                 
                     <Row>
                         <Col xsOffset={2} smOffset={1} mdOffset={0} lgOffset={0}>
                             <div className="accountViewContainer">
+                                 <section className='MyRewards borderColored' ref={(section) => { this.MyRewards = section; }}>
+                                    <MyRewards />
+                                </section>
                                 <section className='MyBookings borderColored' ref={(section) => { this.MyBookings = section; }}>
                                     <MyBookings />
-                                </section>
-                                <section className='MyRewards borderColored' ref={(section) => { this.MyRewards = section; }}>
-                                    <MyRewards />
                                 </section>
                             </div>
                         </Col>
