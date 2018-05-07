@@ -2,7 +2,7 @@ import C from './constants'
 
 export const setcurrentuser = (name, token) => ({
       type: C.SET_CURRENTUSER,
-          payload: {"currentUser":  {name, token}}
+          payload: {name, token}
    })
 
 export const setSearchResults = (searchResults) => ({
@@ -43,4 +43,12 @@ export const cancelBooking = (hotel) => ({
 export const updateBooking = (booking) => ({
     type: C.UPDATE_BOOKING,
       payload: booking
+})
+
+export const cancelAllBooking = () => ({
+    type: C.CANCELALL_BOOKING
+})
+
+export const clearUser = () => ({
+    type: C.CLEAR_CURRENTUSER
 })

@@ -35,7 +35,7 @@ class AccountListView extends Component {
      <div>
         <ListGroup>
           <ListGroupItem>
-
+          
           {this.state.items.map((item, index) => {
             return (
               <div id="eachHotel" class="box">

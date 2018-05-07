@@ -59,6 +59,8 @@ class Login extends Component {
           login({"email": this.refs.email.value,
                 "password": this.refs.password.value
           })
+          this.closeModal();
+          window.location.reload(true);
       }
 
     render() {
