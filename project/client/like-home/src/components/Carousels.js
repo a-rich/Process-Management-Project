@@ -22,7 +22,7 @@ class Carousels extends Component {
         return (
             <Carousel>
             <Carousel.Item>
-              <img  width={900} height={500} src={window.store.getState().selectedHotel.selectedHotel.h.image_url} />
+              <img  width={900} height={500} src={window.store.getState().selectedHotel.h.image_url} />
               <Carousel.Caption>
               <h3>First slide label</h3>
               </Carousel.Caption>
