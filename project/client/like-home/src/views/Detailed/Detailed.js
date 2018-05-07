@@ -10,12 +10,12 @@ import GoogleMap from '../../components/GoogleMap'
 import {addBooking} from '../../actions.js'
 
 const mapStateToProps = () => ({
-    
+
   })
-  
+
   const mapDispatchToProps = dispatch => {
     return {
-      
+
     }
   }
 
@@ -37,16 +37,16 @@ class Detailed extends Component {
       }
 
       componentWillMount() {
-        this.setState({hotel:  window.store.getState().selectedHotel.selectedHotel.h})
+        this.setState({hotel:  window.store.getState().selectedHotel.h})
       }
-    
+
       componentWillReceiveProps(nextProps) {
         this.setState({
-          hotel: window.store.getState().selectedHotel.selectedHotel.h })
+          hotel: window.store.getState().selectedHote.h })
       }
 
       handleClick=() => {
-          window.store.dispatch(addBooking(window.store.getState().selectedHotel.selectedHotel.h))
+          window.store.dispatch(addBooking(window.store.getState().selectedHotel.h))
           this.props.history.push('/payment');
       }
 
@@ -54,13 +54,13 @@ class Detailed extends Component {
         const { selectedHotel } = this.state;
         console.log(this.state.hotel)
         return (
-            
-           
-            
+
+
+
                     <div class="detailPic">
                     <Carousels />
-                    
-                        <div id="hotelDetails" class= "boxRadius"> 
+
+                        <div id="hotelDetails" class= "boxRadius">
                         <Grid>
                             <Row>
                                 <Col md={6}>
@@ -69,21 +69,21 @@ class Detailed extends Component {
                                         <h4 class= "theColor">Address: {this.state.hotel.location.display_address}</h4>
                                         <h3 class= "theColor">Price: ${this.state.hotel.price}</h3>
                                         <h3>Reviews: {this.state.hotel.review_count}</h3>
-                                        <h3>Rating: {this.state.hotel.rating}</h3>                   
+                                        <h3>Rating: {this.state.hotel.rating}</h3>
                                         <a href={this.state.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
-                                    <Button bsStyle="bookNow" onClick={this.handleClick}>Book Now!</Button> 
+                                    <Button bsStyle="bookNow" onClick={this.handleClick}>Book Now!</Button>
                                 </Col>
                                 <Col md={6}>
                                 <GoogleMap  />
                                 </Col>
-                                
+
                             </Row>
-                            
+
                         </Grid>
-                            </div> 
-                        
+                            </div>
+
                 </div>
-               
+
 
         );
     }
