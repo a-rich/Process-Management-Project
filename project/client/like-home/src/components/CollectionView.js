@@ -71,7 +71,7 @@ export class CollectionView extends React.Component {
         <div className="items">
           {this.state.items.map((item, index) => {
             return (
-                <div className="itemLink" onClick={this.showHotel.bind(this, item.name)}>
+                <div className="itemLink zoomHover" onClick={this.showHotel.bind(this, item.name)}>
                 <div key={index} className="">
                   <img src={item.photo}/>
                   <div className="info">

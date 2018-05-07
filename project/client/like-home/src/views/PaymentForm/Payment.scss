@@ -26,7 +26,12 @@
     }
 
     #payButton {
+        border-radius: 16px;
+        color: white;
+        font-weight: bold;
         width: 400px;
+        background-color: #4cd137;
+        outline: none;
     }
 
     input {
