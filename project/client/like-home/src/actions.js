@@ -27,7 +27,7 @@ export const setSearchDates = (startDate, endDate) => ({
 
 export const selectedHotel = (selectedHotel) => ({
     type: C.SET_SELECTEDHOTEL,
-      payload: {selectedHotel}
+      payload: selectedHotel
 })
 
 export const addBooking = (hotel) => ({
