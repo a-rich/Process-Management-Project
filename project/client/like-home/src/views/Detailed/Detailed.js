@@ -8,6 +8,10 @@ import { connect as reduxConnect } from 'react-redux'
 import store from '../../store'
 import GoogleMap from '../../components/GoogleMap'
 import {addBooking} from '../../actions.js'
+import moment from 'moment'
+import 'react-dates/initialize'
+import {  DateRangePicker } from 'react-dates'
+import 'react-dates/lib/css/_datepicker.css'
 
 const mapStateToProps = () => ({
 
@@ -25,6 +29,7 @@ class Detailed extends Component {
         this.state = {
             hotel: [
              ],
+             date: moment()
         };
       }
 

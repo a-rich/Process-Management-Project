@@ -8,7 +8,6 @@ import Bed from 'react-icons/lib/fa/bed'
 import FaDollar from 'react-icons/lib/fa/dollar'
 import Search from 'react-icons/lib/fa/search'
 import Autocomplete from '../../components/Autocomplete'
-import DateRange from '../../components/DateRange'
 import SearchBar from '../../components/SearchBar'
 import TableView from '../../components/TableView'
 import { withRouter } from "react-router-dom"

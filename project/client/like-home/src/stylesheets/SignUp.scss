@@ -11,32 +11,30 @@ input[type=word], input[type=password] {
     margin-right: auto;
     display: inline-block;
     border: none;
-    background: rgba(0, 0, 0, 0.25);
-    color: white;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px $color_quill_gray_approx;
     
     /* Add a background color when the inputs get focus */
     &:focus {
         box-shadow: 0 0 5px $primaryColor;
-        -webkit-transition: box-shadow 0.5s ease-in;
-        -moz-transition: box-shadow 0.5s ease-in;
-        -o-transition: box-shadow 0.5s ease-in;
-        transition: box-shadow 0.5s ease-in;
+        -webkit-transition: box-shadow 0.2s ease-in;
+        -moz-transition: box-shadow 0.2s ease-in;
+        -o-transition: box-shadow 0.2s ease-in;
+        transition: box-shadow 0.2s ease-in;
         outline: none;
     }
     &:hover {
-        box-shadow: 0 0 10px $secondaryColor;
-        -webkit-transition: box-shadow 0.5s ease-in;
-        -moz-transition: box-shadow 0.5s ease-in;
-        -o-transition: box-shadow 0.5s ease-in;
-        transition: box-shadow 0.5s ease-in;
+        box-shadow: 0 0 10px $primaryColor;
+        -webkit-transition: box-shadow 0.2s ease-in;
+        -moz-transition: box-shadow 0.2s ease-in;
+        -o-transition: box-shadow 0.2s ease-in;
+        transition: box-shadow 0.2s ease-in;
         outline: none;
     }
 }
 
 
 .ReactModal__Content {
-    p { color: $color_whiteSmoke; }
+    p { color: black; }
     position: absolute;
     width: 40%;
     border-radius: 20px !important;
@@ -46,7 +44,7 @@ input[type=word], input[type=password] {
     @media only screen and (min-width: 769px) and (max-width: 992px) {
         width: 60%;
     }
-     background: rgba(0, 0, 0, 0.75) !important;
+     //background: rgba(0, 0, 0, 0.75) !important;
 
     h2 {
         color: $primaryColor !important;
