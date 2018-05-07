@@ -15,7 +15,6 @@ import Detailed from './views/Detailed/Detailed'
 import Payment from './views/PaymentForm/Payment';
 import Logout from './components/Logout'
 
-
 const userLinks = (
   <NavItem>
   <Link to="/account">Account &emsp;&emsp;</Link>
@@ -44,7 +43,7 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
           <Nav pullRight>
-          {localStorage.getItem("redux-store")===null ? guessLinks : userLinks }
+          {Object.keys(window.store.getState().currentUser).length === 0 ? guessLinks : userLinks }
           </Nav>
           </Navbar.Collapse>
         </Navbar>
