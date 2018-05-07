@@ -119,7 +119,7 @@ class Detailed extends Component {
                             <Row>
                                 <Col md={4} lg={4}>
                                     <h3>{this.state.hotel.name}</h3>
-                                    <h3>Phone number: {this.state.hotel.phone}</h3>
+                                    <h3>Phone number: {this.state.hotel.display_phone}</h3>
                                         <h4 class= "theColor">Address: {this.state.hotel.location.address1} {this.state.hotel.location.city} {this.state.hotel.location.state} {this.state.hotel.location.zip_code}</h4>
                                         <h3 class= "theColor">Price: ${this.state.hotel.price}</h3>
                                         <h3>Reviews: {this.state.hotel.review_count}</h3>
