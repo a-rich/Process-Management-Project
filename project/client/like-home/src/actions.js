@@ -30,14 +30,14 @@ export const selectedHotel = (selectedHotel) => ({
       payload: selectedHotel
 })
 
-export const addBooking = (hotel) => ({
+export const addBooking = (hotel, startDate, endDate, price) => ({
     type: C.ADD_BOOKING,
-      payload: hotel
+      payload: { hotel: hotel, startDate: startDate, endDate: endDate, price: price }
 })
 
 export const cancelBooking = (hotel) => ({
     type: C.CANCEL_BOOKING,
-      payload: hotel
+      payload: {hotel: hotel}
 })
 
 export const updateBooking = (booking) => ({

@@ -2,7 +2,18 @@ import React from 'react'
 import { Component } from 'react'
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap'
 import '../stylesheets/ListView.scss'
-import {cancelBooking} from '../actions.js'
+import {cancelBooking, selectedHotel} from '../actions.js'
+import { connect as reduxConnect } from 'react-redux'
+import {withRouter} from 'react-router-dom'
+
+const mapStateToProps = () => ({
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    
+  }
+}
 
 class AccountListView extends Component {
 
@@ -30,6 +41,47 @@ class AccountListView extends Component {
     }
   }
 
+  formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+showDetail = (h, id) => {
+  console.log("H: ", h)
+  console.log("ID: ", id)
+  window.store.dispatch(selectedHotel({h}))
+  this.props.history.push('/Detailed');
+}
+
+ daysDiff (d1, d2) {
+    var diff = Date.parse(d2) - Date.parse(d1);
+    return Math.floor(diff / 86400000);
+}
+
+formatSmallDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear().toString().substr(-2);
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [month, day, year].join('-');
+}
+
+daysDiff (d1, d2) {
+  var diff = Date.parse(d2) - Date.parse(d1);
+  return Math.floor(diff / 86400000);
+}
+
   render() {
  return(
      <div>
@@ -43,22 +95,24 @@ class AccountListView extends Component {
                     <Row>
                       <Col md={4}>
                       <div id="hotelImage">
-                          <img className="reservationImg" src={item.image_url}/>
+                          <img className="reservationImg zoomHover" src={item.hotel.image_url} onClick={this.showDetail.bind(this, item.hotel)}/>
                         </div>
                         </Col>
 
-                        <Col md={6}>
+                        <Col md={5}>
                           <div id="hotelName">
-                            <h4>{item.name}</h4>
+                            <h4>{item.hotel.name}</h4>
                           </div>
                           <div id="hotelAddress">
-                            {item.location.display_address}
+                     {item.hotel.location.address1} {item.hotel.location.city} {item.hotel.location.state} {item.hotel.location.zip_code}    
                           </div>
-                          <a href={item.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
+                          <a href={item.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
                         </Col>
 
-                      <Col md={2}>
-                          <Row id="price"><h3>{item.price}</h3></Row>
+                        <Col md={3}>
+                        <h4>{this.formatSmallDate(item.startDate)} to {this.formatSmallDate(item.endDate)}</h4>
+                          <h4>{this.daysDiff(this.formatDate(item.startDate), this.formatDate(item.endDate))} days</h4>
+                          <Row id="price"><h3>${item.price}</h3></Row>
                           <Row><Button id="detailButton" bsStyle="danger" onClick={this.cancelReservation.bind(this, item)}>Cancel</Button></Row>
                       </Col>
                     </Row>
@@ -72,4 +126,4 @@ class AccountListView extends Component {
  )
 }
 };
-export default AccountListView;
+export default withRouter(reduxConnect(mapStateToProps, mapDispatchToProps)(AccountListView))
