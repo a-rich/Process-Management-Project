@@ -9,12 +9,12 @@ import { addReward, redeemReward, setSelectedHotelClientPrice} from '../actions'
 // import ReactScriptLoaderMixin from 'react-script-loader'
 
 const mapStateToProps = () => ({
-  
+
 })
 
 const mapDispatchToProps = dispatch => {
   return {
-    
+
   }
 }
 
@@ -44,6 +44,7 @@ class PaymentForm extends Component {
         window.store.dispatch(setSelectedHotelClientPrice(window.store.getState().selectedHotel.h.price-window.store.getState().rewards))
         window.store.dispatch(redeemReward(window.store.getState().selectedHotel.h.price))
         window.location.reload(true)
+        this.props.history.push('/Account');
     }
       componentWillMount() {
           this.setState({price: window.store.getState().selectedHotel.h.price})
