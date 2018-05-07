@@ -57,3 +57,14 @@ export const addReward = (reward) => ({
     type: C.ADD_REWARD,
     payload: reward
 })
+
+export const redeemReward = (amount) => ({
+    type: C.REDEEM_REWARD,
+    payload: amount
+    }
+)
+
+export const setSelectedHotelClientPrice = (price) => ({
+    type: C.SET_SELECTED_HOTEL_CLIENT_PRICE,
+    payload: price
+})

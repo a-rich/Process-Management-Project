@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon, Carousel} from 'react-bootstrap';
 import '../stylesheets/TableView.scss'
 import {searchHotels, showHotelRooms} from '../actions/Search'
-import {selectedHotel} from '../actions.js'
+import {selectedHotel, setSelectedHotelClientPrice} from '../actions.js'
 import { setSearchResults } from '../actions.js'
 import { connect as reduxConnect } from 'react-redux'
 import store from '../store'
@@ -44,6 +44,7 @@ class TableView extends Component {
   }
     showDetail= (h, id) => {
       window.store.dispatch(selectedHotel({h}))
+      window.store.dispatch(setSelectedHotelClientPrice(window.store.getState().selectedHotel.h.price))
       this.props.history.push('/Detailed');
   }
 
