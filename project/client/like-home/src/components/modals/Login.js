@@ -88,15 +88,15 @@ class Login extends Component {
                 </div>
                 <div className="col-4">
                   <label for="email"><b>Email Address</b></label>
-                  <input class="make-it-slow" ref="email" type="word" placeholder="Enter Email" name="email" required onChange={this.handleEmailChange.bind(this)}/>
+                  <input ref="email" type="word" placeholder="Enter Email" name="email" required onChange={this.handleEmailChange.bind(this)}/>
                 </div>
                 <div className="col-4">
                   <label for="psw"><b>Password</b></label>
-                  <input class="make-it-slow" ref="password" type="password" placeholder="Enter Password" name="psw" required onChange={this.handlePasswordChange.bind(this)}/>
+                  <input ref="password" type="password" placeholder="Enter Password" name="psw" required onChange={this.handlePasswordChange.bind(this)}/>
                 </div>
                 <div className="col-4">
                   <p><a href="#" >Forgot your password?</a></p>
-                  <button type="submit" class="button2" onClick={this.submit}>Login</button>
+                  <button type="submit" class="button2 zoomHover" onClick={this.submit}>Login</button>
                   <p>Don't have an account?<SignUp /></p>
                 </div>
               </div>
