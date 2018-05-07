@@ -37,7 +37,7 @@ class App extends Component {
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-            <Link to="/">LIKEHOME</Link>
+            <Link to="/" className="zoomHover">LIKEHOME</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

@@ -101,7 +101,7 @@
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white !important;
+ // color: white !important;
   opacity: 1; /* Firefox */
 }
 
@@ -111,4 +111,8 @@
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: white !important;
+}
+
+a, a:focus, a:active, a:visited {
+  text-decoration: none !important;
 }

@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=c:\Users\nathan\desktop\Process-Management-Project\project\server\env"
+set "VIRTUAL_ENV=C:\Users\Nathan\Desktop\Process-Management-Project\project\server\env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

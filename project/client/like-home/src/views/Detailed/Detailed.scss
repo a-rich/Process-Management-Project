@@ -19,13 +19,24 @@
     border-radius: 10px !important;
 }
 
+.bookNowContainer {
+    margin-top: 30px;
+}
+
 .btn-bookNow {
     margin: 20px !important;
     color: white;
     background-color: #3498db;
+    
+    a {
+        color: white;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
 }
 
 .yelpImg {
-    
     max-width: 100px;
 }

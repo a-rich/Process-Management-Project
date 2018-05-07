@@ -56,10 +56,6 @@ b {
   box-shadow: 0 0 10px #4f4f4f;
   box-sizing: border-box;
   margin-bottom: 30px;
-  transition: all .2s ease-in-out;
-  &:hover{
-    transform: scale(1.1);
-  }
 
   &:hover .info {
     opacity: 1;
