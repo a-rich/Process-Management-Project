@@ -36,7 +36,7 @@ class PaymentForm extends Component {
 
       onClick = (e) => {
           console.log("TESTING")
-          window.store.dispatch(addReward(parseInt(window.store.getState().selectedHotel.h.price)))
+          window.store.dispatch(addReward(parseInt(window.store.getState().selectedHotel.h.price)/10))
           this.props.history.push('/Account');
       }
 
@@ -49,7 +49,7 @@ class PaymentForm extends Component {
       componentWillMount() {
           this.setState({price: window.store.getState().selectedHotel.h.price})
       }
-    
+
     render() {
         return (
             <Grid>
