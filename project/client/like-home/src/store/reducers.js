@@ -27,10 +27,9 @@ export const reservations = (state = {}, action) => {
     ]
 
     case C.UPDATE_BOOKING:
-
+    return state;
     case C.CANCEL_BOOKING:
-    return state.filter(reservation => {return reservation.id !== action.payload});
-    break;
+    return state.filter(reservation => {return reservation.id !== action.payload.id});
     default:
     return state;
   }
@@ -39,4 +38,3 @@ export const reservations = (state = {}, action) => {
 export default combineReducers({
   currentUser, searchResults, detailResults, cityData, searchDates, selectedHotel, reservations
 })
-
