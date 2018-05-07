@@ -27,6 +27,17 @@ export const searchDates = (state = {}, action) =>
 export const selectedHotel = (state = {}, action) =>
 (action.type === C.SET_SELECTEDHOTEL)? action.payload : state
 
+export const rewards = (state = 0, action) => {
+  switch (action.type) {
+    case C.ADD_REWARD:
+    return state+action.payload
+    case C.REDEEM_REWARD:
+    return state-action.payload
+    default:
+    return state
+  }
+}
+
 export const reservations = (state = {}, action) => {
   switch (action.type) {
     case C.ADD_BOOKING:
@@ -45,6 +56,10 @@ export const reservations = (state = {}, action) => {
   }
 }
 
+export const selectedHotelClientPrice = (state = 0, action) => 
+  (action.type === C.SET_SELECTED_HOTEL_CLIENT_PRICE) ? (action.payload > 0 ? action.payload : 0) : state
+
+
 export default combineReducers({
-  currentUser, searchResults, detailResults, cityData, searchDates, selectedHotel, reservations
+  currentUser, searchResults, detailResults, cityData, searchDates, selectedHotel, reservations, rewards,selectedHotelClientPrice
 })
