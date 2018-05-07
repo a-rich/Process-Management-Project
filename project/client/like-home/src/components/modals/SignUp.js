@@ -106,7 +106,7 @@ class SignUp extends Component {
                 </div>
                 <div className="col-4">
                   <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-                  <button class="button2" onClick={this.submit}>Sign Up</button>
+                  <button class="button2 zoomHover" onClick={this.submit}>Sign Up</button>
                 </div>
               </div>
            </Modal>

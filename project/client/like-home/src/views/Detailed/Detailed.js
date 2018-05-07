@@ -12,6 +12,9 @@ import moment from 'moment'
 import 'react-dates/initialize'
 import {  DateRangePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css'
+import scrollToComponent from 'react-scroll-to-component'
+import chevron from '../assets/../../assets/chevron.png'
+import '../../stylesheets/Home.scss'
 
 const mapStateToProps = () => ({
 
@@ -62,6 +65,10 @@ class Detailed extends Component {
         return Math.floor(diff / 86400000);
     }
 
+    componentDidMount() {
+        scrollToComponent(this.Top, { offset: 0, align: 'top', duration: 1})
+    }
+
       componentWillMount() {
         this.setState({hotel:  window.store.getState().selectedHotel.h})
       }
@@ -97,9 +104,16 @@ class Detailed extends Component {
         const { selectedHotel } = this.state;
         console.log(this.state.hotel)
         return (
-                    <div class="detailPic">
-                    <Carousels />
-
+            <div>
+            <section className='top' ref={(section) => { this.Top = section; }}>
+            <div class="detailPic">
+                <Carousels />
+                <div class="navarrow">
+                <button class="navarrowbutton bounce" ><img src= {chevron} onClick={() => scrollToComponent(this.Bottom, { offset: 0, align: 'top', duration: 500})} /></button>
+                </div>
+                </div>
+            </section>
+              <section className='bottom' ref={(section) => { this.Bottom = section; }}>
                         <div id="hotelDetails" class= "boxRadius">
                         <Grid>
                             <Row>
@@ -141,8 +155,11 @@ class Detailed extends Component {
 
                         </Grid>
                             </div>
+                            </section>
+                            
 
                 </div>
+                
 
 
         );

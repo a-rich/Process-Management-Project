@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import {ListGroup, ListGroupItem, Grid, Row, Col, Button, buttonStyle, Checkbox , Glyphicon} from 'react-bootstrap'
 import '../stylesheets/ListView.scss'
-import {cancelBooking, selectedHotel} from '../actions.js'
+import {cancelBooking, selectedHotel, redeemReward} from '../actions.js'
 import { connect as reduxConnect } from 'react-redux'
 import {withRouter} from 'react-router-dom'
 
@@ -31,12 +31,14 @@ class AccountListView extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      items: window.store.getState().reservations  })
+      items: window.store.getState().reservations })
   }
 
   cancelReservation = (item) => {
+    console.log("CANCEL", item)
     if(window.confirm("Are you sure you want to cancel? You will be charged a $50 cancellation fee.")){
       window.store.dispatch(cancelBooking(item))
+      window.store.dispatch(redeemReward(parseInt(item.price)/100))
       window.location.reload(true)
     }
   }

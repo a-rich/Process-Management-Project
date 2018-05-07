@@ -37,7 +37,7 @@ export const addBooking = (hotel, startDate, endDate, price) => ({
 
 export const cancelBooking = (hotel) => ({
     type: C.CANCEL_BOOKING,
-      payload: {hotel: hotel}
+      payload: hotel
 })
 
 export const updateBooking = (booking) => ({
