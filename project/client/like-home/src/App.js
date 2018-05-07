@@ -13,7 +13,23 @@ import Ripples from 'react-ripples'
 import SearchHotels from './views/SearchHotels/SearchHotels'
 import Detailed from './views/Detailed/Detailed'
 import Payment from './views/PaymentForm/Payment';
+import Logout from './components/Logout'
+
+const userLinks = (
+  <NavItem>
+  <Link to="/account">Account &emsp;&emsp;</Link>
+  <Logout/>
+  </NavItem>
+);
+
+const guessLinks = (
+  <NavItem>
+  <Login/>
+  </NavItem>
+);
+
 class App extends Component {
+
   render() {
     return (
       <Router>
@@ -27,12 +43,7 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
           <Nav pullRight>
-             <NavItem>
-              <Login/>
-            </NavItem>
-            <NavItem>
-            <div className="zoomHover"><Link to="/account">Account</Link></div>
-            </NavItem>
+          {Object.keys(window.store.getState().currentUser).length === 0 ? guessLinks : userLinks }
           </Nav>
           </Navbar.Collapse>
         </Navbar>

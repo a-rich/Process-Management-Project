@@ -1,8 +1,16 @@
 import C from '../constants.js'
 import { combineReducers } from 'redux'
 
-export const currentUser = (state = {}, action) =>
-(action.type === C.SET_CURRENTUSER) ? action.payload : state
+export const currentUser = (state = {}, action) => {
+  switch (action.type) {
+    case C.SET_CURRENTUSER:
+      return action.payload
+    case C.CLEAR_CURRENTUSER:
+      return {}
+      default:
+      return state
+  }
+}
 
 export const searchResults = (state = {}, action) =>
 (action.type === C.SET_SEARCHRESULTS) ? action.payload : state
@@ -27,10 +35,11 @@ export const reservations = (state = {}, action) => {
     ]
 
     case C.UPDATE_BOOKING:
-
+    return state;
     case C.CANCEL_BOOKING:
-    return state.filter(reservation => {return reservation.id !== action.payload});
-    break;
+    return state.filter(reservation => {return reservation.id !== action.payload.id});
+    case C.CANCELALL_BOOKING:
+    return [];
     default:
     return state;
   }
@@ -39,4 +48,3 @@ export const reservations = (state = {}, action) => {
 export default combineReducers({
   currentUser, searchResults, detailResults, cityData, searchDates, selectedHotel, reservations
 })
-

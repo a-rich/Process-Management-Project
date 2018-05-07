@@ -5,7 +5,7 @@ import GoogleMapReact from 'google-map-react'
 const AnyReactComponent = ({ text }) => (
     <div style={{
       position: 'relative', color: 'white', background: 'red',
-      height: 40, width: 60, top: -20, left: -30,    
+      height: 40, width: 60, top: -20, left: -30,
     }}>
       {text}
     </div>
@@ -16,37 +16,41 @@ const AnyReactComponent = ({ text }) => (
     constructor(props) {
         super(props);
         this.state = {
-          lat: null,
-          lng: null,
+          lat: window.store.getState().selectedHotel.h,
+          lng: window.store.getState().selectedHotel.h,
+          name: window.store.getState().selectedHotel.h.name
         }
       }
 
     static defaultProps = {
       center: {
-        lat: 59.95,
-        lng: 30.33
+        lat: null,
+        lng: null
       },
-      zoom: 11
+      zoom: 15
     };
 
     componentWillMount() {
-        this.setState({ lat: window.store.getState().selectedHotel.selectedHotel.h.coordinates.latitude, 
-            lng: window.store.getState().selectedHotel.selectedHotel.h.coordinates.longitude});
+        this.setState({ lat: window.store.getState().selectedHotel.h.coordinates.latitude,
+            lng: window.store.getState().selectedHotel.h.coordinates.longitude,
+            name: window.store.getState().selectedHotel.h.name
+          });
+
       }
-  
+
     render() {
       return (
         // Important! Always set the container height explicitly
-        <div style={{ height: '400px', width: '500px' }}>
+        <div style={{ height: '400px', width: '500px'}}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: "AIzaSyAhKIWtI4AG_BvzKo9MkIuVx6Iz5tM6e40"}}
-            defaultCenter={this.props.center}
+            defaultCenter={{lat: this.state.lat, lng: this.state.lng}}
             defaultZoom={this.props.zoom}
           >
             <AnyReactComponent
-              lat={59.955413}
-              lng={30.337844}
-              text={'Kreyser Avrora'}
+              lat={this.state.lat}
+              lng={this.state.lng}
+              text={this.state.name}
             />
           </GoogleMapReact>
         </div>

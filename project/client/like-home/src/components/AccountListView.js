@@ -24,8 +24,10 @@ class AccountListView extends Component {
   }
 
   cancelReservation = (item) => {
-    console.log("HIT ME: ", item)
-    window.store.dispatch(cancelBooking(item.id))
+    if(window.confirm("Are you sure you want to cancel? You will be charged a $50 cancellation fee.")){
+      window.store.dispatch(cancelBooking(item))
+      window.location.reload(true)
+    }
   }
 
   render() {
@@ -33,7 +35,7 @@ class AccountListView extends Component {
      <div>
         <ListGroup>
           <ListGroupItem>
-
+          
           {this.state.items.map((item, index) => {
             return (
               <div id="eachHotel" class="box">
@@ -41,23 +43,23 @@ class AccountListView extends Component {
                     <Row>
                       <Col md={4}>
                       <div id="hotelImage">
-                          <img className="reservationImg" src={item.hotel.image_url}/>
+                          <img className="reservationImg" src={item.image_url}/>
                         </div>
                         </Col>
 
                         <Col md={6}>
                           <div id="hotelName">
-                            <h4>{item.hotel.name}</h4>
+                            <h4>{item.name}</h4>
                           </div>
                           <div id="hotelAddress">
-                            {item.hotel.location.display_address}
+                            {item.location.display_address}
                           </div>
-                          <a href={item.hotel.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
+                          <a href={item.url} target="_blank"><img className="yelpImg" src="https://cdn.worldvectorlogo.com/logos/yelp.svg" /> </a>
                         </Col>
-                      
+
                       <Col md={2}>
                           <Row id="price"><h3>{item.price}</h3></Row>
-                          <Row><Button id="detailButton" bsStyle="danger" onClick={this.cancelReservation.bind(this, item.hotel)}>Cancel</Button></Row>
+                          <Row><Button id="detailButton" bsStyle="danger" onClick={this.cancelReservation.bind(this, item)}>Cancel</Button></Row>
                       </Col>
                     </Row>
                   </Grid>
