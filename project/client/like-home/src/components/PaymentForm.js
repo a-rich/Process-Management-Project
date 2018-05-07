@@ -49,7 +49,7 @@ class PaymentForm extends Component {
       componentWillMount() {
           this.setState({price: window.store.getState().selectedHotel.h.price})
       }
-
+    
     render() {
         return (
             <Grid>
@@ -58,7 +58,6 @@ class PaymentForm extends Component {
                     <form>
                         <Row>
                             <Col>
-
                             <input type = 'text' id='nameBox' value = {this.props.name}
                                 onChange = {this.updateState} placeholder="Full name" /> <br />  <br />
 

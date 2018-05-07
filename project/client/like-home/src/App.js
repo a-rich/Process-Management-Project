@@ -16,15 +16,15 @@ import Payment from './views/PaymentForm/Payment';
 import Logout from './components/Logout'
 
 const userLinks = (
-  <NavItem>
-  <Link to="/account">Account &nbsp;&nbsp;</Link>
+  <NavItem className="zoomHover">
+  <Link to="/account">Account &emsp;&emsp;</Link>
   <Logout/>
   </NavItem>
 );
 
 const guessLinks = (
-  <NavItem>
-  <Login/>
+  <NavItem className="zoomHover">
+    <Login />
   </NavItem>
 );
 

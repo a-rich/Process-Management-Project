@@ -54,8 +54,6 @@ class AccountListView extends Component {
 }
 
 showDetail = (h, id) => {
-  console.log("H: ", h)
-  console.log("ID: ", id)
   window.store.dispatch(selectedHotel({h}))
   this.props.history.push('/Detailed');
 }
