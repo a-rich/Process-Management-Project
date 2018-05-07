@@ -41,6 +41,10 @@ class Detailed extends Component {
         hotel: new Map()
       }
 
+      datesOverlap(StartA, StartB, EndA, EndB) {
+        return (StartA > StartB? StartA: StartB) <= (EndA < EndB? EndA: EndB)
+    }
+
       formatDate(date) {
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
@@ -68,13 +72,24 @@ class Detailed extends Component {
       }
 
       handleClick=() => {
+          let reservations = window.store.getState().reservations
+          var overlap = false
           var sDate = this.formatDate(this.state.startDate)
           var eDate = this.formatDate(this.state.endDate)
           var totalDays = this.daysDiff(this.formatDate(this.state.startDate), this.formatDate(this.state.endDate))
           var price = window.store.getState().selectedHotel.h.price*totalDays
-          
-          window.store.dispatch(addBooking(window.store.getState().selectedHotel.h, sDate, eDate, price))
-          this.props.history.push('/payment');
+         
+        for(var r = 0; r < reservations.length; r++) {
+            overlap = this.datesOverlap(sDate, reservations[r].startDate, eDate, reservations[r].endDate)
+            console.log(overlap)
+        }
+        if(!overlap) {
+            window.store.dispatch(addBooking(window.store.getState().selectedHotel.h, sDate, eDate, price))
+            this.props.history.push('/payment');
+        }
+        else{
+            window.alert("You already have a reservation within the selected date range.");
+        }
       }
 
     render() {

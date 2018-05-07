@@ -26,7 +26,6 @@ const mapDispatchToProps = dispatch => {
 
 class ListView extends Component {
   constructor(props) {
-    console.log(window.store.getState().searchResults.searchResults)
     super(props);
    
     this.state = {
@@ -43,7 +42,6 @@ class ListView extends Component {
     items: new Map()
   }
     showDetail= (e, id) => {
-      console.log(e);
       showHotelRooms(e);
       this.props.history.push('/Detailed');
   }

@@ -27,3 +27,10 @@ img {
     opacity: .5;
 }
 
+.glyphicon, .glyphicon-chevron-right {
+    transition: all .1s ease-in-out;
+  &:hover{
+    transform: scale(3);
+  }
+}
+

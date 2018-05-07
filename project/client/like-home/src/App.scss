@@ -116,3 +116,7 @@
 a, a:focus, a:active, a:visited {
   text-decoration: none !important;
 }
+
+*:focus {
+  outline: none !important;
+}

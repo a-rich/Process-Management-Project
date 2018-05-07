@@ -818,7 +818,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6251194
             },
             "transactions": [],
-            "price": "685",
+            "price": "485",
             "location": {
                 "address1": "108 E Superior St",
                 "address2": "",
@@ -982,7 +982,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6251117
             },
             "transactions": [],
-            "price": "698",
+            "price": "498",
             "location": {
                 "address1": "120 E Delaware Pl",
                 "address2": "",
@@ -1096,7 +1096,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.626560916989
             },
             "transactions": [],
-            "price": "579",
+            "price": "399",
             "location": {
                 "address1": "401 N Wabash Ave",
                 "address2": "",
@@ -1184,7 +1184,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.6265341082282
             },
             "transactions": [],
-            "price": "695",
+            "price": "495",
             "location": {
                 "address1": "225 N Wabash Ave",
                 "address2": "",
@@ -1428,7 +1428,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -87.625112
             },
             "transactions": [],
-            "price": "609",
+            "price": "409",
             "location": {
                 "address1": "800 N Michigan Ave",
                 "address2": "",
@@ -1663,7 +1663,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.40138
             },
             "transactions": [],
-            "price": "579",
+            "price": "429",
             "location": {
                 "address1": "125 3rd St",
                 "address2": "",
@@ -2245,7 +2245,7 @@ window.store.dispatch(setCityData({"sanjose":[{
             "id": "s17UpNt-CaHbA3QaarI_7A",
             "alias": "four-seasons-hotel-san-francisco-san-francisco",
             "name": "Four Seasons Hotel San Francisco",
-            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/CelbipgaFv3A0zPXcT9Dlg/o.jpg",
+            "image_url": "https://www.fourseasons.com/content/dam/fourseasons/images/web/SFR/SFR_428_1280x486.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/four-seasons-hotel-san-francisco-san-francisco?adjust_creative=-SxmL2JanjVMHYmRgJBIPQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=-SxmL2JanjVMHYmRgJBIPQ",
             "review_count": 296,
@@ -2265,7 +2265,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -122.404476803829
             },
             "transactions": [],
-            "price": "599",
+            "price": "299",
             "location": {
                 "address1": "757 Market St",
                 "address2": "",
@@ -2458,7 +2458,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.389457
             },
             "transactions": [],
-            "price": "669",
+            "price": "469",
             "location": {
                 "address1": "300 S Doheny Dr",
                 "address2": "",
@@ -2652,7 +2652,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.255921580179
             },
             "transactions": [],
-            "price": "678",
+            "price": "478",
             "location": {
                 "address1": "404 S Figueroa St",
                 "address2": "",
@@ -3128,7 +3128,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -118.266620451555
             },
             "transactions": [],
-            "price": "695",
+            "price": "495",
             "location": {
                 "address1": "900 W Olympic Blvd",
                 "address2": "",
@@ -3292,7 +3292,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.03041
             },
             "transactions": [],
-            "price": "625",
+            "price": "425",
             "location": {
                 "address1": "1330 Maryland Ave SW",
                 "address2": "",
@@ -3456,7 +3456,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0337715731464
             },
             "transactions": [],
-            "price": "654",
+            "price": "454",
             "location": {
                 "address1": "806 15th St NW",
                 "address2": "",
@@ -3494,7 +3494,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0575662467342
             },
             "transactions": [],
-            "price": "729",
+            "price": "429",
             "location": {
                 "address1": "2800 Pennsylvania Ave NW",
                 "address2": "",
@@ -3950,7 +3950,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -77.0491026341915
             },
             "transactions": [],
-            "price": "899",
+            "price": "499",
             "location": {
                 "address1": "1150 22nd St NW",
                 "address2": "",
@@ -4047,7 +4047,7 @@ window.store.dispatch(setCityData({"sanjose":[{
             "id": "AfhgLmyOTHTM44PIiYKTHQ",
             "alias": "kleinfeld-hotel-blocks-new-york",
             "name": "Kleinfeld Hotel Blocks",
-            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jibVZ_ZG2icvfsHBGWQDsw/o.jpg",
+            "image_url": "http://e4336fa0c208189c0eee-e6761b7f2db36d2d2df00f6c169a70d2.r66.cf1.rackcdn.com/lps/assets/u/who1299ex-178939-W-Union-Square---Exterior.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/kleinfeld-hotel-blocks-new-york?adjust_creative=-SxmL2JanjVMHYmRgJBIPQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=-SxmL2JanjVMHYmRgJBIPQ",
             "review_count": 172,
@@ -4467,7 +4467,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -74.00529
             },
             "transactions": [],
-            "price": "789",
+            "price": "489",
             "location": {
                 "address1": "246 Spring St",
                 "address2": "",
@@ -4661,7 +4661,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.97732
             },
             "transactions": [],
-            "price": "619",
+            "price": "419",
             "location": {
                 "address1": "28 W 53rd St",
                 "address2": "",
@@ -4741,7 +4741,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -73.97449483766
             },
             "transactions": [],
-            "price": "649",
+            "price": "449",
             "location": {
                 "address1": "Fifth Avenue At Central Park S",
                 "address2": "",
@@ -5611,7 +5611,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.173992335813
             },
             "transactions": [],
-            "price": "654",
+            "price": "454",
             "location": {
                 "address1": "3708 Las Vegas Blvd S",
                 "address2": null,
@@ -5929,7 +5929,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.174213
             },
             "transactions": [],
-            "price": "629",
+            "price": "429",
             "location": {
                 "address1": "3752 Las Vegas Blvd S",
                 "address2": "",
@@ -6051,7 +6051,7 @@ window.store.dispatch(setCityData({"sanjose":[{
                 "longitude": -115.174222740489
             },
             "transactions": [],
-            "price": "739",
+            "price": "439",
             "location": {
                 "address1": "3960 S Las Vegas Blvd",
                 "address2": "",

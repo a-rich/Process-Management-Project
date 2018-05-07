@@ -57,7 +57,6 @@ export class CollectionView extends React.Component {
   }
 
   showHotel= (e, id) => {
-    console.log("SHOW HOTEL e: ", e);
     searchHotels({"query": e})
     this.props.history.push('/SearchHotels');
 }

@@ -44,6 +44,10 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
+  transition: all .5s ease-in-out;
+  &:hover{
+    transform: scale(1.5);
+  }
   button {
     border:none;
     background-color: rgba(0, 0, 0, 0.0);
