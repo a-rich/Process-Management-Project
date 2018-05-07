@@ -32,7 +32,7 @@ export const rewards = (state = 0, action) => {
     case C.ADD_REWARD:
     return state+action.payload
     case C.REDEEM_REWARD:
-    return state-action.payload
+    return (state-action.payload > 0?state-action.payload:0)
     default:
     return state
   }
@@ -56,7 +56,7 @@ export const reservations = (state = {}, action) => {
   }
 }
 
-export const selectedHotelClientPrice = (state = 0, action) => 
+export const selectedHotelClientPrice = (state = 0, action) =>
   (action.type === C.SET_SELECTED_HOTEL_CLIENT_PRICE) ? (action.payload > 0 ? action.payload : 0) : state
 
 
